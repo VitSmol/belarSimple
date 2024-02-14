@@ -1,17 +1,20 @@
 h1
-  font-family: Hydro
+  // font-family: Hydro
   font-size: 60px
 
 
 .header-wrapper
   display: flex
-  justify-content: center
-  padding: 15px
+  justify-content: space-between
+  padding: 15px 0
   // background: black
   position: fixed
   z-index: 200
-  width: 100%
-  margin: 0
+  width: $contentWidth
+  left: 0
+  right: 0
+  margin: 0 auto
+  z-index: 300
 .header__navigation
   display: flex
   gap: 1vw
@@ -19,6 +22,10 @@ h1
   a
     color: white
     text-decoration: none
+    // transition: .5s all 
+    &:hover
+      transition: .5s color 
+      color: $mainColor
 
 .logo
   background-image: url(../assets/img/logoBelar.png)
@@ -42,5 +49,39 @@ h1
   top: 0
   bottom: 0
   // background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(3, 100, 77, 0.74) 17%, rgba(7, 88, 70, 0.67) 35%, rgba(3, 48, 37, 0.65) 62%, rgb(1, 8, 6) 100%)
-  background: linear-gradient(to bottom, rgb(89 80 80) 0%, rgba(3, 100, 77, 0.74) 17%, rgba(7, 88, 70, 0.67) 35%, rgba(3, 48, 37, 0.65) 62%, rgb(50 56 54) 100%)
+  // background: linear-gradient(to bottom, rgb(89 80 80) 0%, rgba(3, 100, 77, 0.74) 17%, rgba(7, 88, 70, 0.67) 35%, rgba(3, 48, 37, 0.65) 62%, rgb(50 56 54) 100%)
+  background: linear-gradient(to bottom, rgb(52 48 48) 0%, rgb(2 34 26 / 74%) 17%, rgb(1 26 21 / 67%) 35%, rgb(0 0 0 / 65%) 62%, rgb(33 35 34) 100%)
   z-index: 100
+
+.caption
+  z-index: 200
+  margin: auto
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  .caption-wrapper
+    width: 70%
+  h1
+    padding-bottom: 15px
+
+  p
+    text-shadow: 1px 1px 1px #000
+    font-size: 18px
+  .next
+    width: 313px
+    height: 60px
+    outline: none
+    background-color: $mainColor
+    font-weight: bold
+    border: none
+    &:hover
+      background-color: #8d5609
+      color: #f3f0f0
+      transition: all .5s
+      // transition: color .5s
