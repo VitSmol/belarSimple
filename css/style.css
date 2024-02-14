@@ -9,13 +9,17 @@ h1 {
   font-size: 60px;
 }
 
+header {
+  padding-bottom: 10px;
+}
+
 .header-wrapper {
   display: flex;
   justify-content: space-between;
   padding: 15px 0;
   position: fixed;
   z-index: 200;
-  width: 70%;
+  width: calc(100% - 20vw);
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -24,14 +28,14 @@ h1 {
 
 .header__navigation {
   display: flex;
-  gap: 1vw;
+  gap: 2vw;
   align-items: center;
 }
 .header__navigation a {
   color: white;
   text-decoration: none;
 }
-.header__navigation a:hover {
+.header__navigation a:hover, .header__navigation a.active {
   transition: 0.5s color;
   color: #ca7b0f;
 }
@@ -77,7 +81,7 @@ h1 {
   flex-direction: column;
 }
 .caption .caption-wrapper {
-  width: 70%;
+  width: calc(100% - 20vw);
 }
 .caption h1 {
   padding-bottom: 15px;
@@ -87,17 +91,89 @@ h1 {
   font-size: 18px;
 }
 .caption .next {
+  display: block;
   width: 313px;
   height: 60px;
   outline: none;
   background-color: #ca7b0f;
   font-weight: bold;
   border: none;
+  margin-top: 45px;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  line-height: 60px;
 }
 .caption .next:hover {
+  cursor: pointer;
   background-color: #8d5609;
   color: #f3f0f0;
   transition: all 0.5s;
+}
+
+.icons-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 20px auto;
+  width: calc(100% - 20vw);
+  z-index: 300;
+  display: flex;
+  flex-direction: row;
+}
+.icons-wrapper > * {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.0901960784);
+  flex-grow: 1;
+}
+.icons-wrapper > * .icon path {
+  fill: #ca7b0f;
+}
+.icons-wrapper > *:not(:last-child) {
+  border-right: none;
+}
+.icons-wrapper > * strong {
+  font-weight: 200;
+  margin-top: 10px;
+}
+
+.back {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/img/back.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.caption.about {
+  justify-content: start;
+  margin-top: 100px;
+}
+.caption.about p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.video {
+  max-width: 500px;
+  height: 200px;
+}
+
+.image-container {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1vw;
+}
+.image-container img {
+  width: 12vw;
+  box-shadow: 1px 1px 7px #ca7b0f;
+  justify-self: center;
 }
 
 body {
