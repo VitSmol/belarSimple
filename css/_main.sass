@@ -99,37 +99,17 @@ header
       background-color: $bgColor
       color: $mainColor
       transition: all .5s
-
-.log
-  color: white
-  position: relative
-  z-index: 200
-  width: 700px
-  display: grid
-  transform-style: preserve-3d
-  place-items: center
-  font-size: min(20vw, 30vw)
-  line-height: 0.9
-  --rx: 6deg
-  --ry: -14deg
-.caption-logo
-  font-family: Arial
-  font-size: 40px
-  letter-spacing: 4.3px
-  color: hsl(47, 100%, var(--light))
+.vid
+  // position: absolute
+  // width: 700px
+  // left: 80px
+  // transform-origin: 0%
+  // bottom: 0px
+  // transform: rotate(-90deg)
   position: absolute
-  left: 50%
-  top: 50%
-  width: 100%
-  text-align: center
-  transform: translate(10vw, 470%) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -7))
-  &:nth-child(1) 
-    filter: blur(6px)
-    color: #00000007
-  @for $i from 0 to 20 
-    &:nth-child(#{$i + 2}) 
-      --tz: #{$i * 0.9 + 120}px
-      --light: #{($i + 2) * 2}%
-  .caption-logo:nth-child(21) 
-      --light: 39%
-      color: rgb(0 0 0 / 0%)
+  width: 600px
+  left: 80px
+  transform-origin: 0%
+  top: 660px
+  transform: rotate(-90deg) rotateX(4deg) rotateY(1deg)
+  z-index: -1

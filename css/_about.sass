@@ -7,15 +7,13 @@
   
 .about-wrapper
   width: $contentWidth
-  // padding: 20px 0
   height: 100%
   display: flex
   flex-direction: column
-  gap: 20px
+  gap: 50px
   .main-caption
     text-align: center
     font-size: 40px
-    // margin-bottom: 30px
   .description
     display: flex
     gap: 20px
@@ -40,23 +38,27 @@
     color: $bgColor
     text-decoration: none
     padding: 20px
-    border: 1px solid #ffffff17
+    border: 1px solid $mainColor
     flex-grow: 1
     text-align: center
     .icon path
       fill: $mainColor
     &:not(:last-child)
       border-right: none
+    &:hover
+      cursor: pointer
 
 .image-container
   display: grid
   grid-template-rows: repeat(1, 1fr)
   grid-template-columns: repeat(4, 1fr)
   gap: 1vw
-  img
+  .img-item
     width: 12vw
     box-shadow: $mainShadow
     justify-self: center
+    &:hover
+      cursor: -webkit-zoom-in
 .video-wrapper
   width: 100%
   display: flex
