@@ -1,20 +1,52 @@
-.back
-  width: 100%
+.about  
+  padding-top: 100px
+  display: flex
+  align-items: center
+  flex-direction: column
   height: 100vh
-  background-image: url(../assets/img/back.png)
-  background-size: cover
-  background-repeat: no-repeat
-
-.caption.about
   
-  justify-content: start
-  margin-top: 100px
-  p
-    font-size: 14px
-    margin-bottom: 5px
-.video
-  max-width: 500px
-  height: 200px
+.about-wrapper
+  width: $contentWidth
+  // padding: 20px 0
+  height: 100%
+  display: flex
+  flex-direction: column
+  gap: 20px
+  .main-caption
+    text-align: center
+    font-size: 40px
+    // margin-bottom: 30px
+  .description
+    display: flex
+    gap: 20px
+    h2
+      font-size: 25px
+    strong
+      font-weight: normal
+    p
+      font-size: 18px
+      
+.icons-wrapper
+  width: 100%
+  display: flex
+  flex-direction: row
+  height: fit-content
+  .icon-card
+    display: flex
+    font-weight: normal
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    color: $bgColor
+    text-decoration: none
+    padding: 20px
+    border: 1px solid #ffffff17
+    flex-grow: 1
+    text-align: center
+    .icon path
+      fill: $mainColor
+    &:not(:last-child)
+      border-right: none
 
 .image-container
   display: grid
@@ -23,5 +55,12 @@
   gap: 1vw
   img
     width: 12vw
-    box-shadow: 1px 1px 7px $mainColor
+    box-shadow: $mainShadow
     justify-self: center
+.video-wrapper
+  width: 100%
+  display: flex
+  justify-content: space-between
+.video
+  max-width: 500px
+  height: 200px

@@ -1,0 +1,135 @@
+.main
+  padding: 0
+.start-content
+  height: 100vh
+  position: relative
+header
+  padding-bottom: 10px
+  background-color: black
+  width: 100%
+  height: 85px
+  box-shadow: $mainShadow
+  position: fixed
+.header-wrapper
+  font-size: 18px
+  height: 100%
+  display: flex
+  justify-content: space-between
+  padding: 15px 0
+  width: $contentWidth
+  margin: 0 auto
+.header__navigation
+  display: flex
+  align-items: center
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+    gap: 1vw
+    width: 100%
+
+  a
+    color: white
+    text-decoration: none
+    &:hover, &.active
+      transition: .5s color 
+      color: $mainColor
+
+.logo
+  background-image: url(../assets/img/logoBelar.png)
+  width: 200px
+  height: 50px
+  background-repeat: no-repeat
+  background-size: contain
+
+
+.caption
+  padding-top: 90px
+  display: flex
+  align-items: center
+  flex-direction: column
+  height: 100%
+  background-image: url('../assets/img/cyl.png')
+  background-size: 55%
+  background-position: 100% 137%
+  background-repeat: no-repeat
+  .caption-wrapper
+    width: $contentWidth
+    padding: 20px 0
+    height: 100%
+    .orgname  
+      display: flex
+      justify-content: end
+      text-transform: uppercase
+      .name
+        font-size: 20px
+        font-weight: 500
+        color: $mainColor
+        font-style: oblique
+  .main-caption-wrapper
+    width: 70%
+    .main-caption
+      font-size: 50px
+      font-weight: 500
+    .sub-caption
+      margin-top: 20px
+      font-size: 23px
+      strong
+        font-weight: normal
+
+  .next
+    display: block
+    font-size: 20px
+    width: 313px
+    height: 60px
+    outline: none
+    background-color: $mainColor
+    font-weight: bold
+    border: none
+    margin-top: 45px
+    color: $bgColor
+    text-decoration: none
+    text-align: center
+    line-height: 60px
+    box-shadow: $mainShadow
+    border-radius: 5px
+    &:hover
+      cursor: pointer
+      background-color: $bgColor
+      color: $mainColor
+      transition: all .5s
+
+.log
+  color: white
+  position: relative
+  z-index: 200
+  width: 700px
+  display: grid
+  transform-style: preserve-3d
+  place-items: center
+  font-size: min(20vw, 30vw)
+  line-height: 0.9
+  --rx: 6deg
+  --ry: -14deg
+.caption-logo
+  font-family: Arial
+  font-size: 40px
+  letter-spacing: 4.3px
+  color: hsl(47, 100%, var(--light))
+  position: absolute
+  left: 50%
+  top: 50%
+  width: 100%
+  text-align: center
+  transform: translate(10vw, 470%) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -7))
+  &:nth-child(1) 
+    filter: blur(6px)
+    color: #00000007
+  @for $i from 0 to 20 
+    &:nth-child(#{$i + 2}) 
+      --tz: #{$i * 0.9 + 120}px
+      --light: #{($i + 2) * 2}%
+  .caption-logo:nth-child(21) 
+      --light: 39%
+      color: rgb(0 0 0 / 0%)
