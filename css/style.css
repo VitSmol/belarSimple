@@ -571,6 +571,18 @@ footer .company-department-employee a span {
     bottom: -70px;
   }
 }
+@media screen and (orientation: landscape) {
+  .start-content {
+    height: 100%;
+  }
+  .vid {
+    bottom: -10vw;
+  }
+  .hydro {
+    width: 61vw;
+    bottom: -100px;
+  }
+}
 body {
   font-family: "Hydro", sans-serif;
   font-family: "Noto Sans", sans-serif;
