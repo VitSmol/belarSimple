@@ -78,6 +78,7 @@ header {
   right: 0;
   top: 200px;
   z-index: -1;
+  filter: drop-shadow(8px 14px 6px black);
 }
 
 .caption {
@@ -169,8 +170,11 @@ header {
   font-size: 40px;
 }
 .about-wrapper .description {
-  display: flex;
   gap: 20px;
+}
+.about-wrapper .description .description-image {
+  float: left;
+  margin-left: 20px;
 }
 .about-wrapper .description h2 {
   font-size: 25px;
@@ -544,7 +548,10 @@ footer .company-department-employee a span {
     gap: 20px;
     align-items: center;
   }
-  .video-wrapper video {
+  .description {
+    display: flex;
+  }
+  .description video {
     max-height: -moz-max-content;
     max-height: max-content;
     width: 100%;
