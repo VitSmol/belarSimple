@@ -1,0 +1,92 @@
+footer
+  margin-top: 100px
+  height: fit-content
+  background-image: url(../assets/img/footer-backg.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  background-attachment: fixed
+  background-position: center
+  position: relative
+  h3, h5
+    font-weight: bold
+  .footer-overlay
+    position: absolute
+    width: 100%
+    inset: 0
+    background: rgb(0 0 0 / 39%)
+    z-index: 1
+    height: 100%
+  .footer-bg
+    margin: 0 auto
+    color: $background
+    position: relative
+    z-index: 4
+    padding-left: 30px
+    padding-right: 30px
+    .footer-wrapper
+      padding-top: 70px
+    .footer-contacts
+      display: flex
+      // flex-direction: column
+      gap: 10px
+      .rb
+        display: flex
+        flex-grow: 2
+        gap: 10px
+        .company-card
+          column-gap: 10px
+      .company-name, .company-department-name, summary
+        color: $mainColor
+      .company-name
+        font-size: 20px
+      .company-department-name
+        font-size: 18px
+    .company-card, .company-department, .regions
+      list-style-type: none
+      margin: 0
+      padding: 0
+      font-size: 15px
+      .company-address
+        font-style: italic
+      a
+        color: $background
+        text-decoration: none
+      .contact-icon
+        padding-left: 10px
+        padding-right: 2px
+        height: max-content
+        vertical-align: middle
+    .company-department-item
+      margin-top: 20px
+    .region 
+      padding-left: 20px
+  .company-department-employee a
+    margin-top: 10px
+    display: flex
+    flex-direction: row
+    align-items: center
+    span
+      display: block
+.rf 
+  display: flex
+  flex-direction: column
+  .rf-companes
+    display: flex
+    gap: 10px
+    flex-shrink: 1
+    .company-card
+      max-width: 300px
+  & > .company-name
+    text-align: center
+.map
+  width: 100%
+  padding-top: 30px
+  iframe
+    width: 100%
+.footer-map
+  position: relative
+  z-index: 1000
+.footer-politics
+  position: relative
+  z-index: 1000
+  background-color: $bgColor
