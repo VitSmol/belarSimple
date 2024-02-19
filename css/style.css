@@ -72,10 +72,10 @@ header {
 }
 
 .hydro {
-  width: 70vw;
+  width: 40vw;
   position: absolute;
   transform: rotateY(180deg);
-  right: -16vw;
+  right: 0;
   top: 200px;
   z-index: -1;
 }
@@ -86,9 +86,6 @@ header {
   align-items: center;
   flex-direction: column;
   height: 100%;
-  background-size: 55%;
-  background-position: 100% 137%;
-  background-repeat: no-repeat;
 }
 .caption .orgname {
   display: flex;
@@ -580,6 +577,18 @@ footer .company-department-employee a span {
   }
   .hydro {
     width: 61vw;
+    bottom: -100px;
+  }
+}
+@media screen and (max-height: 844px) {
+  .start-content {
+    height: 100%;
+  }
+  .vid {
+    bottom: -10vw;
+  }
+  .hydro {
+    width: 40vw;
     bottom: -100px;
   }
 }
