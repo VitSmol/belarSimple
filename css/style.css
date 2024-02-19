@@ -564,6 +564,12 @@ footer .company-department-employee a span {
   .rf .rf-companes {
     grid-template-columns: repeat(1, 1fr);
   }
+  .vid {
+    bottom: -7vw;
+  }
+  .hydro {
+    bottom: -70px;
+  }
 }
 body {
   font-family: "Hydro", sans-serif;
