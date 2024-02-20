@@ -66,6 +66,11 @@ header
   width: $contentWidth
   padding: 20px 0
   height: 100%
+  margin: 0 auto
+  display: grid
+  gap: 30px
+  grid-template-areas:"caption caption" "start gallery" "button vid"
+  grid-template-columns: 1fr 1fr
 .hydro
   width: 40vw
   position: absolute
@@ -77,20 +82,44 @@ header
 .caption
   padding-top: 90px
   display: flex
-  align-items: center
-  flex-direction: column
   height: 100%
+  .gallery
+    display: flex
+    flex-wrap: wrap
+    gap: 10px
+    grid-area: gallery
+    align-items: flex-start
+    // width: calc(100% - 10vw)
+    .card
+      width: 80px
+      border-radius: 16px
+      height: inherit
+      overflow: hidden
+      transition: 0.4s ease-in-out
+      box-shadow: $mainShadow
+      flex: 0.25
+      figure
+        margin-bottom: 0
+      img
+        width: 600px
+      &:hover
+        flex-grow: 3
+        // flex-basis: 80%
+        font-weight: bold
+        cursor: pointer
+        border-radius: 8px
   .orgname  
     display: flex
     justify-content: end
     text-transform: uppercase
+    grid-area: caption
     .name
       font-size: 20px
       font-weight: 500
       color: $mainColor
       font-style: oblique
 .main-caption-wrapper
-  width: 60%
+  grid-area: start
 .main-caption
   font-size: 50px
   font-weight: 500
@@ -100,6 +129,7 @@ header
   strong
     font-weight: normal
 .next
+  grid-area: button
   display: block
   font-size: 20px
   width: 313px
@@ -121,10 +151,13 @@ header
     color: $mainColor
     transition: all .5s
 .vid
-  position: absolute
+  grid-area: vid
+  // position: absolute
   width: 600px
-  left: 80px
-  transform-origin: 0%
-  top: 660px
-  transform: rotate(-90deg) rotateX(4deg) rotateY(1deg)
+  // right: 0
+  // bottom: -1vw
+  // left: 80px
+  // transform-origin: 0%
+  // top: 660px
+  // transform: rotate(-90deg) rotateX(4deg) rotateY(1deg)
   z-index: -1

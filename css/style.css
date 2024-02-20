@@ -32,7 +32,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 15px 0;
-  width: calc(100% - 20vw);
+  width: calc(100% - 5vw);
   margin: 0 auto;
 }
 .header-wrapper .menu, .header-wrapper .close {
@@ -85,9 +85,14 @@ header {
 }
 
 .caption-wrapper {
-  width: calc(100% - 20vw);
+  width: calc(100% - 5vw);
   padding: 20px 0;
   height: 100%;
+  margin: 0 auto;
+  display: grid;
+  gap: 30px;
+  grid-template-areas: "caption caption" "start gallery" "button vid";
+  grid-template-columns: 1fr 1fr;
 }
 
 .hydro {
@@ -103,14 +108,41 @@ header {
 .caption {
   padding-top: 90px;
   display: flex;
-  align-items: center;
-  flex-direction: column;
   height: 100%;
+}
+.caption .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  grid-area: gallery;
+  align-items: flex-start;
+}
+.caption .gallery .card {
+  width: 80px;
+  border-radius: 16px;
+  height: inherit;
+  overflow: hidden;
+  transition: 0.4s ease-in-out;
+  box-shadow: 1px 1px 9px 0px #ca7b0f;
+  flex: 0.25;
+}
+.caption .gallery .card figure {
+  margin-bottom: 0;
+}
+.caption .gallery .card img {
+  width: 600px;
+}
+.caption .gallery .card:hover {
+  flex-grow: 3;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
 }
 .caption .orgname {
   display: flex;
   justify-content: end;
   text-transform: uppercase;
+  grid-area: caption;
 }
 .caption .orgname .name {
   font-size: 20px;
@@ -120,7 +152,7 @@ header {
 }
 
 .main-caption-wrapper {
-  width: 60%;
+  grid-area: start;
 }
 
 .main-caption {
@@ -137,6 +169,7 @@ header {
 }
 
 .next {
+  grid-area: button;
   display: block;
   font-size: 20px;
   width: 313px;
@@ -161,12 +194,8 @@ header {
 }
 
 .vid {
-  position: absolute;
+  grid-area: vid;
   width: 600px;
-  left: 80px;
-  transform-origin: 0%;
-  top: 660px;
-  transform: rotate(-90deg) rotateX(4deg) rotateY(1deg);
   z-index: -1;
 }
 
@@ -178,7 +207,7 @@ header {
 }
 
 .about-wrapper {
-  width: calc(100% - 20vw);
+  width: calc(100% - 5vw);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -427,11 +456,35 @@ footer .company-department-employee a span {
     grid-area: region;
   }
 }
+@media screen and (max-width: 1460px) {
+  h1.main-caption {
+    font-size: 35px;
+  }
+  .sub-caption {
+    font-size: 20px;
+  }
+  .caption .gallery .card:hover {
+    flex-grow: 3;
+  }
+  .caption-wrapper {
+    -moz-column-gap: 0;
+         column-gap: 0;
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
 @media screen and (max-width: 1360px) {
-  .header-wrapper,
-  .caption-wrapper,
-  .about-wrapper {
-    width: calc(100% - 10vw);
+  h1.main-caption {
+    font-size: 30px;
+  }
+  .sub-caption {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .caption .gallery .card:hover {
+    flex-grow: 6;
+  }
+  .caption-wrapper {
+    row-gap: 15px;
   }
   a.caption-layer {
     font-size: 15px;
@@ -439,33 +492,26 @@ footer .company-department-employee a span {
   .logo {
     width: 100px;
   }
-  h1.main-caption {
-    font-size: 35px;
-  }
-  .sub-caption {
-    font-size: 20px;
-    margin-top: 10px;
-  }
   .hydro {
     top: auto;
     bottom: 40px;
     z-index: 20;
   }
-  .main-caption-wrapper {
-    width: 80%;
-  }
-  .vid {
-    width: min(700px, 59vw);
-    left: 0;
-    top: auto;
-    transform: rotate(0deg) rotateX(0deg) rotateY(0deg);
-    bottom: 5vw;
-  }
   .next {
-    margin-top: 3vw;
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 1260px) {
+  .next {
+    margin-top: 20px;
+  }
+  .caption .gallery .card:hover {
+    flex-grow: 1.5;
+  }
+  .caption-wrapper {
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-areas: "caption caption" "start start" "gallery gallery" "button vid";
+  }
   .video-wrapper {
     align-items: center;
     justify-content: center;
@@ -481,6 +527,13 @@ footer .company-department-employee a span {
   }
 }
 @media screen and (max-width: 1160px) {
+  .caption .gallery .card:hover {
+    flex-grow: 1.6;
+  }
+  .vid {
+    width: auto;
+    max-width: 600px;
+  }
   .description-image {
     width: 44vw;
     height: -moz-fit-content;
@@ -488,6 +541,9 @@ footer .company-department-employee a span {
   }
 }
 @media screen and (max-width: 1000px) {
+  .caption .gallery .card:hover {
+    flex-grow: 2.9;
+  }
   .logo {
     z-index: 300;
   }
@@ -499,6 +555,10 @@ footer .company-department-employee a span {
   }
   .header-wrapper .menu.hide, .header-wrapper .close.hide {
     display: none;
+  }
+  .caption-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas: "caption" "start" "gallery" "vid" "button";
   }
   .header__navigation ul {
     position: absolute;
@@ -602,8 +662,11 @@ footer .company-department-employee a span {
   }
 }
 @media screen and (max-width: 768px) {
-  .vid {
-    bottom: 1vw;
+  .caption .gallery .card:hover {
+    flex-grow: 2.9;
+  }
+  .caption .gallery .card img {
+    width: 453px;
   }
   .video-wrapper {
     flex-direction: column;
@@ -620,7 +683,24 @@ footer .company-department-employee a span {
     height: 300px;
   }
 }
+@media screen and (max-width: 680px) {
+  .caption .gallery .card img {
+    width: 410px;
+  }
+  .caption .gallery .card:hover {
+    flex-grow: 3.2;
+  }
+  .vid {
+    max-width: 400px;
+  }
+}
 @media screen and (max-width: 530px) {
+  .caption .gallery .card img {
+    width: 320px;
+  }
+  .caption .gallery .card:hover {
+    flex-grow: 3.9;
+  }
   .belar .company-card {
     grid-template-areas: "caption" "address" "priem" "constr" "sales";
   }
@@ -630,9 +710,6 @@ footer .company-department-employee a span {
   .rf .rf-companes {
     grid-template-columns: repeat(1, 1fr);
   }
-  .vid {
-    bottom: -7vw;
-  }
   .hydro {
     bottom: -70px;
   }
@@ -640,9 +717,6 @@ footer .company-department-employee a span {
 @media screen and (orientation: landscape) {
   .start-content {
     height: 100%;
-  }
-  .vid {
-    bottom: -10vw;
   }
   .hydro {
     width: 40vw;
@@ -652,13 +726,6 @@ footer .company-department-employee a span {
 @media screen and (max-height: 844px) {
   .start-content {
     height: 100%;
-  }
-  .vid {
-    bottom: -10vw;
-  }
-  .hydro {
-    width: 40vw;
-    bottom: -100px;
   }
 }
 body {
