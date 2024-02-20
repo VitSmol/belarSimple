@@ -45,7 +45,7 @@
     bottom: 40px
     z-index: 20
   .main-caption-wrapper
-    width: 100%
+    width: 80%
   .vid
     width: min(700px, 59vw)
     left: 0
@@ -55,16 +55,48 @@
   .next
     margin-top: 3vw
 @media screen and (max-width: 1260px)
-  .video-wrapper video
-    max-height: 15vw
-      
-
+  .video-wrapper
+    align-items: center
+    justify-content: center
+    gap: 20px
+    flex-wrap: wrap
+    video
+      max-width: 500px
+      max-height: 300px
+      &:last-child
+        margin: 0 auto
 
 @media screen and (max-width: 1160px)
   .description-image
     width: 44vw
     height: fit-content
 @media screen and (max-width: 1000px)
+  .logo
+    z-index: 300
+  .header-wrapper
+    justify-content: end
+    .menu
+      display: inline-block
+  .header__navigation ul
+    position: absolute
+    flex-direction: column
+    left: 0
+    top: 0
+    background: black
+    width: 100%
+    overflow-y: hidden
+    transform: scale(0)
+    // transition: 0.5s transform ease-in-out
+    &.active
+      height: min-content
+      padding: 0
+      padding-left: 5vw
+      padding-bottom: 20px
+      padding-top: 0
+      top: 85px
+      transform: scale(1)
+      transition: 0.3s transform ease-in-out
+
   .description
     flex-direction: column
     .description-image
@@ -154,7 +186,7 @@
   .vid
     bottom: -10vw
   .hydro
-    width: 61vw
+    width: 40vw
     bottom: -100px
 @media screen and (max-height: 844px)
   .start-content

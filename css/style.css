@@ -12,7 +12,7 @@
 }
 
 .start-content {
-  height: 100vh;
+  height: 100%;
   position: relative;
 }
 
@@ -35,6 +35,15 @@ header {
   width: calc(100% - 20vw);
   margin: 0 auto;
 }
+.header-wrapper .menu, .header-wrapper .close {
+  color: #ca7b0f;
+  position: absolute;
+  left: 5vw;
+  display: none;
+  font-size: 40px;
+  top: calc(50% - 20px);
+  font-weight: 900;
+}
 
 .header__navigation {
   display: flex;
@@ -47,6 +56,13 @@ header {
   display: flex;
   gap: 1vw;
   width: 100%;
+}
+.header__navigation .arrowUp {
+  display: none;
+  color: #ca7b0f;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 6pxpx);
 }
 .header__navigation a {
   color: white;
@@ -174,7 +190,7 @@ header {
 }
 .about-wrapper .description .description-image {
   float: left;
-  margin-left: 20px;
+  margin-right: 20px;
 }
 .about-wrapper .description h2 {
   font-size: 25px;
@@ -433,7 +449,7 @@ footer .company-department-employee a span {
     z-index: 20;
   }
   .main-caption-wrapper {
-    width: 100%;
+    width: 80%;
   }
   .vid {
     width: min(700px, 59vw);
@@ -447,8 +463,18 @@ footer .company-department-employee a span {
   }
 }
 @media screen and (max-width: 1260px) {
+  .video-wrapper {
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
   .video-wrapper video {
-    max-height: 15vw;
+    max-width: 500px;
+    max-height: 300px;
+  }
+  .video-wrapper video:last-child {
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 1160px) {
@@ -459,6 +485,36 @@ footer .company-department-employee a span {
   }
 }
 @media screen and (max-width: 1000px) {
+  .logo {
+    z-index: 300;
+  }
+  .header-wrapper {
+    justify-content: end;
+  }
+  .header-wrapper .menu {
+    display: inline-block;
+  }
+  .header__navigation ul {
+    position: absolute;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    background: black;
+    width: 100%;
+    overflow-y: hidden;
+    transform: scale(0);
+  }
+  .header__navigation ul.active {
+    height: -moz-min-content;
+    height: min-content;
+    padding: 0;
+    padding-left: 5vw;
+    padding-bottom: 20px;
+    padding-top: 0;
+    top: 85px;
+    transform: scale(1);
+    transition: 0.3s transform ease-in-out;
+  }
   .description {
     flex-direction: column;
   }
@@ -583,7 +639,7 @@ footer .company-department-employee a span {
     bottom: -10vw;
   }
   .hydro {
-    width: 61vw;
+    width: 40vw;
     bottom: -100px;
   }
 }
