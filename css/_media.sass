@@ -75,8 +75,11 @@
     z-index: 300
   .header-wrapper
     justify-content: end
-    .menu
+    .menu.show, .close.show
       display: inline-block
+    .menu.hide, .close.hide
+      display: none
+
   .header__navigation ul
     position: absolute
     flex-direction: column
