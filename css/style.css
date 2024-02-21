@@ -86,7 +86,6 @@ header {
 
 .caption-wrapper {
   width: calc(100% - 5vw);
-  padding: 20px 0;
   height: 100%;
   margin: 0 auto;
   display: grid;
@@ -106,7 +105,7 @@ header {
 }
 
 .caption {
-  padding-top: 90px;
+  padding-top: 80px;
   display: flex;
   height: 100%;
 }
@@ -149,6 +148,7 @@ header {
   font-weight: 500;
   color: #ca7b0f;
   font-style: oblique;
+  margin-bottom: 0;
 }
 
 .main-caption-wrapper {
@@ -178,7 +178,7 @@ header {
   background-color: #ca7b0f;
   font-weight: bold;
   border: none;
-  margin-top: 45px;
+  margin-top: 20px;
   color: black;
   text-decoration: none;
   text-align: center;
@@ -454,6 +454,9 @@ footer .company-department-employee a span {
   }
   .techno .company-card .region {
     grid-area: region;
+  }
+  .rf .rf-companes {
+    justify-content: space-between;
   }
 }
 @media screen and (max-width: 1460px) {
