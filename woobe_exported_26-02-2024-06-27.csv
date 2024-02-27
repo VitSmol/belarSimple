@@ -1,0 +1,623 @@
+"ID","Meta: _thumbnail_id","Заголовок","Описание","Кратк.Описание.","Тип","Статус","Обычная цена","Цена продажи","Артикул","Управление запасами","Количество в запасе","Статус запасов",
+11175,,"С100/40х200-3.44(515)   (Ц100х200-3)",,,"simple, virtual",1,0,0,,0,0,1
+11176,,"MC50-3405215-А   (-01, -02)","<style>
+    /*скрыть цену*/
+    p.price {
+        display:none;
+    }
+/*скрыть карту сайта*/
+nav.woocommerce-breadcrumb{
+ color:#f8f5f4;
+    pointer-events: none;
+}    
+/*скрыть надпись гц*/
+span.single-product-category > a{
+    color:#f8f5f4;
+    pointer-events: none;
+}
+/*изменить цвет и изменить ссылку*/
+span.posted_in > a{
+    color:black;
+   /* content: attr(""https://belar.pro/?page_id=17871"");*/
+}
+/*изменить цвет и убрать ссылки*/
+ #tab-additional_information > table > tbody > tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--attribute_pa_diamp > td > p > a{
+    color:black;
+    pointer-events: none;
+}
+#tab-additional_information > table > tbody > tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--attribute_pa_diamsh > td > p > a{
+    color:black;
+    pointer-events: none;
+}
+ #tab-additional_information > table > tbody > tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--attribute_pa_hod > td > p > a{
+    color:black;
+    pointer-events: none;
+}
+ #tab-additional_information > table > tbody > tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--attribute_pa_mezhos > td > p > a{
+    color:black;
+    pointer-events: none;
+}
+/*поменять картинку*/
+ #product-11176 {
+    margin-top: 62px;
+}
+/*добавить маргины*/
+.ast-page-builder-template .site-content > .ast-container {
+    max-width: 1224px;
+    padding: 0;
+}
+.ast-article-single.ast-woo-product-no-review.desktop-align-left.tablet-align-left.mobile-align-left.product.type-product.post-27633.status-publish.first.instock.product_cat-gc.downloadable.virtual.purchasable.product-type-simple {
+    margin-bottom: 0;
+    position: relative;
+    margin-top: 47px;
+}
+/**/
+ a[title=""Просмотр корзины""]{
+    color: #fa9100;
+}    
+</style>",,"simple, virtual",1,3,0,,0,0,1
+11177,,"С75/30х200-3.44(515) (с подводом жидкости в зоне передней крышки)","<style>
+    <style>
+/*скрыть цену*/
+    p.price {
+        display:none;
+    }
+/*скрыть карту сайта*/
+nav.woocommerce-breadcrumb{
+       display:none;
+}    
+/*скрыть надпись гц*/
+#product-11177 > div.summary.entry-summary > span > a{
+    color:#f8f5f4;
+    pointer-events: none;
+}
+/*изменить цвет и изменить ссылку*/
+#product-11177 > div.summary.entry-summary > div > span > a{
+    color:black;
+}
+/*изменить цвет и убрать ссылки*/
+#tab-additional_information > table > tbody > tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--attribute_pa_diamp > td > p > a{
+    color:black;
+    pointer-events: none;
+}
+#tab-additional_information > table > tbody > tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--attribute_pa_diamsh > td > p > a{
+    color:black;
+    pointer-events: none;
+}
+#tab-additional_information > table > tbody > tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--attribute_pa_hod > td > p > a{
+    color:black;
+    pointer-events: none;
+}
+#tab-additional_information > table > tbody > tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--attribute_pa_mezhos > td > p > a{
+    color:black;
+    pointer-events: none;
+}
+/*поменять картинку*/
+#product-11177 > div.woocommerce-product-gallery.woocommerce-product-gallery--without-images.woocommerce-product-gallery--columns-4.images > div > div > img{
+}
+/*добавить маргины*/
+.ast-page-builder-template .site-content > .ast-container {
+    max-width: 1224px;
+    padding: 0;
+    margin-top: 107px;
+}
+/**/
+a[title=""Просмотр корзины""]{
+    color: #fa9100;
+}
+</style>
+</style>",,"simple, virtual",1,3,0,,0,0,1
+12077,,МС125/50х400-4.11(797),,,"simple, virtual",1,3,0,,0,0,1
+12083,,MC125/50х400-4.11(797),,,"simple, virtual",1,3,0,,0,0,1
+12086,,MC125/50х200-3.11(515),,,"simple, virtual",1,3,0,,0,0,1
+12089,,МС160/80х120-4.11(510),,,"simple, virtual",1,3,0,,0,0,1
+12092,,МС160/80х800-4.11(1205),,,"simple, virtual",1,3,0,,0,0,1
+12095,,МС160/80х200-4.11(590),,,"simple, virtual",1,3,0,,0,0,1
+12099,,МС160/80х360-4.11(750),,,"simple, virtual",1,3,0,,0,0,1
+12102,,МС160/80х710-4.11(1115),,,"simple, virtual",1,3,0,,0,0,1
+12105,,МС125/63х1000-3.32(1090),,,"simple, virtual",1,3,0,,0,0,1
+12108,,МС125/63х540-3.11(1090),,,"simple, virtual",1,3,0,,0,0,1
+12111,,МС140/70х710-3.11.3(1192),,,"simple, virtual",1,3,0,,0,0,1
+12114,,"С75/30х110-3.44(515)   (Ц75х110-3)",,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12123,,МС80/50х710-3.32(300),,,"simple, virtual",1,3,0,,0,0,1
+12126,,МС80/50х970-3.31(300),,,"simple, virtual",1,3,0,,0,0,1
+12132,,"МС100/50х250-3.72(560)   (бугельный)",,"МС100/50х250-3.72(560) (бугельный)","simple, downloadable, virtual",1,3,0,,0,0,1
+12135,,МС40/25х250-3.15(444),,,"simple, virtual",1,3,0,,0,0,1
+12138,,МС40/25х160-3.11(350),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12153,,МСТР75/55х1865-3.11С(1583),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12159,,МС80/40х320-3.22(1300),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12162,,МС80/40х630-3.22(930),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12165,,МС80/40х320-3.22(1160),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12168,,МС63/30х630-3.22(915),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12171,,МС50/25х250-3.22(1025),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12177,,МС50/25х160-3.22(830),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12180,,МС63/30х400-3.22(685),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12183,,МС50/25х250-3.22(485),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12186,,МС40/25х300-3.11(490),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12189,,МС63/30х690-3.11(1000),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12192,,МС80/40х200-3.22(500),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12198,,МС50/25х200-3.22(435),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12199,,МС125/50х200-3.44.1(515)(Ц125х200-3),,,"simple, virtual",1,0,0,,0,0,1
+12206,,МС100/60х500-3.22.2(830),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12212,,МС100/60х800-3.22.2(1130),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12213,,MC50-3405215-А,,,"simple, virtual",1,0,0,,0,0,1
+12218,,МСР80х220-3.82(395),,,"simple, virtual",1,0,0,,0,0,1
+12221,,МС80/40х320-3.22.2(620),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12222,,"MC63-3405115   (-01,-02,)",,,"simple, virtual",1,0,0,,0,0,1
+12225,,МС63/30х500-3.11(785),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12228,,МС40/25х180-3.11,,,"simple, virtual",1,3,0,,0,0,1
+12231,,МС50/25х175-3.55(455),,,"simple, virtual",1,3,0,,0,0,1
+12234,,"Н065.15.020-03   (М16х1,5)",,,"simple, virtual",1,3,0,,0,0,1
+12237,,"Н065.15.020-02   (М22х1,5)",,,"simple, virtual",1,3,0,,0,0,1
+12240,,ГА81.000А,,,"simple, virtual",1,3,0,,0,0,1
+12243,,ГА81.00.000-08,,,"simple, virtual",1,3,0,,0,0,1
+12252,,МС80/50х630-3.22(930),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12255,,МС80/50х200-4.44(515),,,"simple, virtual",1,3,0,,0,0,1
+12258,,МС40/25х100-4.15(294),,,"simple, virtual",1,3,0,,0,0,1
+12261,,МС40/25х200-4.15(394),,,"simple, virtual",1,3,0,,0,0,1
+12264,,МС50/25х630-4.11(835),,,"simple, virtual",1,3,0,,0,0,1
+12267,,МС50/25х320-3.11(555),,,"simple, virtual",1,3,0,,0,0,1
+12273,,"МС 50/25х400-3.11 (605)",,,"simple, virtual",1,3,0,,0,0,1
+12275,,МС40/25х70-3.11(260)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12278,,МС80/40х400-3.11(700)(01),,,"simple, virtual",1,3,0,,0,0,1
+12281,,МС80/40х250-4.22(550)(01),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12287,,МС100/50х500-4.11(800)(01),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12290,,МС100/50х630-4.11(930),,,"simple, virtual",1,3,0,,0,0,1
+12305,,МС80/40х320-4.22(620),,,"simple, virtual",1,3,0,,0,0,1
+12311,,МС100/40х200-4.44.1(515)(01),,,"simple, virtual",1,3,0,,0,0,1
+12317,,МС80/40х400-4.22(700),,,"simple, virtual",1,3,0,,0,0,1
+12323,,МС125/50х250-4.22(550),,,"simple, virtual",1,3,0,,0,0,1
+12326,,МС75/30х200-4.44.1(515),,,"simple, virtual",1,3,0,,0,0,1
+12329,,МС50/30х200-4.44(515),,,"simple, virtual",1,3,0,,0,0,1
+12332,,МС80/40х800-4.22(1100),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12335,,"МС 100/50х400-4.11(690)",,,"simple, virtual",1,3,0,,0,0,1
+12338,,"МС 80/40х400-4.22(700)",,,"simple, virtual",1,3,0,,0,0,1
+12341,,"МС 100/40х200-4.44.1(515)(01)",,,"simple, virtual",1,3,0,,0,0,1
+12344,,"МС 80/40х320-4.22(620)",,,"simple, virtual",1,3,0,,0,0,1
+12347,,"МС 100/50х500-4.11(800)(01)",,,"simple, virtual",1,3,0,,0,0,1
+12368,,МС80/40х200-3.44(515)(01),,,"simple, virtual",1,3,0,,0,0,1
+12391,,МС100/40х400-3.44(715)(01),,,"simple, virtual",1,3,0,,0,0,1
+12403,,МС125/63х200-3.11(515)(01),,,"simple, virtual",1,3,0,,0,0,1
+12415,,МС50/30х200-3.22(435),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12421,,МС50/30х160-3.22(395),,,"simple, virtual",1,3,0,,0,0,1
+12424,,МС50/30х320-3.22(555),,,"simple, virtual",1,3,0,,0,0,1
+12427,,МС50/30х250-3.22(485),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12430,,"МС50/30х160-4.22   (395)",,,"simple, virtual",1,3,0,,0,0,1
+12433,,МС100/50х400-4.44(715),,,"simple, virtual",1,3,0,,0,0,1
+12436,,"МС80/40х200-4.22 (515)",,,"simple, virtual",1,3,0,,0,0,1
+12439,,МС100/40х200-4.44(515),,,"simple, virtual",1,3,0,,0,0,1
+12442,,МС100/40х630-4.44(945),,,"simple, virtual",1,3,0,,0,0,1
+12448,,МС100/50х800-3.11.3(1100),,,"simple, virtual",1,3,0,,0,0,1
+12451,,МС75/30х200-3.44.3А(515),,,"simple, virtual",1,3,0,,0,0,1
+12454,,МС100/50х400-3.11(690),,,"simple, virtual",1,3,0,,0,0,1
+12466,,МС100/40х610-4.44(880),,,"simple, virtual",1,3,0,,0,0,1
+12475,,МС80/30х200-4.44D(515),,,"simple, virtual",1,3,0,,0,0,1
+12478,,МС75/30х200-3.44(515)(01),,,"simple, virtual",1,3,0,,0,0,1
+12481,,МС100/50х320-4.22(610),,,"simple, virtual",1,3,0,,0,0,1
+12487,,МС100/40х400-4.44.1(715)(01),,,"simple, virtual",1,3,0,,0,0,1
+12493,,МС80/40х630-4.11(930),,,"simple, virtual",1,3,0,,0,0,1
+12496,,МС40/25х125-4.22(265),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12499,,МСР30х125-4.22.3(265),,,"simple, virtual",1,3,0,,0,0,1
+12535,,МС50/25х200-3.24(515),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12538,,МС50/25х200-3.11(435),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12544,,С75/30х200-3.44(515),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12547,,МС50/30х400-3.11(660),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12553,,МС80/56х280-3.11(645),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12556,,МС50/25х160-3.22(395),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12559,,МС80/40х320-3.11(620),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12562,,МC80/56х160-3.11(510)(01),,,"simple, virtual",1,3,0,,0,0,1
+12565,,МC80/56х400-3.11(765)(01),,,"simple, virtual",1,3,0,,0,0,1
+12568,,МС80/56х560-3.11(925)(01) ,,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12571,,МС80/56х630-3.11(1010)(01),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12574,,МC80/56х280-3.11(645)(01),,,"simple, virtual",1,3,0,,0,0,1
+12583,,МС110/56х280-3.11(580)(01),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12586,,"МС80/56х630-3.11 (1010)(01)",,,"simple, virtual",1,3,0,,0,0,1
+12592,,МС110/56х1120-3.11(1520)(01),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12601,,МС50/25х200-3.22(435)(01),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12604,,МC80/50х160-3.11(510),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12607,,МC80/50х400-3.11(765)(01) ,,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12610,,МС80/50х630-3.11(1010) ,,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12613,,МC80/50х280-3.11(610),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12616,,МС110/56х280-3.11(645)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12622,,МС110/56х900-3.11(1300)(01),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12631,,МC80/50х400-3.11(1085),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12634,,МС80/50х560-3.11(925)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12637,,МС125/63х400-5.11.3(980),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12640,,МC80/56х160-3.11(525),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12643,,МC80/56х400-3.11(765),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12646,,МС80/56х700-3.11(1100),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12652,,МC80/56х280-3.11(645),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12655,,МС80/56х630-3.11(995),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12673,,МС80/56х900-3.11(1265),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12686,,МС80/56х390-3.12(890),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12692,,МC80/50х200-3.11(445),,,"simple, virtual",1,500,0,,0,0,1
+12704,,МС110/56х900-3.11(1300),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12707,,МС110/63х900-3.11(1300),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12710,,МС80/56х400-3.11(765),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12716,,МС80/56х900-3.11(1250),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12719,,МС110/56х140-3.31(132),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12722,,МС110/56х1120-3.11(1520),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12725,,МС110/56х280-3.11(680),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12728,,МС80/56х560-3.11(925),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12731,,МС125/60х400-4.11.1(1040) ,,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12734,,МС125/60х710-4.11.1(1160),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12737,,МС160/80х400-4.11.1(894) ,,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12740,,МС125/60х710-4.14.1(1160) ,,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12743,,МС160/80х500-4.11.1(1030),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12746,,МС125/80х800-4.14.1(1320),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12749,,МС125/63х710-4.11.6(1160),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12752,,МС140/80х800-5.14.6F(1320),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12755,,МС125/63х360-4.11(780),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12758,,МС125/56х554-3.22(970) ,,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12761,,МС125/63х400-4.11(1040),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12764,,МС125/63х710-4.11(1125) ,,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12767,,МС100/50х250-4.11С(560),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12773,,МС63/40х1200-4.11.1(1510),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12776,,МС80/50х320-4.21(522),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12779,,МС80/63х1000-4.11(1365),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12782,,МС125/80х938-4.11(1322),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12788,,МС125/80х720-4.11(1080),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12791,,МС140/70х400-3.11(804),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12794,,МС125/56х450-3.11(865),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12797,,МС125/63х500-3.11(926),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+12800,,МС125/63х1000-3.11(1420),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12803,,МС100/63х400-3.11.6(900),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12806,,МС100/63х280-3.11.6(620),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12809,,МС50/30х250-3.15(500)(002),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12812,,МС80/40х190-3.11(480)(002),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12815,,МС80/40х251-3.11.1(529)(002),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12818,,МС80/40х251-3.11.1(529)(01)(002),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12821,,МС80/50х1400-3.55.2(1855)(002),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12824,,МС100/50х1010-3.35.1(690)(002),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12827,,МС100/50х1010-3.35.1(690)(01)(002) ,,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12830,,МС100/50х284-3.41.1(620)(002),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12833,,МС100/50х284-3.41.1(620)(01)(002),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12836,,МС100/50х440-3.35.1(640)(002),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12839,,МС125/70х400-3.11(862)(002),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12842,,МС125/70х400-3.11.3(862)(002),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12845,,МС63/30х150-3.14.3(390)(002),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12848,,МС80/40х100-3.14.3(470)(002),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12851,,МС80/40х100-3.15.3(430)(002),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12854,,МС80/40х250-3.11.3(615)(002),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12863,,МС80/40х250-3.14.3(615)(002),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12866,,МС80/40х250-3.15.3(545)(002),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12869,,МС40/25х63-3.11(215) ,,,"simple, virtual",1,3,0,,0,0,1
+12875,,МС40/25х125-3.11(277),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12881,,МС40/25х800-3.11(961),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12884,,МС50/30х160-3.11(390),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12890,,МС63/30х85-3.22(275)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12899,,МС40/25х100-3.11(290)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12901,,МС40/25х160-3.11(350)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12903,,МС40/25х160-3.11(450)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12905,,МС80/50х250-3.22(515),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12908,,МС80/50х400-3.11(765),,,"simple, virtual",1,500,0,,0,0,1
+12911,,МС80/50х425-3.11(665),,,"simple, virtual",1,500,0,,0,0,1
+12914,,МС80/50х560-3.11(925)(03),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12917,,МС50/25х120-3.22(350),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12922,,МС63/30х400-3.25(541),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12929,,МС80/50х580-3.11(930),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12932,,МС63/30х145-3.22(320),,,"simple, virtual",1,500,0,,0,0,1
+12937,,МС50-3405215-А,,,"simple, virtual",1,0,0,,0,0,1
+12946,,МС80/50х400-3.55(650),,,"simple, virtual",1,500,0,,0,0,1
+12949,,МС80/50х400-3.22(665),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12955,,МС80/50х560-3.22(825),,,"simple, virtual",1,500,0,,0,0,1
+12958,,МС80/40х630-4.11.1(935),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12959,,C100/40x200-3.44(515),,,"simple, virtual",1,500,0,,0,0,1
+12963,,MC100/40x200-3.44.1(515),,,"simple, virtual",1,500,0,,0,0,1
+12964,,МС63/30х250-3.22(515),,,"simple, virtual",1,500,0,,0,0,1
+12967,,МС63/30х175-3.25(316),,,"simple, virtual",1,500,0,,0,0,1
+12970,,МС80/50х1000-3.11(1365),,,"simple, virtual",1,500,0,,0,0,1
+12974,,MC110/40x200-3.44.1(515),,,"simple, virtual",1,550,0,,0,0,1
+12975,,МС80/50х560-3.11(925)(02),,,"simple, virtual",1,500,0,,0,0,1
+12978,,МС63/30х400-3.11(660),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+12981,,МС63/30х250-3.11(515),,,"simple, virtual",1,500,0,,0,0,1
+12984,,МС80/50х350-3.11(590),,,"simple, virtual",1,3,0,,0,0,1
+12987,,МС80/60х1265-4.11(1590),,,"simple, virtual",1,500,0,,0,0,1
+12990,,МС63/30х175-3.22(343),,,"simple, virtual",1,500,0,,0,0,1
+12993,,МС63/30х250-3.25(391),,,"simple, virtual",1,500,0,,0,0,1
+12996,,"МС50/30х100. 22(305)",,,"simple, virtual",1,3,0,,0,0,1
+12998,,МС50-3405215-А-01,,,"simple, virtual",1,0,0,,0,0,1
+13000,,МС63-3405115-А-02,,,"simple, virtual",1,0,0,,0,0,1
+13003,,"МС50/30х200. 22(405)",,,"simple, downloadable, virtual",1,500,0,,0,0,1
+13006,,"МС80/40х250. 22(550)",,,"simple, downloadable, virtual",1,500,0,,0,0,1
+13009,,МС80/40х400-3.22(700),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+13012,,МС80/40х630-3.22(930)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+13015,,МС100/50х200-4.44(515),,,"simple, virtual",1,500,0,,0,0,1
+13030,,МС100/50х250-3.72(560),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+13036,,МС80/50х900-3.31(450),,,"simple, downloadable, virtual",1,3,0,,0,0,1
+13039,,МС125/63х620-3.11(1050),,,"simple, virtual",1,500,0,,0,0,1
+13042,,Ц50-3405215-А-02,,,"simple, virtual",1,0,0,,0,0,1
+13044,,MC125/50x20-3.44.1(515),,,"simple, virtual",1,0,0,,0,0,1
+13046,,MC63-3405115-A-01,,,"simple, virtual",1,0,0,,0,0,1
+13048,,МС50-3405215-А-02,,,"simple, virtual",1,550,0,,0,0,1
+13050,,MC63-3405115-A-03,,,"simple, virtual",1,500,0,,0,0,1
+13090,,МС40/25х250-3.11(440),,,"simple, virtual",1,500,0,,0,0,1
+13179,,МС80/40х250-3.22(550),,,"simple, virtual",1,500,0,,0,0,1
+13302,,МС110/56х900-3.11(1250),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+13352,,МС63/40х1200-4.11.1(1510)(01),,,"simple, virtual",1,500,0,,0,0,1
+13471,,МС80/40х320-3.11.3(620)(002),,,"simple, virtual",1,500,0,,0,0,1
+13483,,МС80/50х315-3.11.3(625)(002) ,,,"simple, virtual",1,500,0,,0,0,1
+13496,,МС125/70х784-3.11.6(1265)(002) ,,,"simple, virtual",1,500,0,,0,0,1
+13506,,МС140/80х553-3.11.6(1050)(002),,,"simple, virtual",1,500,0,,0,0,1
+13524,,МС80/40х430-3.11.3(680)(002),,,"simple, virtual",1,500,0,,0,0,1
+13527,,С75/30х200-3.44(515)(002),,,"simple, virtual",1,500,0,,0,0,1
+13534,,МС125/50х400-3.11.3(797)(002),,,"simple, virtual",1,500,0,,0,0,1
+13543,,МС125/50х400-3.11.3(797)(01)(002) ,,,"simple, virtual",1,500,0,,0,0,1
+13546,,МС125/50х400-4.11.3(797)(002),,,"simple, virtual",1,500,0,,0,0,1
+13549,,МС125/50х400-4.11.3(797)(02)(002),,,"simple, virtual",1,500,0,,0,0,1
+13552,,МС125/50х400-4.11.1(797)(002) ,,,"simple, virtual",1,500,0,,0,0,1
+13556,,МС63/30х100-3.11.3(335)(002),,,"simple, virtual",1,500,0,,0,0,1
+13565,,МС80/40х150-3.14.3(475)(002),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+13601,,"Подъем   крышки цистерны (КО-560А)",,,"simple, virtual",1,500,0,,0,0,1
+13619,,"МС80/40х320. 22(620)",,,"simple, downloadable, virtual",1,500,0,,0,0,1
+14087,,МС50/25х200-3.55(426),,,"simple, virtual",1,500,0,,0,0,1
+14090,,МС63/40х500-3.11К(800),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+14093,,МС40/25х160-3.11К(350),,,"simple, virtual",1,500,0,,0,0,1
+14096,,МС40/25х63-3.22К(200),,,"simple, virtual",1,500,0,,0,0,1
+14099,,МСР25х40-3.22(200),,,"simple, virtual",1,500,0,,0,0,1
+14102,,"МС40/25х63-3.25(222,5)",,,"simple, virtual",1,500,0,,0,0,1
+14105,,МС63/32х275-4.55(500),,,"simple, virtual",1,500,0,,0,0,1
+14108,,МСР40х85-3.22(285),,,"simple, virtual",1,500,0,,0,0,1
+14111,,МСР40х63-3.22(285),,,"simple, virtual",1,500,0,,0,0,1
+14114,,МСР40/25х180-3.22К(405),,,"simple, virtual",1,500,0,,0,0,1
+14117,,МСР32х340-3.25(580),,,"simple, virtual",1,500,0,,0,0,1
+14120,,МС40/25х360-3.22К(555),,,"simple, virtual",1,500,0,,0,0,1
+14126,,МC/25х200-3.55(426)(01),,,"simple, virtual",1,500,0,,0,0,1
+14238,,МС50/25х200-3.22(395),,,"simple, virtual",1,500,0,,0,0,1
+14244,,МС63/40х320-4.11(620),,,"simple, virtual",1,500,0,,0,0,1
+14247,,МС80/40х200-4.11(500),,,"simple, virtual",1,500,0,,0,0,1
+14257,,"МС75/30х200-3.44К(630),      Ц75х200-3К",,,"simple, virtual",1,500,0,,0,0,1
+14260,,МС40/25х100-3.11(290),,,"simple, virtual",1,500,0,,0,0,1
+14266,,МС50/25х320-3.11(525),,,"simple, virtual",1,500,0,,0,0,1
+14272,,МС63/40х500-3.11.3(695),,,"simple, virtual",1,500,0,,0,0,1
+14291,,МС63/40х500-3.11.3(695)(01),,,"simple, virtual",1,500,0,,0,0,1
+14318,,МС100/50х630-3.11(930),,,"simple, virtual",1,500,0,,0,0,1
+14532,, МС100/50х200-3.44(515)(01),,,"simple, virtual",1,500,0,,0,0,1
+14547,, МС80/40х250-3.11(550)(01),,,"simple, virtual",1,500,0,,0,0,1
+14577,, МС100/63х250-3.11(565)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+14641,,МС100/50х800-3.11(1130)(01),,,"simple, virtual",1,500,0,,0,0,1
+14690,,МС80/50х515-3.11(800),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+14693,,МС80/50х180-3.11(1070),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+14703,,МС75/30х200-3.443А(515),,,"simple, virtual",1,500,0,,0,0,1
+14716,,"МС80/56х160-3.11 (510)",,,"simple, virtual",1,500,0,,0,0,1
+14720,,МС80/40х160-3.11(510),,,"simple, virtual",1,500,0,,0,0,1
+14732,,МС80/40х400-3.11(700)(02),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+14745,,МС125/63х250-3.72С(560),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+14757,,МС125/63х800-4.11(1192),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+14760,,МС125/80х800-4.11(1192),,,"simple, virtual",1,500,0,,0,0,1
+14778,,МС80/40х85-3.22(275),,,"simple, virtual",1,500,0,,0,0,1
+14793,,МС100/50х160-3.22(425)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+14803,,МС100/50х160-3.22(425),,,"simple, virtual",1,500,0,,0,0,1
+14804,,"AUTO-DRAFT (Копировать)",,,simple,-1,500,0,,0,0,1
+14813,,МС80/35х680-4.11(900),,,"simple, virtual",1,500,0,,0,0,1
+14822,,МС80/35х680-4.11(900)(01),,,"simple, virtual",1,500,0,,0,0,1
+14843,,МС125/63х200-3.11(515),,,"simple, virtual",1,500,0,,0,0,1
+14858,,МC100/50х800-4.11(1130)(01),,,"simple, virtual",1,500,0,,0,0,1
+14885,,"МС80/40х200-4.24(450)      ",,,"simple, virtual",1,500,0,,0,0,1
+14890,,МС80/40х500-4.44(750),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+14920,,МС100/40х400-4.44(715)(01),,,"simple, virtual",1,500,0,,0,0,1
+14926,,МС100/50х200-4.24(515),,,"simple, virtual",1,500,0,,0,0,1
+17067,,МС100/50х630-3.22(930)(01),,,"simple, virtual",1,500,0,,0,0,1
+17073,,МС50/325х250-3.22(485),,,"simple, virtual",1,500,0,,0,0,1
+17091,,МС63/40х150-3.22(606),,,"simple, virtual",1,500,0,,0,0,1
+17171,, МС100/40х610-3.44(870)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+17174,, МС80/40х200-3.11(445),,,"simple, virtual",1,500,0,,0,0,1
+17177,,"МС100/40х400-3.44(515)(01)      ",,,"simple, virtual",1,500,0,,0,0,1
+17183,,МС80/56х900-3.11(1250)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+17190,,МС80/40х400-3.22(700)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+17210,,МС110/56х225-3.31(132) ,,,"simple, downloadable, virtual",1,500,0,,0,0,1
+17216,,МС80/56х630-3.11(1010),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+19747,,МС125/50х200-3.11(515),,,"simple, virtual",1,500,0,,0,0,1
+19756,,С75/30х110-3.44(515)(Ц75х110-3),,,"simple, virtual",1,500,0,,0,0,1
+19797,,МС100/50х250-3.72(560)(бугельный),,,"simple, virtual",1,500,0,,0,0,1
+19962,,МС40/25х180-3.22К(405),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+19964,,МС63/25х200-3.55(426)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+19979,,МС40/25х160-4.11(350),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20022,,МС50/25х400-3.11(605),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20024,,МС80/40х250-4.22(550)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20095,,МС50/30х020-3.22(435),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20097,,МС100/50х800-4.11(1130)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20099,,МС50/30х160-4.22(395),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20104,,МС80/40х200-4.22(515),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20109,,С100/40х400-3.44(715),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20161,,МС80/56х160-3.11(510)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20165,,МС80/56х400-3.11(765)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20175,,МС80/56х280-3.11(645)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20215,,МС80/50х160-3.11(510),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20227,,МС80/50х400-3.11(765)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20230,,МС80/50х280-3.11(610),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20256,,МС80/50х400-3.11(1085),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20262,,МС80/56х160-3.11(525),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20296,,МС80/50х200-3.11(445),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20483,,"МСР25х250-3.16.3(392) G8056-11E-075",,,"simple, virtual",1,500,0,,0,0,1
+20500,,"МС32/20х260-3.11.3С(435) G4148-11Е-000",,,"simple, virtual",1,500,0,,0,0,1
+20506,,"МС35/25х250-3.16.3С(394) G1094-11Е-000",,,"simple, virtual",1,500,0,,0,0,1
+20513,,"МСP50х55-3.66(182) G8041-11E-000",,,"simple, virtual",1,500,0,,0,0,1
+20518,,"MCP50x55-3.66(182)(01) G8048-11E-000",,,"simple, virtual",1,500,0,,0,0,1
+20520,,"МС40/20х160-20.1G1F.0A0A.  350.01.G",,,"simple, virtual",1,500,0,,0,0,1
+20525,,"MC63/32x500-20.1G1D.0A0A.  800.01.G",,,"simple, virtual",1,500,0,,0,0,1
+20530,,"MCP63x800-3.11(1100)(01) G8050-11E-000",,,"simple, virtual",1,500,0,,0,0,1
+20532,,"MC40/20x160-20.1G1A.0A0A.  350.01.G",,,"simple, virtual",1,500,0,,0,0,1
+20534,,"МС40/20х200-20.1G1D.0A0A.  390.01.G",,,"simple, virtual",1,500,0,,0,0,1
+20539,,"МС40/20х200-20.1G1A.  0A0A.390.01.G",,,"simple, virtual",1,500,0,,0,0,1
+20542,,"MC40/20x70-20.1G1A.3A3A.  260.01.G",,,"simple, virtual",1,500,0,,0,0,1
+20548,,"MC40/20x70-16.1G1A.0A0A.  260.01.G",,,"simple, virtual",1,500,0,,0,0,1
+20550,,"МС50/30х160-20.1G1A.0A0A.  395.01.G",,,"simple, virtual",1,500,0,,0,0,1
+20555,,"MC50/30x320-20.1G1A.0A0A.  555.01.G",,,"simple, virtual",1,500,0,,0,0,1
+20558,,"МС50/28х40-20.2G2С.0A0A.  280.02.G",,,"simple, virtual",1,500,0,,0,0,1
+20560,,"MC50/28x160-20.2G2С.0A0A.  395.02.G",,,"simple, virtual",1,500,0,,0,0,1
+20563,,"МС50/28х200-20.2G2С.0A0A.  435.02.G",,,"simple, virtual",1,500,0,,0,0,1
+20565,,"МС50/28х320-20.2G2С.0A0A.  555.02.G",,,"simple, virtual",1,500,0,,0,0,1
+20567,,"MC50/28x250-20.2G2С.0A0A.  485.02.G",,,"simple, virtual",1,500,0,,0,0,1
+20569,,МС75/30х200-3.44(515),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20570,,"МС63/28х200-20.5А5А.  3А3А.435.01.G",,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20576,,"МС63/28х200-20.5А5А.3А3А.  435.02.G",,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20579,,"MC63/32x200-20.5A5A.3A3A.  439.01.G",,,"simple, virtual",1,500,0,,0,0,1
+20581,,"MC63/28x130-20.5A5A.0A0A.  435.01.G",,,"simple, virtual",1,500,0,,0,0,1
+20583,,"MC63/25x185-20.5A5A.3A3A.  444.01.G",,,"simple, virtual",1,500,0,,0,0,1
+20588,,MC80/50x250-20.2H2C.0A0A.550.01.G,,,"simple, virtual",1,500,0,,0,0,1
+20593,,"MC80/45x530-4.15(910)(075) G4137-11E-000",,,"simple, virtual",1,500,0,,0,0,1
+20595,,"MC100/50x250-4.15(655) G2798-11E-000",,,"simple, virtual",1,500,0,,0,0,1
+20597,,"MC100/50х250-3.11(571) G2785-11E-000",,,"simple, virtual",1,500,0,,0,0,1
+20599,,"MC100/50х250-3.11(571) (01)G2786-11E-000",,,"simple, virtual",1,500,0,,0,0,1
+20601,,"Маслопровод вращающийся В1-14-22PК",,,"simple, virtual",1,500,0,,0,0,1
+20605,,"Маслопровод вращающийся В1-14-20МК",,,"simple, virtual",1,500,0,,0,0,1
+20639,,Ц100х400-3,,,"simple, virtual",1,500,0,,0,0,1
+20824,,МС80/40х85-3.22(275)(01),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20829,,МС63/30х85-3.22(275),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20850,,С100/40х200-3.44(515),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+20852,,МС100/40х200-3.44.1(515),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+23792,,MC125/63х200-3.11(515),,,"simple, downloadable, virtual",1,500,0,,0,0,1
+27583,,"ВС100/40х500-20.2Н2С.3А3А.  800.02.G(305)",,,"simple, downloadable, virtual",1,500,0,,0,0,1
+27601,,"BС125/50х800-20.2H2C.3A3A.  1193.03.G(305)",,,"simple, downloadable, virtual",1,500,0,,0,0,1
+27607,,ВС80/40х630-4.21.3(930),,,"simple, downloadable, virtual",1,550,0,,0,0,1
+27611,,"BС100/40х500-20.2H2C.3A3A.  800.02.G(305)","<style>
+/*скрыть цену*/
+    p.price {
+        display:none;
+    }
+/*скрыть карту сайта*/
+nav.woocommerce-breadcrumb{
+       display:none;
+}    
+/*скрыть надпись гц*/
+#product-27611 > div.summary.entry-summary > span > a{
+    color:#f8f5f4;
+    pointer-events: none;
+}
+/*изменить цвет и изменить ссылку*/
+#product-27611 > div.summary.entry-summary > div > span > a{
+    color:black;
+}
+/*изменить цвет и убрать ссылки*/
+#tab-additional_information > table > tbody > tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--attribute_pa_diamp > td > p > a{
+    color:black;
+    pointer-events: none;
+}
+#tab-additional_information > table > tbody > tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--attribute_pa_diamsh > td > p > a{
+    color:black;
+    pointer-events: none;
+}
+#tab-additional_information > table > tbody > tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--attribute_pa_hod > td > p > a{
+    color:black;
+    pointer-events: none;
+}
+#tab-additional_information > table > tbody > tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--attribute_pa_mezhos > td > p > a{
+    color:black;
+    pointer-events: none;
+}
+/*поменять картинку*/
+#product-27611 > div.woocommerce-product-gallery.woocommerce-product-gallery--without-images.woocommerce-product-gallery--columns-4.images > div > div > img{
+}
+/*добавить маргины*/
+.ast-page-builder-template .site-content > .ast-container {
+    max-width: 1224px;
+    padding: 0;
+    margin-top: 107px;
+}
+/**/
+a[title=""Просмотр корзины""]{
+    color: #fa9100;
+}
+</style>",,"simple, downloadable, virtual",1,550,0,,0,0,1
+27627,,"BС100/50х800-20.2H1А.3A3A.  1130.02.G(305)","<style>
+/*скрыть цену*/
+    p.price {
+        display:none;
+    }
+/*скрыть карту сайта*/
+nav.woocommerce-breadcrumb{
+       display:none;
+}    
+/*скрыть надпись гц*/
+span.single-product-category > a{
+    color:#f8f5f4;
+    pointer-events: none;
+}
+/*изменить цвет и изменить ссылку*/
+span.posted_in > a{
+    color:black;
+   /* content: attr(""https://belar.pro/?page_id=17871"");*/
+}
+/*изменить цвет и убрать ссылки*/
+#tab-additional_information > table > tbody > tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--attribute_pa_diamp > td > p > a{
+    color:black;
+    pointer-events: none;
+}
+#tab-additional_information > table > tbody > tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--attribute_pa_diamsh > td > p > a{
+    color:black;
+    pointer-events: none;
+}
+#tab-additional_information > table > tbody > tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--attribute_pa_hod > td > p > a{
+    color:black;
+    pointer-events: none;
+}
+#tab-additional_information > table > tbody > tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--attribute_pa_mezhos > td > p > a{
+    color:black;
+    pointer-events: none;
+}
+/*поменять картинку*/
+#product-27611 > div.woocommerce-product-gallery.woocommerce-product-gallery--without-images.woocommerce-product-gallery--columns-4.images > div > div > img{
+}
+/*добавить маргины*/
+.ast-page-builder-template .site-content > .ast-container {
+    max-width: 1224px;
+    padding: 0;
+    margin-top: 107px;
+}
+/**/
+a[title=""Просмотр корзины""]{
+    color: #fa9100;
+}
+</style>",,"simple, downloadable, virtual",1,550,0,,0,0,1
+27633,,"BС80/40х400-20.2H2C.3A3A.  700.01.G(305)","<style>
+    <style>
+/*скрыть цену*/
+    p.price {
+        display:none;
+    }
+/*скрыть карту сайта*/
+nav.woocommerce-breadcrumb{
+       display:none;
+}    
+/*скрыть надпись гц*/
+#product-27633 > div.summary.entry-summary > span > a{
+    color:#f8f5f4;
+    pointer-events: none;
+}
+/*изменить цвет и изменить ссылку*/
+#product-27633 > div.summary.entry-summary > div > span > a{
+    color:black;
+}
+/*изменить цвет и убрать ссылки*/
+#tab-additional_information > table > tbody > tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--attribute_pa_diamp > td > p > a{
+    color:black;
+    pointer-events: none;
+}
+#tab-additional_information > table > tbody > tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--attribute_pa_diamsh > td > p > a{
+    color:black;
+    pointer-events: none;
+}
+#tab-additional_information > table > tbody > tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--attribute_pa_hod > td > p > a{
+    color:black;
+    pointer-events: none;
+}
+#tab-additional_information > table > tbody > tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--attribute_pa_mezhos > td > p > a{
+    color:black;
+    pointer-events: none;
+}
+/*поменять картинку*/
+#product-27633 > div.woocommerce-product-gallery.woocommerce-product-gallery--without-images.woocommerce-product-gallery--columns-4.images > div > div > img{
+}
+/*добавить маргины*/
+.ast-page-builder-template .site-content > .ast-container {
+    max-width: 1224px;
+    padding: 0;
+    margin-top: 55px;
+}
+/**/
+a[title=""Просмотр корзины""]{
+    color: #fa9100;
+}
+</style>",,"simple, downloadable, virtual",1,550,0,,0,0,1
+27712,,"BС40/25х100-20.1G1A.3A3A.  290.01.G(305)",,,"simple, downloadable, virtual",1,550,0,,0,0,1

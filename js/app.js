@@ -1,3 +1,5 @@
+window.location.href = 'https://vitsmol.github.io/belarSimple/new/#/';
+
 const menuBtn = document.querySelector('.menu');
 const closeBtn = document.querySelector('.close');
 const openClose = (open, close, menu, addClose) => {
