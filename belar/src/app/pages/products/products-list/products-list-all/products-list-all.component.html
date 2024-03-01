@@ -1,0 +1,32 @@
+<div class="wrapper">
+  <mat-paginator [length]="this.productsArr.length" [pageSize]="10" showFirstLastButtons [pageSizeOptions]="[5, 10, 25, 100, 380]"
+  aria-label="Select page" (page)="pageHandler($event)">
+</mat-paginator>
+  <div class="cards">
+  <div class="card-container" *ngFor="let item of productsSlice">
+    <div class="card-wrapper">
+    <img src="assets/img/cy.png" alt="" class="card-img">
+    <h4 class="card-title">
+      {{item.title}}
+    </h4>
+
+    <div class="piston-diameter" *ngIf="item.pa_diamp">
+      <strong>Диаметр поршня: </strong> <span>{{ item.pa_diamp}}</span>
+    </div>
+
+    <div class="rod-diameter" *ngIf="item.pa_diamsh">
+      <strong>Диаметр штока: </strong> <span>{{ item.pa_diamsh }}</span>
+    </div>
+    <div class="piston-stroke" *ngIf="item.pa_hod">
+      <strong>Ход поршня: </strong><span>{{ item.pa_hod}}</span>
+    </div>
+    <div class="center-distance" *ngIf="item.pa_mezhos">
+      <strong>Межосевое расстояние: </strong> <span>{{ item.pa_mezhos }}</span>
+    </div>
+    <button class="add-to-cart" mat-raised-button color="accent">В корзину</button>
+    </div>
+  </div>
+</div>
+
+
+</div>

@@ -1,0 +1,36 @@
+<header>
+  <div class="header-wrapper">
+    <img class="logo" src="assets/img/logoBelar.png" alt='OOO TM "Белар"' title='OOO TM "Белар" - производство гидроцилиндров'>
+    <span class="material-symbols-outlined menu show" (click)="openClose('open')">
+      menu
+    </span>
+    <span class="material-symbols-outlined close" (click)="openClose('close')">
+      close
+    </span>
+    <nav class="header__navigation">
+      <ul id="listMenu">
+        <li>
+          <a (click)="getRoute()" (click)="removeMenu('close')" routerLinkActive="active" [routerLink]="['']" [routerLinkActiveOptions]="{exact:true}" class="caption-layer">Главная</a>
+        </li>
+        <li>
+          <a (click)="getRoute()" (click)="removeMenu('close')" routerLinkActive="active" [routerLink]="['/products']" class="caption-layer">Продукция</a>
+        </li>
+        <li>
+          <a (click)="getRoute()" (click)="removeMenu('close')" routerLinkActive="active" [routerLink]="['/cert']" class="caption-layer">Сертификаты</a>
+        </li>
+        <li>
+          <a (click)="getRoute()" (click)="removeMenu('close')" routerLinkActive="active" [routerLink]="['/login']" class="caption-layer">Личный кабинет</a>
+        </li>
+        <li>
+          <a href="#contacts" (click)="removeMenu('close')" class="caption-layer" (click)="scrollTo($event)">Контакты</a>
+          <!-- <a  [href]="currentRoute + '#contacts'" (click)="getRoute()"  class="caption-layer">Контакты</a> -->
+        </li>
+        <li>
+          <a (click)="getRoute()" (click)="removeMenu('close')" routerLinkActive="active" [routerLink]="['/cart']" class="caption-layer">Корзина</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,289 @@
+@import 'variables'
+.main
+  padding: 0
+.start-content
+  height: 100%
+  position: relative
+.caption
+  padding-top: 80px
+  display: flex
+  height: 100%
+.caption-wrapper
+  width: $contentWidth
+  height: 100%
+  margin: 0 auto
+  display: grid
+  gap: 30px
+  grid-template-areas:"caption caption" "start gallery" "vid cyl"
+  grid-template-columns: 1fr 1fr
+  .orgname
+    display: flex
+    justify-content: end
+    text-transform: uppercase
+    grid-area: caption
+    .name
+      font-size: 20px
+      font-weight: 500
+      color: $mainColor
+      font-style: oblique
+      margin-bottom: 0
+.main-caption-wrapper
+  grid-area: start
+.main-caption
+  font-size: 50px
+  font-weight: 500
+.sub-caption
+  margin-top: 20px
+  font-size: 23px
+  strong
+    font-weight: normal
+.next
+  grid-area: cyl
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  position: relative
+  column-gap: 50px
+  img
+    position: relative
+    // width: 300px
+    transform: scale(1)
+    transition: transform 0.5s
+    z-index: 300
+    height: 100px
+    justify-self: center
+    &:hover
+      cursor: pointer
+      transition: 0.5s transform
+      transform: scale(2.1)
+      z-index: 5
+
+
+  // display: block
+  // font-size: 20px
+  // width: 313px
+  // height: 60px
+  // outline: none
+  // background-color: $mainColor
+  // font-weight: bold
+  // border: none
+  // margin-top: 20px
+  // color: $bgColor
+  // text-decoration: none
+  // text-align: center
+  // line-height: 60px
+  // box-shadow: $mainShadow
+  // border-radius: 5px
+  // &:hover
+  //   cursor: pointer
+  //   background-color: $bgColor
+  //   color: $mainColor
+  //   transition: all .5s
+
+.gallery
+  display: flex
+  flex-wrap: wrap
+  gap: 10px
+  grid-area: gallery
+  align-items: flex-start
+  .card
+    width: 80px
+    border-radius: 16px
+    height: inherit
+    overflow: hidden
+    transition: 0.4s ease-in-out
+    box-shadow: $mainShadow
+    flex: 0.25
+    figure
+      margin-bottom: 0
+    img
+      width: 600px
+    &:hover
+      flex-grow: 3
+      // flex-basis: 80%
+      font-weight: bold
+      cursor: pointer
+      border-radius: 8px
+.vid
+  grid-area: vid
+  justify-self: center
+  width: 600px
+  z-index: -1
+
+  //! Секция "О компании"
+.about
+  padding: 70px 0
+  display: flex
+  align-items: center
+  flex-direction: column
+.about-wrapper
+  width: $contentWidth
+  height: 100%
+  display: flex
+  flex-direction: column
+  gap: 20px
+  .main-caption
+    text-align: center
+    font-size: 40px
+  .description
+    gap: 20px
+    .description-image
+      float: left
+      margin-right: 20px
+    h2
+      font-size: 25px
+    strong
+      font-weight: normal
+    p
+      font-size: 18px
+
+.icons-wrapper
+  width: 100%
+  display: flex
+  flex-direction: row
+  height: fit-content
+  .icon-card
+    display: flex
+    font-weight: normal
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    color: $bgColor
+    text-decoration: none
+    padding: 20px
+    border: 1px solid $mainColor
+    flex-grow: 1
+    text-align: center
+    .icon path
+      fill: $mainColor
+    &:not(:last-child)
+      border-right: none
+    &:hover
+      cursor: pointer
+.image-container
+  display: grid
+  grid-template-rows: repeat(1, 1fr)
+  grid-template-columns: repeat(4, 1fr)
+  gap: 1vw
+  .img-item
+    position: relative
+    width: 19vw
+    box-shadow: $mainShadow
+    justify-self: center
+    transform: scale(1)
+    &:hover
+      // transform: scale(2)
+      cursor: -webkit-zoom-in
+.video-wrapper
+  width: 100%
+  display: flex
+  justify-content: space-between
+.video
+  max-width: 500px
+  height: 200px
+@media screen and (max-width: 1460px)
+  h1.main-caption
+    font-size: 35px
+  .sub-caption
+    font-size: 20px
+  .caption .gallery .card:hover
+    flex-grow: 3
+  .caption-wrapper
+    column-gap: 0
+    grid-template-columns: 1fr 1.5fr
+
+@media screen and (max-width: 1360px)
+  h1.main-caption
+    font-size: 30px
+  .sub-caption
+    font-size: 18px
+    margin-top: 10px
+  .caption .gallery .card:hover
+    flex-grow: 6
+  .caption-wrapper
+    row-gap: 15px
+@media screen and (max-width: 1260px)
+  .caption .gallery .card:hover
+    flex-grow: 1.5
+  .caption-wrapper
+    row-gap: 50px
+    grid-template-columns: 1.5fr 1fr
+    grid-template-areas: "caption caption" "start start" "gallery gallery" "cyl cyl" "vid vid"
+  .video-wrapper
+    align-items: center
+    justify-content: center
+    gap: 20px
+    flex-wrap: wrap
+    video
+      max-width: 500px
+      max-height: 300px
+      &:last-child
+        margin: 0 auto
+@media screen and (max-width: 1160px)
+  .caption .gallery .card:hover
+    flex-grow: 1.6
+  .vid
+    width: auto
+    max-width: 600px
+  .description-image
+    width: 44vw
+    height: fit-content
+@media screen and (max-width: 1000px)
+  .caption .gallery .card:hover
+    flex-grow: 2.9
+  .caption-wrapper
+      grid-template-columns: 1fr
+      grid-template-areas: "caption" "start" "gallery" "cyl" "vid"
+  .description
+    flex-direction: column
+    .description-image
+      align-self: center
+@media screen and (max-width: 813px)
+  .icons-wrapper
+    flex-wrap: wrap
+    .icon-card
+      flex-basis: 50%
+      &:nth-child(2)
+        border-right: 1px solid $mainColor
+      &:nth-child(1), &:nth-child(2)
+        border-bottom: none
+  .image-container
+    grid-template-rows: repeat(4,1fr)
+    grid-template-columns: repeat(2,1fr)
+    .img-item
+      width: 40vw
+@media screen and (max-width: 768px)
+  .caption .gallery .card:hover
+    flex-grow: 2.9
+  .caption .gallery .card img
+    width: 453px
+  .video-wrapper
+    flex-direction: column
+    gap: 20px
+    align-items: center
+  .description
+    display: flex
+    video
+      max-height: max-content
+      width: 100%
+      height: 300px
+@media screen and (max-width: 680px)
+  .next
+    justify-content: center
+    grid-template-rows: repeat(3, 1fr)
+    grid-template-columns: calc($contentWidth / 2)
+    img
+      width: $contentWidth
+      height: auto
+      &:hover
+        transform: scale(1.7)
+  .caption .gallery .card img
+    width: 410px
+  .caption .gallery .card:hover
+    flex-grow: 3.2
+  .vid
+    max-width: 400px
+@media screen and (max-width: 530px)
+  .caption .gallery .card img
+    width: 320px
+  .caption .gallery .card:hover
+    flex-grow: 3.9

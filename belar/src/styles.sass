@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap'
+@import 'variables'
+@keyframes opacity-links
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+*
+  animation-duration: 0.5s
+  animation-name: opacity-links
+body
+  font-family: 'Hydro', sans-serif
+  font-family: 'Noto Sans', sans-serif
+  font-family: 'Exo 2', sans-serif
+  font-family: 'Monserrat', sans-serif
+  color: $bgColor
+  background-color: $background
+  overflow-x: hidden
+
+
+.logo
+  // background-image: url(assets/img/logoBelar.png)
+  // width: 200px
+  height: inherit
+  background-repeat: no-repeat
+  background-size: contain

@@ -1,0 +1,16 @@
+<div class="products-wrapper">
+  <nav class="products-navigation">
+    <ul>
+      <li routerLinkActive="active">
+        <a mat-raised-button color="accent" [routerLink]="['/products', 'list']">Из каталога</a>
+      </li>
+      <li routerLinkActive="active">
+        <a mat-raised-button color="accent" [routerLink]="['/products', 'constructor']">По индивидуальному заказу</a>
+      </li>
+      <li routerLinkActive="active">
+        <a mat-raised-button color="accent" [routerLink]="['/products', 'technick']">Применяемость по видам техники</a>
+      </li>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

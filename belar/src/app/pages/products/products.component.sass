@@ -1,0 +1,31 @@
+@import 'variables'
+.products-wrapper
+  margin: 0 auto
+  padding-top: 60px
+  ul
+    padding: 10px 0
+    background: $gradientBg
+    list-style-type: none
+    display: flex
+    justify-content: center
+    gap: 30px
+    margin: 0
+    position: relative
+    li
+      transform: translateX(0) translateY(0)
+      transition: all 0.5s
+    a
+      border-radius: 3px
+      text-decoration: none
+      font-size: 14px
+      padding: 10px
+      position: relative
+
+    li:hover, .active
+      transition: position, transform 0.5s
+      position: relative
+      transform: translateX(-2px) translateY(-2px)
+      a
+        box-shadow: 1px 1px 8px #00000054
+        transition: 0.5s position, transform, box-shadow
+

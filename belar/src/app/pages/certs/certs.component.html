@@ -1,0 +1,10 @@
+<section class="certification">
+
+  <div class="cert-wrapper">
+    <figure *ngFor="let cert of certsArray">
+      <img class="cert-img" src="{{cert.src}}" alt="{{cert.alt}}" title="{{cert.title}}">
+      <figcaption>{{cert.title}}</figcaption>
+    </figure>
+  </div>
+</section>
+<!-- <img src="assets/img/certs/cert-1.png" alt=""> -->
