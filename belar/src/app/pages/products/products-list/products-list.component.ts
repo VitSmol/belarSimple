@@ -36,7 +36,7 @@ export class ProductsListComponent implements OnInit {
         for (let [key, val] of Object.entries(this.query)) {
           val.splice(0,1)
         }
-        console.log(this.query);
+        // console.log(this.query);
       })
   }
 

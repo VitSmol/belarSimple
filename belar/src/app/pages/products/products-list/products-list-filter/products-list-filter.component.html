@@ -1,20 +1,29 @@
 <p>products-list-filter works!</p>
 <form>
-  <mat-form-field>
+  <mat-form-field appearance="outline">
     <mat-label>Диаметр поршня</mat-label>
     <mat-chip-grid #chipGrid area-label="Выбор диаметра поршня">
-      <mat-chip-row *ngFor="let diamP of this.pistonDiameter" oved)="remove(diamP)">
-        {{diamP}}
-        <button matChipRemove [attr.aria-label]="'удалить '+ diamP">
+      <mat-chip-row *ngFor="let startdiamP of this.currentPistonDiameters"
+      (removed)="remove(startdiamP)">
+        {{startdiamP}}
+        <button matChipRemove [attr.aria-label]="'удалить '+ startdiamP">
           <mat-icon>cancel</mat-icon>
         </button>
       </mat-chip-row>
     </mat-chip-grid>
-    <input placeholder="Добавить диаметр" #diamPInput [matChipInputFor]="chipGrid" [matAutocomplete]="auto"
-      [matChipInputSeparatorKeyCodes]="separatorKeysCodes" (matChipInputTokenEnd)="add($event)" />
+
+    <input placeholder="Добавить диаметр"
+      #diamPInput
+      [formControl]="pistonDiameterControl"
+      [matChipInputFor]="chipGrid"
+      [matAutocomplete]="auto"
+      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      (input)="input($event)"
+      (matChipInputTokenEnd)="add($event)"
+      />
 
     <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
-      @for (diamP of filteredDiamP | async; track diamP) {
+      @for (diamP of intersectArr; track diamP) {
       <mat-option [value]="diamP">
         {{diamP}}
       </mat-option>
