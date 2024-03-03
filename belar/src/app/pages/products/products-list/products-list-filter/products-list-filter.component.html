@@ -1,5 +1,7 @@
 <p>products-list-filter works!</p>
 <form>
+
+  <!-- ! Диаметр поршня -->
   <mat-form-field appearance="outline">
     <mat-label>Диаметр поршня</mat-label>
     <mat-chip-grid #chipGrid area-label="Выбор диаметра поршня">
@@ -18,13 +20,15 @@
       [matChipInputFor]="chipGrid"
       [matAutocomplete]="auto"
       [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-      (input)="input(diamPInput, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)"
       (matChipInputTokenEnd)="add($event, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)"
+      matChipInputAddOnBlur="true"
+      (input)="input($event, diamPInput, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)"
       />
 
-    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event, diamPInput, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)">
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event, diamPInput, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)"
+    (optionActivated)="changeInput($event, diamPInput)">
       @for (diamP of intersectPistonDiameters; track diamP) {
-      <mat-option [value]="diamP" (keydown)="log($event)">
+      <mat-option [value]="diamP">
         {{diamP}}
       </mat-option>
       }

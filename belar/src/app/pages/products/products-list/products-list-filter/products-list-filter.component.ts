@@ -15,14 +15,15 @@ import { map, startWith } from 'rxjs';
 })
 export class ProductsListFilterComponent {
 
-  private searchValue: string = '';
-
   separatorKeysCodes: number[] = [ENTER, COMMA]
 
   public intersectPistonDiameters: string[] = []
   public searchPistonDiameters: string[] = ['32']; //! стартовое значение диметра поршня
-  // filteredDiamP: string[] = [];
-  // Observable<string[]>;
+
+  public intersectStrokeDiameters: string[] = []
+  public searchStrokeDiameters: string[] = []; //! стартовое значение диметра поршня
+
+
   pistonDiameterControl = new FormControl();
 
   query!: query
@@ -32,6 +33,7 @@ export class ProductsListFilterComponent {
       this.query = query
       // this.updateIntersectArr(this.intersectPistonDiameters, this.query.pa_diamp, this.searchPistonDiameters)
       this.intersectPistonDiameters = this.intersection(this.query.pa_diamp, this.searchPistonDiameters)
+      this.intersectStrokeDiameters = this.intersection(this.query.pa_diamsh, this.searchStrokeDiameters)
       // console.log(this.query);
     }, 5);
   }
@@ -61,7 +63,10 @@ export class ProductsListFilterComponent {
 
   //*
   //! Метод, срабатывающий при вводе запроса в input
-  input(inputElement: any, intersectArr: string[], initialArr: string[], searchArr: string[]) {
+  input(event: any, inputElement: any, intersectArr: string[], initialArr: string[], searchArr: string[]) {
+    event.preventDefault()
+    console.log(event);
+    this.pistonDiameterControl.setValue(null)
     // //! при начале ввода значений делаем разницу массивов
     this.updateIntersectArr(intersectArr, initialArr, searchArr);
     // //! определяем текущее введенное значение
@@ -116,8 +121,10 @@ export class ProductsListFilterComponent {
 
   }
 
-log(ev: any) {
-  console.log(ev);
+changeInput(ev: any, inputElement: any) {
+  inputElement.value = ev.option.value
+  console.log(
+    );
 
 }
 
