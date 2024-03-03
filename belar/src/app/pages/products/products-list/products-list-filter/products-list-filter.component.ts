@@ -48,7 +48,9 @@ export class ProductsListFilterComponent {
     return arr1.filter((el: any) => !arr2.includes(el))
   }
   updateIntersectArr(intersectArr: string[], initialArr: string[], searchArr: string[]) {
-    this.intersection(initialArr, searchArr).forEach((element: any, index: any) => {
+    const tempArr = this.intersection(initialArr, searchArr)
+    intersectArr.length = 0
+    tempArr.forEach((element: any, index: any) => {
       intersectArr[index] = element;
     });
   }
@@ -56,11 +58,10 @@ export class ProductsListFilterComponent {
   filter(arr: string[], value: string) {
     return arr.filter(item => item.toLocaleLowerCase().includes(value))
   }
+
   //*
   //! Метод, срабатывающий при вводе запроса в input
   input(inputElement: any, intersectArr: string[], initialArr: string[], searchArr: string[]) {
-    // console.log(intersectArr);
-
     // //! при начале ввода значений делаем разницу массивов
     this.updateIntersectArr(intersectArr, initialArr, searchArr);
     // //! определяем текущее введенное значение
@@ -72,16 +73,12 @@ export class ProductsListFilterComponent {
     tempArr.forEach((el: any, ind: any) => {
       intersectArr[ind] = el
     })
-    console.log(intersectArr);
-    console.log(this.intersectPistonDiameters);
-
   }
 
   //! Метод для добавления Чипса при вводе в инпут
   add(event: MatChipInputEvent, intersectArr: string[], initialArr: string[], searchArr: string[]) {
     const value = (event.value || "").trim();
     if (value && intersectArr.includes(value) && !searchArr.includes(value)) {
-      console.log(`In add method: ${value}` );
 
       searchArr.push(value)
       let tempArr = [...new Set(searchArr)];
@@ -105,10 +102,7 @@ export class ProductsListFilterComponent {
   }
 
   selected(event: MatAutocompleteSelectedEvent, inputElement: any, intersectArr: string[], initialArr: string[], searchArr: string[]) {
-    console.log(event);
-
-    inputElement.value = null
-    console.log(`in selected method: ${event.option.viewValue}`);
+    inputElement.value = ""
 
     searchArr.push(event.option.viewValue)
     let tempArr = [...new Set(searchArr)];
