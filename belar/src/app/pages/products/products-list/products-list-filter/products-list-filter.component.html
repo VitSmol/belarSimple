@@ -4,7 +4,7 @@
     <mat-label>Диаметр поршня</mat-label>
     <mat-chip-grid #chipGrid area-label="Выбор диаметра поршня">
       <mat-chip-row *ngFor="let startdiamP of this.searchPistonDiameters"
-      (removed)="remove(startdiamP)">
+      (removed)="remove(startdiamP, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)">
         {{startdiamP}}
         <button matChipRemove [attr.aria-label]="'удалить '+ startdiamP">
           <mat-icon>cancel</mat-icon>
@@ -18,16 +18,17 @@
       [matChipInputFor]="chipGrid"
       [matAutocomplete]="auto"
       [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-      (input)="input(diamPInput)"
-      (matChipInputTokenEnd)="add($event)"
+      (input)="input(diamPInput, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)"
+      (matChipInputTokenEnd)="add($event, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)"
       />
 
-    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event, diamPInput)">
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event, diamPInput, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)">
       @for (diamP of intersectPistonDiameters; track diamP) {
-      <mat-option [value]="diamP">
+      <mat-option [value]="diamP" (keydown)="log($event)">
         {{diamP}}
       </mat-option>
       }
     </mat-autocomplete>
   </mat-form-field>
 </form>
+`

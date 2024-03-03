@@ -30,6 +30,7 @@ export class ProductsListFilterComponent {
   @Input('query') public set setProducts(query: query) {
     setTimeout(() => {
       this.query = query
+      // this.updateIntersectArr(this.intersectPistonDiameters, this.query.pa_diamp, this.searchPistonDiameters)
       this.intersectPistonDiameters = this.intersection(this.query.pa_diamp, this.searchPistonDiameters)
       // console.log(this.query);
     }, 5);
@@ -46,8 +47,10 @@ export class ProductsListFilterComponent {
   intersection = (arr1: any, arr2: any) => {
     return arr1.filter((el: any) => !arr2.includes(el))
   }
-  updateIntersectArr() {
-    this.intersectPistonDiameters = this.intersection(this.query.pa_diamp, this.searchPistonDiameters)
+  updateIntersectArr(intersectArr: string[], initialArr: string[], searchArr: string[]) {
+    this.intersection(initialArr, searchArr).forEach((element: any, index: any) => {
+      intersectArr[index] = element;
+    });
   }
 
   filter(arr: string[], value: string) {
@@ -55,47 +58,74 @@ export class ProductsListFilterComponent {
   }
   //*
   //! Метод, срабатывающий при вводе запроса в input
-  input(inputElement: any) {
-    console.dir(inputElement);
+  input(inputElement: any, intersectArr: string[], initialArr: string[], searchArr: string[]) {
+    // console.log(intersectArr);
 
     // //! при начале ввода значений делаем разницу массивов
-    this.updateIntersectArr();
+    this.updateIntersectArr(intersectArr, initialArr, searchArr);
     // //! определяем текущее введенное значение
     let searchValue = inputElement.value;
     // //! В массиве для отображения размеров ищем введенное значение
-    this.intersectPistonDiameters = this.filter(this.intersectPistonDiameters, searchValue)
+
+    let tempArr = this.filter(intersectArr, searchValue)
+    intersectArr.length = 0;
+    tempArr.forEach((el: any, ind: any) => {
+      intersectArr[ind] = el
+    })
+    console.log(intersectArr);
+    console.log(this.intersectPistonDiameters);
+
   }
 
   //! Метод для добавления Чипса при вводе в инпут
-  add(event: MatChipInputEvent) {
+  add(event: MatChipInputEvent, intersectArr: string[], initialArr: string[], searchArr: string[]) {
     const value = (event.value || "").trim();
-    if (value && this.intersectPistonDiameters.includes(value) && !this.searchPistonDiameters.includes(value)) {
-      this.searchPistonDiameters.push(value)
-      this.updateIntersectArr();
+    if (value && intersectArr.includes(value) && !searchArr.includes(value)) {
+      console.log(`In add method: ${value}` );
+
+      searchArr.push(value)
+      let tempArr = [...new Set(searchArr)];
+      searchArr.length = 0;
+      tempArr.forEach((el : any, ind: number) => {
+        searchArr[ind] = el
+      })
+      this.updateIntersectArr(intersectArr, initialArr, searchArr);
     }
     event.chipInput.clear();
     this.pistonDiameterControl.setValue(null)
     event.value = ''
   }
 
-  remove(item: string) {
-    const index = this.searchPistonDiameters.indexOf(item);
+  remove(item: string, intersectArr: string[], initialArr: string[], searchArr: string[]) {
+    const index = searchArr.indexOf(item);
     if (index > -1) {
-      this.searchPistonDiameters.splice(index, 1)
-      this.updateIntersectArr();
+      searchArr.splice(index, 1)
+      this.updateIntersectArr(intersectArr, initialArr, searchArr);
     }
-    console.log(index);
   }
 
-  selected(event: MatAutocompleteSelectedEvent, inputElement: any) {
-    this.searchPistonDiameters.push(event.option.viewValue)
-    this.updateIntersectArr();
-    inputElement.value = ''
+  selected(event: MatAutocompleteSelectedEvent, inputElement: any, intersectArr: string[], initialArr: string[], searchArr: string[]) {
+    console.log(event);
+
+    inputElement.value = null
+    console.log(`in selected method: ${event.option.viewValue}`);
+
+    searchArr.push(event.option.viewValue)
+    let tempArr = [...new Set(searchArr)];
+    searchArr.length = 0;
+    tempArr.forEach((el : any, ind: number) => {
+      searchArr[ind] = el
+    })
+    this.pistonDiameterControl.setValue(null)
+    this.updateIntersectArr(intersectArr, initialArr, searchArr);
     console.log();
 
   }
 
+log(ev: any) {
+  console.log(ev);
 
+}
 
   //* конец нового способа
   //! СТАРЫЙ ПОЛУРАБОЧИЙ МЕТОД
