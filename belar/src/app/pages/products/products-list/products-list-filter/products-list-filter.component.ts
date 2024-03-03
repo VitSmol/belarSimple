@@ -19,8 +19,8 @@ export class ProductsListFilterComponent {
 
   separatorKeysCodes: number[] = [ENTER, COMMA]
 
-  public intersectArr: string[] = []
-  public currentPistonDiameters: string[] = ['32']; //! стартовое значение диметра поршня
+  public intersectPistonDiameters: string[] = []
+  public searchPistonDiameters: string[] = ['32']; //! стартовое значение диметра поршня
   // filteredDiamP: string[] = [];
   // Observable<string[]>;
   pistonDiameterControl = new FormControl();
@@ -30,7 +30,7 @@ export class ProductsListFilterComponent {
   @Input('query') public set setProducts(query: query) {
     setTimeout(() => {
       this.query = query
-      this.intersectArr = this.intersection(this.query.pa_diamp, this.currentPistonDiameters)
+      this.intersectPistonDiameters = this.intersection(this.query.pa_diamp, this.searchPistonDiameters)
       // console.log(this.query);
     }, 5);
   }
@@ -42,12 +42,12 @@ export class ProductsListFilterComponent {
 
   //! intersectArr - массив для отображения размеров
   //! query.pa_diamp - общий массив размеров
-  //! currentPistonDiametres - массив с уже введенными размерами
+  //! searchPistonDiametres - массив с уже введенными размерами
   intersection = (arr1: any, arr2: any) => {
     return arr1.filter((el: any) => !arr2.includes(el))
   }
   updateIntersectArr() {
-    this.intersectArr = this.intersection(this.query.pa_diamp, this.currentPistonDiameters)
+    this.intersectPistonDiameters = this.intersection(this.query.pa_diamp, this.searchPistonDiameters)
   }
 
   filter(arr: string[], value: string) {
@@ -63,14 +63,14 @@ export class ProductsListFilterComponent {
     // //! определяем текущее введенное значение
     let searchValue = inputElement.value;
     // //! В массиве для отображения размеров ищем введенное значение
-    this.intersectArr = this.filter(this.intersectArr, searchValue)
+    this.intersectPistonDiameters = this.filter(this.intersectPistonDiameters, searchValue)
   }
 
   //! Метод для добавления Чипса при вводе в инпут
   add(event: MatChipInputEvent) {
     const value = (event.value || "").trim();
-    if (value && this.intersectArr.includes(value) && !this.currentPistonDiameters.includes(value)) {
-      this.currentPistonDiameters.push(value)
+    if (value && this.intersectPistonDiameters.includes(value) && !this.searchPistonDiameters.includes(value)) {
+      this.searchPistonDiameters.push(value)
       this.updateIntersectArr();
     }
     event.chipInput.clear();
@@ -79,17 +79,18 @@ export class ProductsListFilterComponent {
   }
 
   remove(item: string) {
-    const index = this.currentPistonDiameters.indexOf(item);
+    const index = this.searchPistonDiameters.indexOf(item);
     if (index > -1) {
-      this.currentPistonDiameters.splice(index, 1)
+      this.searchPistonDiameters.splice(index, 1)
       this.updateIntersectArr();
     }
     console.log(index);
   }
 
-  selected(event: MatAutocompleteSelectedEvent) {
-    this.currentPistonDiameters.push(event.option.viewValue)
+  selected(event: MatAutocompleteSelectedEvent, inputElement: any) {
+    this.searchPistonDiameters.push(event.option.viewValue)
     this.updateIntersectArr();
+    inputElement.value = ''
     console.log();
 
   }
