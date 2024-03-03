@@ -30,7 +30,7 @@ export class ProductsListFilterComponent {
   @Input('query') public set setProducts(query: query) {
     setTimeout(() => {
       this.query = query
-     this.intersectArr = this.intersection(this.query.pa_diamp, this.currentPistonDiameters)
+      this.intersectArr = this.intersection(this.query.pa_diamp, this.currentPistonDiameters)
       // console.log(this.query);
     }, 5);
   }
@@ -40,21 +40,30 @@ export class ProductsListFilterComponent {
 
   //* Новый способ
 
-//! intersectArr - массив для отображения размеров
-//! query.pa_diamp - общий массив размеров
-//! currentPistonDiametres - массив с уже введенными размерами
+  //! intersectArr - массив для отображения размеров
+  //! query.pa_diamp - общий массив размеров
+  //! currentPistonDiametres - массив с уже введенными размерами
   intersection = (arr1: any, arr2: any) => {
-    return arr1.filter((el:any) => !arr2.includes(el))
+    return arr1.filter((el: any) => !arr2.includes(el))
+  }
+  updateIntersectArr() {
+    this.intersectArr = this.intersection(this.query.pa_diamp, this.currentPistonDiameters)
+  }
+
+  filter(arr: string[], value: string) {
+    return arr.filter(item => item.toLocaleLowerCase().includes(value))
   }
   //*
   //! Метод, срабатывающий при вводе запроса в input
-  input(event: Event) {
-    //! при начале ввода значений делаем разницу массивов
-    this.intersectArr = this.intersection(this.query.pa_diamp, this.currentPistonDiameters)
-    //! определяем текущее введенное значение
-    this.searchValue = this.diamPInput.nativeElement.value;
-    //! В массиве для отображения размеров ищем введенное значение
-    this.intersectArr = this.filter(this.intersectArr, this.searchValue)
+  input(inputElement: any) {
+    console.dir(inputElement);
+
+    // //! при начале ввода значений делаем разницу массивов
+    this.updateIntersectArr();
+    // //! определяем текущее введенное значение
+    let searchValue = inputElement.value;
+    // //! В массиве для отображения размеров ищем введенное значение
+    this.intersectArr = this.filter(this.intersectArr, searchValue)
   }
 
   //! Метод для добавления Чипса при вводе в инпут
@@ -62,36 +71,32 @@ export class ProductsListFilterComponent {
     const value = (event.value || "").trim();
     if (value && this.intersectArr.includes(value) && !this.currentPistonDiameters.includes(value)) {
       this.currentPistonDiameters.push(value)
-      console.log(`in add method intersectArr`);
-      console.log(this.intersectArr);
-      console.log(`currentPistonDiameters`);
-      console.log(this.currentPistonDiameters);
-
-      this.intersectArr = this.intersection(this.query.pa_diamp, this.currentPistonDiameters)
-      console.log(`After intersection`);
-
-      console.log(this.intersectArr);
+      this.updateIntersectArr();
     }
     event.chipInput.clear();
     this.pistonDiameterControl.setValue(null)
     event.value = ''
+  }
+
+  remove(item: string) {
+    const index = this.currentPistonDiameters.indexOf(item);
+    if (index > -1) {
+      this.currentPistonDiameters.splice(index, 1)
+      this.updateIntersectArr();
+    }
+    console.log(index);
+  }
+
+  selected(event: MatAutocompleteSelectedEvent) {
+    this.currentPistonDiameters.push(event.option.viewValue)
+    this.updateIntersectArr();
+    console.log();
 
   }
 
-    remove(item: string) {
-    throw new Error('Method not implemented.');
-    }
 
 
-    selected($event: MatAutocompleteSelectedEvent) {
-    throw new Error('Method not implemented.');
-    }
-
-    filter(arr: string[], value: string) {
-      return arr.filter(item => item.toLocaleLowerCase().includes(value))
-    }
-
-//* конец нового способа
+  //* конец нового способа
   //! СТАРЫЙ ПОЛУРАБОЧИЙ МЕТОД
   // announcer = inject(LiveAnnouncer)
 
