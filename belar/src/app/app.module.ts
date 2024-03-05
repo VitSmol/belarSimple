@@ -17,7 +17,7 @@ import { ProductsConstructorComponent } from './pages/products/products-construc
 import { ProductsByTechnicsComponent } from './pages/products/products-by-technics/products-by-technics.component';
 import { ProductsListFilterComponent } from './pages/products/products-list/products-list-filter/products-list-filter.component';
 import { ProductsListAllComponent } from './pages/products/products-list/products-list-all/products-list-all.component';
-import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import {MatChipsModule} from '@angular/material/chips';
@@ -25,6 +25,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule} from '@angular/material/autocomplete';
+import { getRUPaginatorIntl } from 'src/paginator-ru';
+import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,9 @@ import { MatAutocompleteModule} from '@angular/material/autocomplete';
     ReactiveFormsModule,
   ],
   providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy}
+    { provide: LocationStrategy, useClass: HashLocationStrategy},
+    {provide: MatPaginatorIntl, useValue: getRUPaginatorIntl()},
+    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
   ],
   bootstrap: [AppComponent]
 })

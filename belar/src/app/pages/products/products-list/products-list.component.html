@@ -1,6 +1,7 @@
 <div class="products-wrapper">
   <app-products-list-filter
     [query] = query
+    (outQuery)="outQuery($event)"
   >
 
   </app-products-list-filter>

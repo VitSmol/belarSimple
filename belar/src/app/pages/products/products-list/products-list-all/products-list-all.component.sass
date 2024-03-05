@@ -4,13 +4,15 @@
     opacity: 0
   100%
     opacity: 1
-
+.wrapper
+  padding-top: 20px
 .cards
   display: grid
   grid-template-columns: repeat(5, 1fr)
   grid-template-rows: repeat(2, auto)
   gap: 20px
   position: relative
+  padding-top: 20px
   @media screen and ( max-width: 1150px )
     grid-template-columns: repeat(3, 1fr)
   @media screen and ( max-width: 800px )
@@ -58,4 +60,8 @@
       background-color: #ca7b0f3b
   .add-to-cart
     margin-top: auto
+::ng-deep
+  mat-paginator.mat-mdc-paginator
+    background: $gradientBg
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15), 0 -1px 5px rgba(0, 0, 0, 0.15)
 

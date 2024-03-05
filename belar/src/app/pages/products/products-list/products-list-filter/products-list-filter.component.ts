@@ -1,12 +1,9 @@
-import { Component, ElementRef, Input, OnInit, Query, ViewChild, inject } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, Query, ViewChild, inject } from '@angular/core';
 import { query } from 'src/app/dao/interfaces/interfaces';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
-import { Observable } from 'rxjs/internal/Observable';
 import { FormControl } from '@angular/forms';
-import { LiveAnnouncer } from '@angular/cdk/a11y';
-import { map, startWith } from 'rxjs';
 
 @Component({
   selector: 'app-products-list-filter',
@@ -18,34 +15,45 @@ export class ProductsListFilterComponent {
   separatorKeysCodes: number[] = [ENTER, COMMA]
 
   public intersectPistonDiameters: string[] = []
-  public searchPistonDiameters: string[] = ['32']; //! стартовое значение диметра поршня
+  public searchPistonDiameters: string[] = []; //! стартовое значение диметра поршня
 
-  public intersectStrokeDiameters: string[] = []
-  public searchStrokeDiameters: string[] = []; //! стартовое значение диметра поршня
+  public intersectStockDiameters: string[] = []
+  public searchStockDiameters: string[] = []; //! стартовое значение диметра штока
+
+  public intersectPistonStroke: string[] = []
+  public searchPistonStroke: string[] = []; //! стартовое значение хода поршня]
 
 
   pistonDiameterControl = new FormControl();
+  stockDiameterControl = new FormControl();
+  pistonHodControl = new FormControl();
 
   query!: query
 
   @Input('query') public set setProducts(query: query) {
     setTimeout(() => {
       this.query = query
-      // this.updateIntersectArr(this.intersectPistonDiameters, this.query.pa_diamp, this.searchPistonDiameters)
       this.intersectPistonDiameters = this.intersection(this.query.pa_diamp, this.searchPistonDiameters)
-      this.intersectStrokeDiameters = this.intersection(this.query.pa_diamsh, this.searchStrokeDiameters)
-      // console.log(this.query);
+      this.intersectStockDiameters = this.intersection(this.query.pa_diamsh, this.searchStockDiameters)
+      this.intersectPistonStroke = this.intersection(this.query.pa_hod, this.searchPistonStroke)
+      console.log(this.query.pa_hod);
+
     }, 5);
   }
+
+  @Output() outQuery = new EventEmitter();
 
   @ViewChild('diamPInput')
   diamPInput!: ElementRef<HTMLInputElement>;
 
+  @ViewChild('diamPInput')
+  diamShInput!: ElementRef<HTMLInputElement>;
+
+  @ViewChild('hodPInput')
+  hodPInput!: ElementRef<HTMLInputElement>;
+
   //* Новый способ
 
-  //! intersectArr - массив для отображения размеров
-  //! query.pa_diamp - общий массив размеров
-  //! searchPistonDiametres - массив с уже введенными размерами
   intersection = (arr1: any, arr2: any) => {
     return arr1.filter((el: any) => !arr2.includes(el))
   }
@@ -65,8 +73,6 @@ export class ProductsListFilterComponent {
   //! Метод, срабатывающий при вводе запроса в input
   input(event: any, inputElement: any, intersectArr: string[], initialArr: string[], searchArr: string[]) {
     event.preventDefault()
-    console.log(event);
-    this.pistonDiameterControl.setValue(null)
     // //! при начале ввода значений делаем разницу массивов
     this.updateIntersectArr(intersectArr, initialArr, searchArr);
     // //! определяем текущее введенное значение
@@ -88,13 +94,12 @@ export class ProductsListFilterComponent {
       searchArr.push(value)
       let tempArr = [...new Set(searchArr)];
       searchArr.length = 0;
-      tempArr.forEach((el : any, ind: number) => {
+      tempArr.forEach((el: any, ind: number) => {
         searchArr[ind] = el
       })
       this.updateIntersectArr(intersectArr, initialArr, searchArr);
     }
     event.chipInput.clear();
-    this.pistonDiameterControl.setValue(null)
     event.value = ''
   }
 
@@ -108,72 +113,33 @@ export class ProductsListFilterComponent {
 
   selected(event: MatAutocompleteSelectedEvent, inputElement: any, intersectArr: string[], initialArr: string[], searchArr: string[]) {
     inputElement.value = ""
-
     searchArr.push(event.option.viewValue)
     let tempArr = [...new Set(searchArr)];
     searchArr.length = 0;
-    tempArr.forEach((el : any, ind: number) => {
+    tempArr.forEach((el: any, ind: number) => {
       searchArr[ind] = el
     })
-    this.pistonDiameterControl.setValue(null)
     this.updateIntersectArr(intersectArr, initialArr, searchArr);
-    console.log();
-
   }
 
-changeInput(ev: any, inputElement: any) {
-  inputElement.value = ev.option.value
-  console.log(
-    );
+  changeInput(ev: any, inputElement: any) {
+    inputElement.value = ev.option.value
+  }
 
-}
+  resetValues() {
+    this.searchPistonDiameters = []
+    this.searchPistonStroke = []
+    this.searchStockDiameters = []
+    this.find()
+  }
 
-  //* конец нового способа
-  //! СТАРЫЙ ПОЛУРАБОЧИЙ МЕТОД
-  // announcer = inject(LiveAnnouncer)
-
-  // constructor() {
-  //   // this.filteredDiamP.map((item) => item ? this._filter(item) : this.filteredDiamP.slice())
-  // }
-  // ngOnInit(): void {
-  // }
-
-  // add(event: MatChipInputEvent) {
-  //   const value = (event.value || '').trim();
-  //   if (value && this.filteredDiamP.includes(value)) {
-  //     this.currentPistonDiameters.push(value);
-  //   }
-  //   // this.filteredDiamP = this.filteredDiamP._filter(value => item.toLowerCase().includes(filterValue))
-  //   event.chipInput!.clear()
-  //   this.pistonDiameterControl.setValue(null)
-  //   this.searchValue = ''
-  // }
-
-  // log(event: Event) {
-  //   console.log(this.diamPInput);
-
-  //   this.searchValue += (event as InputEvent).data
-  //   // console.log(this.searchValue);
-  // }
-
-  // remove(item: string) {
-  //   const index = this.currentPistonDiameters.indexOf(item)
-  //   if (index >= 0) {
-  //     this.currentPistonDiameters.splice(index, 1);
-  //   }
-  // }
-
-  // selected(event: MatAutocompleteSelectedEvent) {
-  //   console.log(event);
-
-  //   this.currentPistonDiameters.push(event.option.viewValue);
-  //   (this.diamPInput.nativeElement as unknown as string) = '';
-  //   this.pistonDiameterControl.setValue(null)
-  // }
-
-  // _filter(item: string): any {
-  //   const filterValue = item.toLowerCase();
-  //   return this.filteredDiamP.filter(item => item.toLowerCase().includes(filterValue))
-  // }
-
+  find() {
+    // if (this.searchPistonDiameters.length || this.searchStockDiameters.length || this.searchPistonStroke.length) {
+      this.outQuery.emit({
+        pa_diamp: this.searchPistonDiameters,
+        pa_diamsh: this.searchStockDiameters,
+        pa_hod: this.searchPistonStroke
+      })
+    // }
+  }
 }

@@ -1,38 +1,92 @@
-<p>products-list-filter works!</p>
 <form>
-
   <!-- ! Диаметр поршня -->
-  <mat-form-field appearance="outline">
+  <mat-form-field appearance="fill">
     <mat-label>Диаметр поршня</mat-label>
     <mat-chip-grid #chipGrid area-label="Выбор диаметра поршня">
       <mat-chip-row *ngFor="let startdiamP of this.searchPistonDiameters"
-      (removed)="remove(startdiamP, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)">
+        (removed)="remove(startdiamP, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)">
         {{startdiamP}}
         <button matChipRemove [attr.aria-label]="'удалить '+ startdiamP">
           <mat-icon>cancel</mat-icon>
         </button>
       </mat-chip-row>
-    </mat-chip-grid>
 
-    <input placeholder="Добавить диаметр"
-      #diamPInput
-      [formControl]="pistonDiameterControl"
-      [matChipInputFor]="chipGrid"
-      [matAutocomplete]="auto"
-      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      <input placeholder="Добавить диаметр" type="number" #diamPInput [formControl]="pistonDiameterControl" [matChipInputFor]="chipGrid"
+      [matAutocomplete]="auto" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
       (matChipInputTokenEnd)="add($event, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)"
       matChipInputAddOnBlur="true"
-      (input)="input($event, diamPInput, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)"
-      />
+      (input)="input($event, diamPInput, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)" />
 
-    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event, diamPInput, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)"
-    (optionActivated)="changeInput($event, diamPInput)">
+      <mat-autocomplete #auto="matAutocomplete"
+      (optionSelected)="selected($event, diamPInput, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)"
+      (optionActivated)="changeInput($event, diamPInput)">
       @for (diamP of intersectPistonDiameters; track diamP) {
-      <mat-option [value]="diamP">
-        {{diamP}}
-      </mat-option>
+        <mat-option [value]="diamP">
+          {{diamP}}
+        </mat-option>
       }
     </mat-autocomplete>
+  </mat-chip-grid>
   </mat-form-field>
+  <!-- ! Диаметр штока -->
+  <mat-form-field appearance="fill">
+    <mat-label>Диаметр штока</mat-label>
+    <mat-chip-grid #chipGrid2 area-label="Выбор диаметра штока">
+      <mat-chip-row *ngFor="let startdiamSh of this.searchStockDiameters"
+        (removed)="remove(startdiamSh, intersectStockDiameters, query.pa_diamsh, searchStockDiameters)">
+        {{startdiamSh}}
+        <button matChipRemove [attr.aria-label]="'удалить '+ startdiamSh">
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </mat-chip-row>
+
+      <input placeholder="Добавить диаметр" #diamShInput [formControl]="stockDiameterControl"
+      [matChipInputFor]="chipGrid2" [matAutocomplete]="auto2" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      (matChipInputTokenEnd)="add($event, intersectStockDiameters, query.pa_diamsh, searchStockDiameters)"
+      matChipInputAddOnBlur="true"
+      (input)="input($event, diamShInput, intersectStockDiameters, query.pa_diamsh, searchStockDiameters)" />
+
+      <mat-autocomplete #auto2="matAutocomplete"
+      (optionSelected)="selected($event, diamShInput, intersectStockDiameters, query.pa_diamsh, searchStockDiameters)"
+      (optionActivated)="changeInput($event, diamShInput)">
+      @for (diamSh of intersectStockDiameters; track diamSh) {
+        <mat-option [value]="diamSh">
+          {{diamSh}}
+        </mat-option>
+      }
+    </mat-autocomplete>
+  </mat-chip-grid>
+  </mat-form-field>
+
+  <!-- ! Ход поршня} -->
+  <mat-form-field appearance="fill">
+    <mat-label>Ход поршня</mat-label>
+    <mat-chip-grid #chipGrid3 area-label="Выбор хода поршня">
+      <mat-chip-row *ngFor="let startHod of this.searchPistonStroke"
+        (removed)="remove(startHod, intersectPistonStroke, query.pa_hod, searchPistonStroke)">
+        {{startHod}}
+        <button matChipRemove [attr.aria-label]="'удалить '+ startHod">
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </mat-chip-row>
+
+      <input placeholder="Добавить диаметр" #hodPInput [formControl]="pistonHodControl"
+      [matChipInputFor]="chipGrid3" [matAutocomplete]="auto3" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      (matChipInputTokenEnd)="add($event, intersectPistonStroke, query.pa_hod, searchPistonStroke)"
+      matChipInputAddOnBlur="true"
+      (input)="input($event, hodPInput, intersectPistonStroke, query.pa_hod, searchPistonStroke)" />
+
+      <mat-autocomplete #auto3="matAutocomplete"
+      (optionSelected)="selected($event, hodPInput, intersectPistonStroke, query.pa_hod, searchPistonStroke)"
+      (optionActivated)="changeInput($event, hodPInput)">
+      @for (hodP of intersectPistonStroke; track hodP) {
+        <mat-option [value]="hodP">
+          {{hodP}}
+        </mat-option>
+      }
+    </mat-autocomplete>
+  </mat-chip-grid>
+  </mat-form-field>
+  <button class="filter-btn" (click)="find()" mat-raised-button color="accent">Найти</button>
+  <button class="filter-btn" (click)="resetValues()" mat-raised-button color="warn">Сбросить фильтры</button>
 </form>
-`
