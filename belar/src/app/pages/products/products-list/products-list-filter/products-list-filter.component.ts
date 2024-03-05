@@ -46,7 +46,7 @@ export class ProductsListFilterComponent {
   @ViewChild('diamPInput')
   diamPInput!: ElementRef<HTMLInputElement>;
 
-  @ViewChild('diamPInput')
+  @ViewChild('diamShInput')
   diamShInput!: ElementRef<HTMLInputElement>;
 
   @ViewChild('hodPInput')

@@ -20,13 +20,9 @@ export class ProductsListAllComponent {
   }
 
   ngOnInit(): void {
-    setTimeout(() => {
-      const pageLabel = document.getElementById('mat-paginator-page-size-label-0');
-      (pageLabel as HTMLElement).innerText = "Товаров на странице:"
-
-    }, 0);
 
   }
+
   //! Расчет текущего количества страниц
   pageHandler(event: any): void {
     console.log(event);

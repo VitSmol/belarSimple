@@ -1,1 +1,9 @@
-<p>products-by-technics works!</p>
+<div class="org-wrapper">
+  <mat-accordion>
+    @for (item of this.orgs; track item) {
+    <app-org [org]="item">
+
+    </app-org>
+    }
+  </mat-accordion>
+</div>

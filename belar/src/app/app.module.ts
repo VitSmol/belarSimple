@@ -20,13 +20,17 @@ import { ProductsListAllComponent } from './pages/products/products-list/product
 import { MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
-import {MatChipsModule} from '@angular/material/chips';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatAutocompleteModule} from '@angular/material/autocomplete';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { getRUPaginatorIntl } from 'src/paginator-ru';
-import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { OrgComponent } from "./pages/products/products-by-technics/org/org.component";
+import { CdkAccordionModule } from '@angular/cdk/accordion';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,13 @@ import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/materi
     ProductsByTechnicsComponent,
     ProductsListFilterComponent,
     ProductsListAllComponent,
+    OrgComponent,
   ],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    { provide: MatPaginatorIntl, useValue: getRUPaginatorIntl() },
+  ],
+  bootstrap: [AppComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,
@@ -58,12 +68,10 @@ import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/materi
     MatIconModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
-  ],
-  providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy},
-    {provide: MatPaginatorIntl, useValue: getRUPaginatorIntl()},
-    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
-  ],
-  bootstrap: [AppComponent]
+    MatExpansionModule,
+    CdkAccordionModule,
+    MatTableModule,
+    MatInputModule
+  ]
 })
 export class AppModule { }

@@ -1,0 +1,48 @@
+<!-- <p>org works!</p> -->
+<!-- <p>компонент {{this.org.orgName}}</p> -->
+<mat-expansion-panel hideToggle>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <h5>
+        {{this.org.orgName}}
+      </h5>
+    </mat-panel-title>
+    <mat-panel-description>
+      <span>Здесь будет img</span>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <!-- TODO здесь будет таблица -->
+  <mat-form-field>
+    <mat-label>Поиск</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Введите запрос" >
+  </mat-form-field>
+<table mat-table [dataSource]="this.dataSource">
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef>№</th>
+    <td mat-cell *matCellDef="let item; let ind = index">{{ind + 1}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="applicability">
+    <th mat-header-cell *matHeaderCellDef>Применение</th>
+    <td mat-cell *matCellDef="let item">{{item.applicability}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="placeLocal">
+    <th mat-header-cell *matHeaderCellDef>Место установки</th>
+    <td mat-cell *matCellDef="let item">{{item.placeLocal}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="cylName">
+    <th mat-header-cell *matHeaderCellDef>Наименование цилиндра</th>
+    <td mat-cell *matCellDef="let item">{{item.cylName}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="count">
+    <th mat-header-cell *matHeaderCellDef>Количество на машине</th>
+    <td mat-cell *matCellDef="let item">{{item.count}}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</mat-expansion-panel>
