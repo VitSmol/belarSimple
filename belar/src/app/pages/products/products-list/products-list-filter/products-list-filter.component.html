@@ -87,6 +87,6 @@
     </mat-autocomplete>
   </mat-chip-grid>
   </mat-form-field>
-  <button class="filter-btn" (click)="find()" mat-raised-button color="accent">Найти</button>
-  <button class="filter-btn" (click)="resetValues()" mat-raised-button color="warn">Сбросить фильтры</button>
+  <button class="filter-btn" (click)="find($event)" mat-raised-button color="accent">Найти</button>
+  <button class="filter-btn" (click)="resetValues($event)" mat-raised-button color="warn">Сбросить фильтры</button>
 </form>

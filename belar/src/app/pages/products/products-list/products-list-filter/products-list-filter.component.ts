@@ -126,14 +126,16 @@ export class ProductsListFilterComponent {
     inputElement.value = ev.option.value
   }
 
-  resetValues() {
+  resetValues(e: any) {
+    e.preventDefault();
     this.searchPistonDiameters = []
     this.searchPistonStroke = []
     this.searchStockDiameters = []
-    this.find()
+    this.find(e)
   }
 
-  find() {
+  find(e: any) {
+    e.preventDefault()
     // if (this.searchPistonDiameters.length || this.searchStockDiameters.length || this.searchPistonStroke.length) {
       this.outQuery.emit({
         pa_diamp: this.searchPistonDiameters,
