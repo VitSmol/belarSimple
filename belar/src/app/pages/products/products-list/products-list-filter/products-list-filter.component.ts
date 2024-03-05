@@ -38,7 +38,7 @@ export class ProductsListFilterComponent {
       this.intersectPistonStroke = this.intersection(this.query.pa_hod, this.searchPistonStroke)
       console.log(this.query.pa_hod);
 
-    }, 5);
+    }, 200);
   }
 
   @Output() outQuery = new EventEmitter();
