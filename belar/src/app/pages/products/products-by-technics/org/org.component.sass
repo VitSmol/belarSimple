@@ -1,17 +1,72 @@
 @import 'variables'
-*
+body
   font-family: 'Monserrat', sans-serif
 ::ng-deep
   mat-panel-title
-    flex-grow: 2 !important
+    flex-grow: 3 !important
   .mat-expansion-panel-header-description
-    flex-grow: 1 !important
+    flex-grow: 0 !important
+  .mat-expansion-panel-header
+    height: 60px !important
+    width: 100%
+
+  .mat-expansion-panel-header-title
+    flex-grow: 1
+
+  // .mat-mdc-header-row
+  //   box-shadow: $mainShadow !important
   mat-form-field
     width: 100%
 h5, th
   font-weight: bold
 h5
   font-size: 18px
+  margin-bottom: 0
+  @media screen and (max-width: 768px)
+    font-size: 14px
+  @media screen and (max-width: 600px)
+    flex-grow: 1
+th
+  vertical-align: top
+
+  // text-align: center
 table
-  fzs: 16px
+  font-size: 16px
+  @media screen and (max-width: 1000px)
+    font-size: 12px
+img
+  max-width: 75px
+  max-height: 55px
+.title
+  display: flex
+  align-items: center
+  gap: 20px
+
+.wrapper
+  height: 60vh
+  overflow: auto
+table
+  text-align: center
+
+
+td, th
+  padding-left: 10px !important
+  padding-right: 10px !important
+.mat-column-position
+  width: 5vw
+.mat-column-applicability
+  width: 40vw
+.mat-column-placeLocal
+  width: 15vw
+.mat-column-cylName
+  width: 35vw
+.mat-column-count
+  width: 5vw
+  text-align: center
+.mat-column-action
+  min-width: 130px !important
+  text-align: center
+  @media screen and (max-width: 1000px)
+    min-width: 48px
+
 

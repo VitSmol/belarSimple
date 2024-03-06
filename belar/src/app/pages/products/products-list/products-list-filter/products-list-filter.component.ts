@@ -43,14 +43,11 @@ export class ProductsListFilterComponent {
 
   @Output() outQuery = new EventEmitter();
 
-  @ViewChild('diamPInput')
-  diamPInput!: ElementRef<HTMLInputElement>;
+  @ViewChild('diamPInput') diamPInput!: ElementRef<HTMLInputElement>;
 
-  @ViewChild('diamShInput')
-  diamShInput!: ElementRef<HTMLInputElement>;
+  @ViewChild('diamShInput')diamShInput!: ElementRef<HTMLInputElement>;
 
-  @ViewChild('hodPInput')
-  hodPInput!: ElementRef<HTMLInputElement>;
+  @ViewChild('hodPInput') hodPInput!: ElementRef<HTMLInputElement>;
 
   //* Новый способ
 

@@ -1,4 +1,4 @@
-import { Observable } from "rxjs";
+import { Observable, filter } from "rxjs";
 import { ProductDAO } from "../interfaces/ProductDAO";
 import { Product } from "../interfaces/interfaces";
 import { HttpClient } from "@angular/common/http";
@@ -8,8 +8,12 @@ export class ProductDAOArray implements ProductDAO {
 
   constructor(
     private http: HttpClient
-  ){
+  ) {
 
+  }
+  getOne(unit: string): Observable<any> {
+    // throw new Error("Method not implemented.");
+    return this.http.get<Product>(this.url)
   }
   readAll(): Observable<Product[]> {
     return this.http.get<Product[]>(this.url)

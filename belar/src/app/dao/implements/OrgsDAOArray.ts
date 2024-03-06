@@ -8,6 +8,9 @@ export class OrgsDAOArray implements OrgsDAO {
 constructor(
   private http: HttpClient
 ){}
+  getOne(unit: string): Observable<Org> {
+    throw new Error("Method not implemented.");
+  }
 
   readAll(): Observable<Org[]> {
     return this.http.get<Org[]>(this.url)

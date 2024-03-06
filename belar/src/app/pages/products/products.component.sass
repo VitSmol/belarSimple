@@ -1,4 +1,6 @@
 @import 'variables'
+*
+  font-family: 'Monserrat', sans-serif
 .products-wrapper
   margin: 0 auto
   padding-top: 60px
@@ -13,21 +15,40 @@
     gap: 30px
     margin: 0
     position: relative
+    @media screen and (max-width: 768px)
+      gap: 15px
+    @media screen and (max-width: 571px)
+      flex-direction: column
+      align-items: center
+      padding: 6px
+      gap: 6px
+
     li
       transform: translateX(0) translateY(0)
       transition: all 0.5s
+      filter: drop-shadow(0px 0px 0px transparent)
+      @media screen and (max-width: 571px)
+        width: 100%
+
     a
       border-radius: 3px
       text-decoration: none
       font-size: 14px
       padding: 10px
       position: relative
-
+      @media screen and (max-width: 768px)
+        font-size: 12px
+        padding: 5px
+      @media screen and (max-width: 571px)
+        min-width: 100%
     li:hover, .active
-      transition: position, transform 0.5s
+      filter: drop-shadow(1px 1px 1px black)
+      transition: 0.5s transform, box-shadow
       position: relative
       transform: translateX(-2px) translateY(-2px)
       a
         box-shadow: 1px 1px 8px #00000054
         transition: 0.5s position, transform, box-shadow
-
+      @media screen and (max-width: 571px)
+        position: static
+        transform: translateX(0) translateY(0)

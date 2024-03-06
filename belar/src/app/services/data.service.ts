@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ProductDAOArray } from '../dao/implements/ProductDAOArray';
-import { Observable } from 'rxjs';
+import { Observable, filter } from 'rxjs';
 import { Product } from '../dao/interfaces/interfaces';
 
 @Injectable({
@@ -17,5 +17,9 @@ export class DataService {
 
   getAll(): Observable<Product[]> {
     return this.productsDAO.readAll()
+  }
+
+  getOne(unit: string) {
+    return this.productsDAO.getOne(unit)
   }
 }

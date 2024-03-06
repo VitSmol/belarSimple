@@ -9,11 +9,12 @@ export interface Product {
 
 export interface Org {
   orgName: string;
+  img: string;
   data: [
     {
       applicability: string,
       placeLocal: string,
-      celName: string,
+      cylName: string,
       count: string,
     }
   ]
