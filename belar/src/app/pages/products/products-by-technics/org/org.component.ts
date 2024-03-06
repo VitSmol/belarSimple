@@ -42,7 +42,9 @@ export class OrgComponent implements OnInit {
   @Input('org') public set setOrgs(org: Org) {
     this.org = org;
     this.dataSource = new MatTableDataSource(this.org.data);
-    this.imgSrc = `assets/img/orgs/${this.org.img}.png`
+    setTimeout(() => {
+      this.imgSrc = `assets/img/orgs/${this.org.img}.png`
+    }, 100);
 
   }
   applyFilter(event: Event) {
