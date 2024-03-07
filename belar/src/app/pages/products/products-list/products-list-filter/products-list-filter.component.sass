@@ -5,9 +5,6 @@
     flex-grow: 1
   .mat-mdc-form-field-flex
     .mat-mdc-form-field-infix
-      // padding: 5px !important
-      // padding-bottom: 5px !important
-      // padding: auto !important
   .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder, mat-label, #placeholder
     font-size: 12px
   mat-chip-row.mat-mdc-chip.mat-mdc-chip-row.mdc-evolution-chip.mat-primary.mdc-evolution-chip--with-trailing-action.mat-mdc-standard-chip
@@ -17,10 +14,40 @@
     background-color: transparent !important
   .mat-mdc-form-field:not(.mat-form-field-no-animations) .mdc-text-field__input::placeholder
     font-size: 14px
-
-
+.diamP
+  grid-area: diamP
+.diamSh
+  grid-area: diamSh
+.hod
+  grid-area: hod
+.find
+  grid-area: find
+.clear
+  grid-area: clear
 form
   display: flex
   gap: 30px
+  @media screen and (max-width:1070px)
+    gap: 10px
+    .filter-btn
+      font-size: 12px
 .filter-btn
   align-self: center
+@media screen and (max-width:951px)
+  form
+    display: grid
+    grid-template-areas: "diamP diamP diamSh diamSh hod hod" "find find find clear clear clear"
+
+  .find
+    width: 200px
+    justify-self: end
+  .clear
+    width: 200px
+@media screen and (max-width: 620px)
+  form
+    grid-template-areas: "diamP diamP" "diamSh diamSh" "hod hod" "find clear"
+    // gap: 0
+  .find, .clear
+    justify-self: center
+    width: 100%
+

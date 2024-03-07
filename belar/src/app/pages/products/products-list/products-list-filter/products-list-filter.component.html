@@ -1,6 +1,6 @@
 <form>
   <!-- ! Диаметр поршня -->
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="fill" class="diamP">
     <mat-label>Диаметр поршня</mat-label>
     <mat-chip-grid #chipGrid area-label="Выбор диаметра поршня">
       <mat-chip-row *ngFor="let startdiamP of this.searchPistonDiameters"
@@ -11,25 +11,25 @@
         </button>
       </mat-chip-row>
 
-      <input placeholder="Добавить диаметр" type="number" #diamPInput [formControl]="pistonDiameterControl" [matChipInputFor]="chipGrid"
-      [matAutocomplete]="auto" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-      (matChipInputTokenEnd)="add($event, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)"
-      matChipInputAddOnBlur="true"
-      (input)="input($event, diamPInput, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)" />
+      <input placeholder="Добавить диаметр" type="number" #diamPInput [formControl]="pistonDiameterControl"
+        [matChipInputFor]="chipGrid" [matAutocomplete]="auto" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        (matChipInputTokenEnd)="add($event, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)"
+        matChipInputAddOnBlur="true"
+        (input)="input($event, diamPInput, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)" />
 
       <mat-autocomplete #auto="matAutocomplete"
-      (optionSelected)="selected($event, diamPInput, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)"
-      (optionActivated)="changeInput($event, diamPInput)">
-      @for (diamP of intersectPistonDiameters; track diamP) {
+        (optionSelected)="selected($event, diamPInput, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)"
+        (optionActivated)="changeInput($event, diamPInput)">
+        @for (diamP of intersectPistonDiameters; track diamP) {
         <mat-option [value]="diamP">
           {{diamP}}
         </mat-option>
-      }
-    </mat-autocomplete>
-  </mat-chip-grid>
+        }
+      </mat-autocomplete>
+    </mat-chip-grid>
   </mat-form-field>
   <!-- ! Диаметр штока -->
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="fill" class="diamSh">
     <mat-label>Диаметр штока</mat-label>
     <mat-chip-grid #chipGrid2 area-label="Выбор диаметра штока">
       <mat-chip-row *ngFor="let startdiamSh of this.searchStockDiameters"
@@ -41,25 +41,25 @@
       </mat-chip-row>
 
       <input placeholder="Добавить диаметр" #diamShInput [formControl]="stockDiameterControl"
-      [matChipInputFor]="chipGrid2" [matAutocomplete]="auto2" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-      (matChipInputTokenEnd)="add($event, intersectStockDiameters, query.pa_diamsh, searchStockDiameters)"
-      matChipInputAddOnBlur="true"
-      (input)="input($event, diamShInput, intersectStockDiameters, query.pa_diamsh, searchStockDiameters)" />
+        [matChipInputFor]="chipGrid2" [matAutocomplete]="auto2" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        (matChipInputTokenEnd)="add($event, intersectStockDiameters, query.pa_diamsh, searchStockDiameters)"
+        matChipInputAddOnBlur="true"
+        (input)="input($event, diamShInput, intersectStockDiameters, query.pa_diamsh, searchStockDiameters)" />
 
       <mat-autocomplete #auto2="matAutocomplete"
-      (optionSelected)="selected($event, diamShInput, intersectStockDiameters, query.pa_diamsh, searchStockDiameters)"
-      (optionActivated)="changeInput($event, diamShInput)">
-      @for (diamSh of intersectStockDiameters; track diamSh) {
+        (optionSelected)="selected($event, diamShInput, intersectStockDiameters, query.pa_diamsh, searchStockDiameters)"
+        (optionActivated)="changeInput($event, diamShInput)">
+        @for (diamSh of intersectStockDiameters; track diamSh) {
         <mat-option [value]="diamSh">
           {{diamSh}}
         </mat-option>
-      }
-    </mat-autocomplete>
-  </mat-chip-grid>
+        }
+      </mat-autocomplete>
+    </mat-chip-grid>
   </mat-form-field>
 
   <!-- ! Ход поршня} -->
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="fill" class="hod">
     <mat-label>Ход поршня</mat-label>
     <mat-chip-grid #chipGrid3 area-label="Выбор хода поршня">
       <mat-chip-row *ngFor="let startHod of this.searchPistonStroke"
@@ -70,23 +70,23 @@
         </button>
       </mat-chip-row>
 
-      <input placeholder="Добавить диаметр" #hodPInput [formControl]="pistonHodControl"
-      [matChipInputFor]="chipGrid3" [matAutocomplete]="auto3" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-      (matChipInputTokenEnd)="add($event, intersectPistonStroke, query.pa_hod, searchPistonStroke)"
-      matChipInputAddOnBlur="true"
-      (input)="input($event, hodPInput, intersectPistonStroke, query.pa_hod, searchPistonStroke)" />
+      <input placeholder="Добавить диаметр" #hodPInput [formControl]="pistonHodControl" [matChipInputFor]="chipGrid3"
+        [matAutocomplete]="auto3" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        (matChipInputTokenEnd)="add($event, intersectPistonStroke, query.pa_hod, searchPistonStroke)"
+        matChipInputAddOnBlur="true"
+        (input)="input($event, hodPInput, intersectPistonStroke, query.pa_hod, searchPistonStroke)" />
 
       <mat-autocomplete #auto3="matAutocomplete"
-      (optionSelected)="selected($event, hodPInput, intersectPistonStroke, query.pa_hod, searchPistonStroke)"
-      (optionActivated)="changeInput($event, hodPInput)">
-      @for (hodP of intersectPistonStroke; track hodP) {
+        (optionSelected)="selected($event, hodPInput, intersectPistonStroke, query.pa_hod, searchPistonStroke)"
+        (optionActivated)="changeInput($event, hodPInput)">
+        @for (hodP of intersectPistonStroke; track hodP) {
         <mat-option [value]="hodP">
           {{hodP}}
         </mat-option>
-      }
-    </mat-autocomplete>
-  </mat-chip-grid>
+        }
+      </mat-autocomplete>
+    </mat-chip-grid>
   </mat-form-field>
-  <button class="filter-btn" (click)="find($event)" mat-raised-button color="accent">Найти</button>
-  <button class="filter-btn" (click)="resetValues($event)" mat-raised-button color="warn">Сбросить фильтры</button>
+  <button class="filter-btn find" (click)="find($event)" mat-raised-button color="accent">Найти</button>
+  <button class="filter-btn clear" (click)="resetValues($event)" mat-raised-button color="warn">Сбросить фильтры</button>
 </form>
