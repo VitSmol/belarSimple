@@ -1,0 +1,259 @@
+{
+  "sleeveFastening": {
+    "title": "Крепление гильзы",
+    "subtitle": "Крепление гильзы",
+    "data": [
+      {
+        "group": "1",
+        "items": [
+          {
+            "title": "Проушина с ШС",
+            "code": "1",
+            "subgroup": "1.1",
+            "listImgSrc": "1_1_проушина-с-шс3",
+            "mainImg": "1_1_проушина-с-шс"
+          },
+          {
+            "title": "Проушина с ШС (повернута на 90°)",
+            "code": "1",
+            "subgroup": "1.2",
+            "listImgSrc": "1_2_Проушина",
+            "mainImg": "1_2_Проушина-3"
+          }
+        ]
+      },
+      {
+        "group": "2",
+        "items": [
+          {
+            "title": "Серьга с ШС",
+            "code": "1",
+            "subgroup": "2.1",
+            "listImgSrc": "2_1_Серьга",
+            "mainImg": "2_1_Серьга-3"
+          },
+          {
+            "title": "Серьга c ШСㅤ(повернута на 90°)",
+            "code": "1",
+            "subgroup": "2.2",
+            "listImgSrc": "2_2_серьга-с-осью",
+            "mainImg": "2_2_серьга-сбоку1"
+          }
+        ]
+      },
+      {
+        "group": "3",
+        "items": [
+          {
+            "title": "Проушина без ШС",
+            "code": "2",
+            "subgroup": "3.1",
+            "listImgSrc": "3_1_проушина-без-шс",
+            "mainImg": "3_1_проушина-без-шс-2"
+          },
+          {
+            "title": "Проушина без ШС (повернута на 90°)",
+            "code": "2",
+            "subgroup": "3.2",
+            "listImgSrc": "3_2_проушина-без-шс-1",
+            "mainImg": "3_2_проушина-сбоку1"
+          }
+        ]
+      },
+      {
+        "group": "4",
+        "items": [
+          {
+            "title": "Вилка",
+            "code": "4",
+            "subgroup": "4.1",
+            "listImgSrc": "4_1_вилка3",
+            "mainImg": "4_1_вилка-повернутая"
+          },
+          {
+            "title": "Вилка",
+            "code": "4",
+            "subgroup": "4.2",
+            "listImgSrc": "4_2_влка4",
+            "mainImg": "4_2_вилкаспереди-2"
+          }
+        ]
+      },
+      {
+        "group": "5",
+        "items": [
+          {
+            "title": "Вилка",
+            "code": "5",
+            "subgroup": "5",
+            "listImgSrc": "5_Шток1",
+            "mainImg": "5_Наружная-резьба-1"
+          }
+        ]
+      },
+      {
+        "group": "6",
+        "items": [
+          {
+            "title": "Вилка",
+            "code": "6",
+            "subgroup": "5",
+            "listImgSrc": "5_Шток1",
+            "mainImg": "5_Наружная-резьба-1"
+          }
+        ]
+      }
+    ]
+  },
+  "stemFastening": {
+    "title": "Крепление штока",
+    "subtitle": "Крепление штока",
+    "data": [
+      {
+        "group": "1",
+        "items": [
+          {
+            "title": "Проушина с ШС",
+            "code": "1",
+            "subgroup": "1.1",
+            "listImgSrc": "1_1_проушина-с-шс3",
+            "mainImg": "1_1_проушина-с-шс-перев"
+          },
+          {
+            "title": "Проушина с ШС (повернута на 90°)",
+            "code": "1",
+            "subgroup": "1.2",
+            "listImgSrc": "1_2_Проушина",
+            "mainImg": "1_2_Проушина-3-перев"
+          }
+        ]
+      },
+      {
+        "group": "2",
+        "items": [
+          {
+            "title": "Серьга с ШС",
+            "code": "1",
+            "subgroup": "2.1",
+            "listImgSrc": "2_1_Серьга",
+            "mainImg": "2_1_Серьга-3-перев"
+          },
+          {
+            "title": "Серьга c ШСㅤ(повернута на 90°)",
+            "code": "1",
+            "subgroup": "2.2",
+            "listImgSrc": "2_2_серьга-с-осью",
+            "mainImg": "2_2_серьга-сбоку1-перев"
+          }
+        ]
+      },
+      {
+        "group": "3",
+        "items": [
+          {
+            "title": "Проушина без ШС",
+            "code": "2",
+            "subgroup": "3.1",
+            "listImgSrc": "3_1_проушина-без-шс",
+            "mainImg": "3_1_проушина-без-шс-2-перев"
+          },
+          {
+            "title": "Проушина без ШС (повернута на 90°)",
+            "code": "2",
+            "subgroup": "3.2",
+            "listImgSrc": "3_2_проушина-без-шс-1",
+            "mainImg": "3_2_проушина-сбоку1-перев"
+          }
+        ]
+      },
+      {
+        "group": "4",
+        "items": [
+          {
+            "title": "Вилка",
+            "code": "4",
+            "subgroup": "4.1",
+            "listImgSrc": "4_1_вилка3",
+            "mainImg": "4_1_вилка-повернутая-перев"
+          },
+          {
+            "title": "Вилка",
+            "code": "4",
+            "subgroup": "4.2",
+            "listImgSrc": "4_2_влка4",
+            "mainImg": "4_2_вилкаспереди-2-перев"
+          }
+        ]
+      },
+      {
+        "group": "5",
+        "items": [
+          {
+            "title": "Вилка",
+            "code": "5",
+            "subgroup": "5",
+            "listImgSrc": "5_Шток1",
+            "mainImg": "5_Наружная-резьба-1-перев"
+          }
+        ]
+      },
+      {
+        "group": "6",
+        "items": [
+          {
+            "title": "Вилка",
+            "code": "6",
+            "subgroup": "5",
+            "listImgSrc": "5_Шток1",
+            "mainImg": "5_Наружная-резьба-1-перев"
+          }
+        ]
+      }
+    ]
+  },
+  "workingFluidSupplyBonk": {
+    "title": "Бонка c внутренней резьбой",
+    "data": [
+      {
+        "title": "ГОСТ 22526-77 ISO 9974-1 (метр.) ISO 1179-1 (BSPP)",
+        "code": null,
+        "subgroup": null,
+        "listImgSrc": "bonk-1",
+        "mainImgSrc": "bonk-1-1"
+      },
+      {
+        "title": "ГОСТ 9833-73",
+        "code": null,
+        "subgroup": null,
+        "listImgSrc": "bonk-2",
+        "mainImgSrc": "bonk-2-1"
+      },
+      {
+        "title": "ГОСТ 25065-90 ISO 6149-1 (метр.) ISO 11926-1 (BSPP)",
+        "code": null,
+        "subgroup": null,
+        "listImgSrc": "bonk-3",
+        "mainImgSrc": "bonk-3-1"
+      }
+    ]
+  },
+  "workingFluidSupplyShtucer": {
+    "title": "Штуцер с наружной резьбой",
+    "data": [
+      {
+        "title": "по ГОСТ 16045-70 DIN 7631",
+        "code": null,
+        "subgroup": null,
+        "listImgSrc": "stuc-1",
+        "mainImgSrc": "stuc-1-1"
+      },
+      {
+        "title": "по ГОСТ 22525-77 DIN 3861 ISO 8434-1",
+        "code": null,
+        "subgroup": null,
+        "listImgSrc": "stuc-2",
+        "mainImgSrc": "stuc-2-1"
+      }
+    ]
+  }
+}

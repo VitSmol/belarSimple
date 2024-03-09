@@ -19,6 +19,40 @@ export interface Org {
     }
   ]
 }
+export interface Item {
+  title: string;
+  code: string | null;
+  subgroup: string | null;
+  listImgSrc: string;
+  mainImgSrc: string;
+}
+
+export interface Sleeve {
+  group: string;
+  items: Item[];
+}
+
+export interface Construct {
+  sleeveFastening: {
+    title: string;
+    subtitle: string;
+    data: Sleeve[];
+  },
+  stemFastening: {
+    title: string;
+    subtitle: string;
+    data: Sleeve[]
+  },
+  workingFluidSupplyBonk: {
+    title: string;
+    data: Sleeve[]
+  },
+  workingFluidSupplyShtucer: {
+    title: string,
+    data: Sleeve[]
+  }
+
+}
 
 export interface query {
   pa_diamp: string[];
