@@ -10,6 +10,10 @@ strong
 .title
   display: flex
   flex-direction: column
+  position: sticky
+  top: 0
+  z-index: 1
+  background: white
 .subtitle-wrapper
   display: flex
   justify-content: start
@@ -30,6 +34,68 @@ strong
   display: flex
   justify-content: center
   border-bottom: $brd-lite
-
   button
     margin: 0 auto
+.group-container
+  display: flex
+  border-bottom: $brd-lite
+
+  .items-container
+    width: 100%
+    .item-container
+      // border-left: $brd-lite
+      // padding: 5px
+      &:first-child
+        border-bottom: $brd-lite
+
+  .number
+    max-width: 10px
+    min-width: 20px
+    flex-grow: 1
+    padding-left: 4px
+    padding-right: 4px
+    align-self: center
+  .sub-groupe
+    display: flex
+    // border-right: $brd-lite
+    border-left: $brd-lite
+    // padding: 4px
+    span
+      align-self: center
+      width: 25px
+    label
+      display: flex
+      width: 100%
+    h6
+      text-align: center
+      padding-top: 5px
+
+img.sub-group-img
+  max-width: 120px
+  max-height: 120px
+  padding-bottom: 5px
+::ng-deep
+  .mdc-form-field
+    flex-direction: row-reverse
+    width: 100%
+    .mdc-label
+      margin: 0
+      padding: 0
+      width: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      border-left: $brd-lite
+      border-right: $brd-lite
+      &:hover
+        cursor: pointer
+
+
+  .mat-mdc-radio-button
+    display: flex
+    width: 100%
+    *
+      animation-duration: 0s
+.content
+  // overflow-y: scroll

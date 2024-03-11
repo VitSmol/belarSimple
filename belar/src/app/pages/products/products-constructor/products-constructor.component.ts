@@ -9,7 +9,7 @@ import { ConstructorService } from 'src/app/services/constructor.service';
 })
 export class ProductsConstructorComponent implements OnInit, AfterViewInit {
 
-  public construct!: Construct
+  public construct?: Construct
 
   constructor(
     private serv: ConstructorService

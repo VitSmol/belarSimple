@@ -39,7 +39,9 @@
                   "src"
               ]
             },
-            "scripts": []
+            "scripts": [
+              "node_modules/dragscroll/dragscroll.js"
+            ]
           },
           "configurations": {
             "production": {

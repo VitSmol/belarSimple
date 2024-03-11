@@ -1,1 +1,6 @@
-<p>middle works!</p>
+<div class="main-wrapper dragscroll">
+  <div class="img-wrapper" (mousewheel)="onwheel($event)" [style.scale]="this.scale"
+  >
+    <img src="assets/img/constr/main.png" alt="">
+  </div>
+</div>

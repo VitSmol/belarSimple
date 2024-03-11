@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ConstructItem, Sleeve } from 'src/app/dao/interfaces/interfaces';
 
 @Component({
   selector: 'app-side',
@@ -6,19 +7,12 @@ import { Component, Input } from '@angular/core';
   styleUrl: './side.component.sass'
 })
 export class SideComponent {
-  public item: any
+  public constructItem?: ConstructItem | undefined
 
-  @Input('constructItem') public set setProducts(constructItem: any) {
+  @Input('constructItem') public set setProducts(constructItem: ConstructItem | undefined) {
     setTimeout(() => {
-      this.item = constructItem
-      console.log(this.item);
-
-      // this.query = query
-      // this.intersectPistonDiameters = this.intersection(this.query.pa_diamp, this.searchPistonDiameters)
-      // this.intersectStockDiameters = this.intersection(this.query.pa_diamsh, this.searchStockDiameters)
-      // this.intersectPistonStroke = this.intersection(this.query.pa_hod, this.searchPistonStroke)
-      // console.log(this.query.pa_hod);
-
+      this.constructItem = constructItem
+      console.log(this.constructItem);
     }, 200);
   }
 }

@@ -1,27 +1,42 @@
-<div class="title">
-  <h3>{{item.title}}</h3>
-  <div class="subtitle-wrapper">
-    <strong class="code">Код</strong>
-    <strong class="nomination">Наименование</strong>
+<div class="wrapper">
+  <div class="title">
+    <h3>{{constructItem?.title}}</h3>
+    <div class="subtitle-wrapper">
+      <strong class="code">Код</strong>
+      <strong class="nomination">Наименование</strong>
+    </div>
+    <div class="btn-container">
+      <button mat-raised-button color="warn" type="button">Очистить</button>
+    </div>
   </div>
-  <div class="btn-container">
-    <button mat-raised-button color="warn" type="button">Очистить</button>
-  </div>
-</div>
-<div *ngIf="item" class="content-left">
-  <mat-radio-group>
-    @for (item of item.data; track item) {
+  <div class="content-wrapper">
+    <div *ngIf="constructItem" class="content">
+      <mat-radio-group id="left-group">
+        @for (item of constructItem.data; track item) {
 
-      <div class="group-container">
-        <div class="number">
-          {{item.group}}
+        <div class="group-container">
+          <div class="number">
+            {{item?.group}}
+          </div>
+          <div class="items-container">
+            @for (element of item?.items; track element) {
+            <div class="item-container">
+              <div class="sub-groupe">
+                <span>{{element.subgroup}}</span>
+                <label for="#left-group">
+                  <mat-radio-button>
+                    <h6 class="subgroup-title">{{element.title}}</h6>
+                    <img [src]="element.listImgSrc" alt="" class="sub-group-img">
+
+                  </mat-radio-button>
+                </label>
+              </div>
+            </div>
+            }
+          </div>
         </div>
-        <div class="items-container">
-          @for (element of item.items; track element) {
-            <p>{{element.title}}</p><!-- console.log(element) -->
-          }
-        </div>
-      </div>
-    }
-  </mat-radio-group>
+        }
+      </mat-radio-group>
+    </div>
+  </div>
 </div>

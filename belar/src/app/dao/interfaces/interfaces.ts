@@ -32,25 +32,17 @@ export interface Sleeve {
   items: Item[];
 }
 
+export interface ConstructItem {
+  title: string;
+  subtitle?: string;
+  data: Sleeve[]
+}
+
 export interface Construct {
-  sleeveFastening: {
-    title: string;
-    subtitle: string;
-    data: Sleeve[];
-  },
-  stemFastening: {
-    title: string;
-    subtitle: string;
-    data: Sleeve[]
-  },
-  workingFluidSupplyBonk: {
-    title: string;
-    data: Sleeve[]
-  },
-  workingFluidSupplyShtucer: {
-    title: string,
-    data: Sleeve[]
-  }
+  sleeveFastening: ConstructItem | undefined,
+  stemFastening: ConstructItem | undefined,
+  workingFluidSupplyBonk: ConstructItem | undefined,
+  workingFluidSupplyShtucer: ConstructItem | undefined
 
 }
 

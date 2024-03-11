@@ -1,33 +1,29 @@
 <div class="constructor">
 
   <div class="wrapper">
+
     <div class="left">
-      <app-side
-      [constructItem]="construct.sleeveFastening"
-      >
-
-      </app-side>
+      <app-side [constructItem]="construct?.sleeveFastening"></app-side>
     </div>
-    <div class="top">
-      <app-top>
 
-      </app-top>
-    </div>
-    <div class="middle">
-      <app-middle>
+    <div class="grid-wrapper">
+      <div class="top">
+        <app-top></app-top>
+      </div>
 
-      </app-middle>
+      <div class="middle">
+        <app-middle></app-middle>
+      </div>
+      <div class="bottom">
+        <app-bottom></app-bottom>
+      </div>
     </div>
+
     <div class="right">
-      <app-side
-      [constructItem]="construct.stemFastening"
-      >
-
+      <app-side [constructItem]="construct?.stemFastening">
       </app-side>
     </div>
-    <div class="bottom">
-      <app-bottom></app-bottom>
-    </div>
+
   </div>
 
 </div>

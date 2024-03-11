@@ -1,39 +1,39 @@
 @import 'variables'
+
 $brd-lite: 1px solid black
 $brd-bold: 3px solid black
 .constructor
   padding: 20px
   width: $contentWidth
-  height: 87vh
+  // height: 87vh
   margin: 0 auto
 .wrapper
   font-family: Montserrat, sans-serif
-  display: grid
-  grid-template-areas: "left top top top top top right" "left middle middle middle middle middle right" "left middle middle middle middle middle right" "left bottom bottom bottom bottom bottom right"
-  // grid-template-rows: auto 70vh auto
+  display: flex
   position: relative
   font-style: italic
-  height: 100%
+  height: 80vh
   gap: 10px
+.grid-wrapper
+  height: 100%
+  flex-grow: 1
+  align-self: stretch
+  max-width: 100%
+  display: grid
 
 .left
   border: $brd-bold
-  grid-area: left
-    // padding: 5px
-
-  // background: gray
-
-
 .right
-  border: 3px solid black
-  grid-area: right
+  border: $brd-bold
+.left, .right
+  width: 250px
+  overflow-y: scroll
+  overflow-x: hidden
+  scrollbar-width: thin
 
 .top
-  grid-area: top
   background: green
 .middle
-  grid-area: middle
-  background: yello
+  width: calc(90vw - 500px)
 .bottom
-  grid-area: bottom
   background: blue
