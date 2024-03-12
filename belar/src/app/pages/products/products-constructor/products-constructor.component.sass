@@ -1,11 +1,10 @@
 @import 'variables'
-
 $brd-lite: 1px solid black
 $brd-bold: 3px solid black
+
 .constructor
-  padding: 20px
+  padding: 20px 0
   width: $contentWidth
-  // height: 87vh
   margin: 0 auto
 .wrapper
   font-family: Montserrat, sans-serif
@@ -20,20 +19,25 @@ $brd-bold: 3px solid black
   align-self: stretch
   max-width: 100%
   display: grid
+  grid-template-rows: 1fr 2fr 1fr
 
 .left
   border: $brd-bold
 .right
   border: $brd-bold
 .left, .right
-  width: 250px
+  min-width: 250px
   overflow-y: scroll
   overflow-x: hidden
   scrollbar-width: thin
 
-.top
-  background: green
 .middle
   width: calc(90vw - 500px)
+  margin: 0 auto
+  height: 100%
+  align-self: center
+.top
+  height: fit-content
+
 .bottom
   background: blue

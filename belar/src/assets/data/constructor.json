@@ -211,9 +211,10 @@
       }
     ]
   },
-  "workingFluidSupplyBonk": {
+
+  "workingFluidSupply": {
     "title": "Бонка c внутренней резьбой",
-    "data": [
+    "items": [
       {
         "title": "ГОСТ 22526-77 ISO 9974-1 (метр.) ISO 1179-1 (BSPP)",
         "code": null,
@@ -234,12 +235,7 @@
         "subgroup": null,
         "listImgSrc": "assets/img/constr/top/bonk-3.png",
         "mainImgSrc": "assets/img/constr/top/bonk-3-1.png"
-      }
-    ]
-  },
-  "workingFluidSupplyShtucer": {
-    "title": "Штуцер с наружной резьбой",
-    "data": [
+      },
       {
         "title": "по ГОСТ 16045-70 DIN 7631",
         "code": null,

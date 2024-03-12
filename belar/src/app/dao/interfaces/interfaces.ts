@@ -32,6 +32,11 @@ export interface Sleeve {
   items: Item[];
 }
 
+export interface FluidSupply {
+  title: string;
+  items: Item[];
+}
+
 export interface ConstructItem {
   title: string;
   subtitle?: string;
@@ -41,8 +46,7 @@ export interface ConstructItem {
 export interface Construct {
   sleeveFastening: ConstructItem | undefined,
   stemFastening: ConstructItem | undefined,
-  workingFluidSupplyBonk: ConstructItem | undefined,
-  workingFluidSupplyShtucer: ConstructItem | undefined
+  workingFluidSupply: FluidSupply | undefined,
 
 }
 

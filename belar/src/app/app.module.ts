@@ -31,59 +31,61 @@ import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { OrgComponent } from "./pages/products/products-by-technics/org/org.component";
 import { CdkAccordionModule } from '@angular/cdk/accordion';
-import {MatRadioModule} from '@angular/material/radio';
+import { MAT_RADIO_DEFAULT_OPTIONS, MatRadioModule } from '@angular/material/radio';
 import { TopComponent } from "./pages/products/products-constructor/top/top.component";
 import { SideComponent } from './pages/products/products-constructor/side/side.component';
 import { BottomComponent } from './pages/products/products-constructor/bottom/bottom.component';
 import { MiddleComponent } from './pages/products/products-constructor/middle/middle.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        HeaderComponent,
-        FooterComponent,
-        AboutComponent,
-        CertsComponent,
-        LoginComponent,
-        ProductsComponent,
-        ProductsListComponent,
-        ProductsConstructorComponent,
-        ProductsByTechnicsComponent,
-        ProductsListFilterComponent,
-        ProductsListAllComponent,
-        OrgComponent,
-        TopComponent,
-        SideComponent,
-        BottomComponent,
-        MiddleComponent
-    ],
-    providers: [
-        { provide: LocationStrategy, useClass: HashLocationStrategy },
-        { provide: MatPaginatorIntl, useValue: getRUPaginatorIntl() },
-        { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { subscriptSizing: 'dynamic' } }
-    ],
-    bootstrap: [AppComponent],
-    imports: [
-        AppRoutingModule,
-        BrowserModule,
-        BrowserAnimationsModule,
-        AppRoutingModule,
-        NgbModule,
-        HttpClientModule,
-        MatPaginatorModule,
-        MatButtonModule,
-        MatSelectModule,
-        MatChipsModule,
-        MatFormFieldModule,
-        MatIconModule,
-        MatAutocompleteModule,
-        ReactiveFormsModule,
-        MatExpansionModule,
-        CdkAccordionModule,
-        MatTableModule,
-        MatInputModule,
-        MatRadioModule,
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    AboutComponent,
+    CertsComponent,
+    LoginComponent,
+    ProductsComponent,
+    ProductsListComponent,
+    ProductsConstructorComponent,
+    ProductsByTechnicsComponent,
+    ProductsListFilterComponent,
+    ProductsListAllComponent,
+    OrgComponent,
+    TopComponent,
+    SideComponent,
+    BottomComponent,
+    MiddleComponent
+  ],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    { provide: MatPaginatorIntl, useValue: getRUPaginatorIntl() },
+    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { subscriptSizing: 'dynamic' } },
+    { provide: MAT_RADIO_DEFAULT_OPTIONS, useValue: { color: 'primary' },
+    }
+  ],
+  bootstrap: [AppComponent],
+  imports: [
+    AppRoutingModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    NgbModule,
+    HttpClientModule,
+    MatPaginatorModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatChipsModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule,
+    MatExpansionModule,
+    CdkAccordionModule,
+    MatTableModule,
+    MatInputModule,
+    MatRadioModule,
 
-    ]
+  ]
 })
 export class AppModule { }

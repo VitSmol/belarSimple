@@ -1,0 +1,52 @@
+$brd-lite: 1px solid black
+$brd-bold: 3px solid black
+.top-wrapper
+  display: flex
+  flex-direction: column
+  border: $brd-lite
+
+.bonk, .shtuc
+  h5
+    // border-right: $brd-lite
+.items-container
+  display: flex
+.item-container
+  display: flex
+  flex-direction: column
+  align-items: center
+  border-right: $brd-lite
+table tr:not(:last-child)
+  border-bottom: $brd-lite
+th:not(:last-child)
+  border-right: $brd-lite
+tr td
+  border-right: $brd-lite
+  text-align: center
+h3
+  font-size: 16px
+  border-bottom: $brd-lite
+h4
+  font-size: 15px
+  border-bottom: $brd-lite
+h5
+  font-size: 14px
+  // border-bottom: $brd-lite
+h6
+  font-size: 13px
+  // border-bottom: $brd-lite
+img
+  height: 60px
+
+h3, h4, h5, h6
+  margin: 0
+  padding: 2px 0
+  text-align: center
+::ng-deep
+  .mdc-radio
+    padding: 5px
+  .mat-mdc-radio-touch-target
+    // background: #000
+  table
+    .mdc-form-field
+      margin-right: calc( 50% - 20px )
+

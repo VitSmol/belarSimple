@@ -22,7 +22,6 @@ export class ProductsConstructorComponent implements OnInit, AfterViewInit {
     this.serv.getAll().subscribe(data => {
       this.construct = data
       console.log(this.construct);
-
     })
   }
 

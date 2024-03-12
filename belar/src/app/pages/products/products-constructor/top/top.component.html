@@ -1,1 +1,64 @@
-<p>top works!</p>
+<div class="top-wrapper">
+  <h3 class="title">Гидроцилиндр MC75/40×X-3.2(X)(предварительное обозначение)</h3>
+  <h4 class="subtitle">Подвод рабочей жидкости</h4>
+
+  <table>
+      <tr>
+        <th colspan="3">
+          <h5>Бонка c внутренней резьбой</h5>
+        </th>
+        <th colspan="2">
+          <h5>Штуцер с наружной резьбой</h5>
+        </th>
+        <th>
+          <h5>Другое по согласованию</h5>
+        </th>
+      </tr>
+
+      <tr>
+        @for (item of constructItem?.workingFluidSupply?.items; track item) {
+        <td>
+          <h6>{{item.title}}</h6>
+        </td>
+      }
+      <td rowspan="2">
+        <textarea
+          cdkTextareaAutosize
+          name="other" id="other" cols="20" rows="4"></textarea>
+      </td>
+      </tr>
+      <tr>
+        @for (item of constructItem?.workingFluidSupply?.items; track item) {
+        <td class="img-td"><img [src]="item.listImgSrc" alt="Бонка с внутренней резьбой"></td>
+        }
+      </tr>
+      <tr>
+        @for (item of constructItem?.workingFluidSupply?.items; track item) {
+          <td>
+              <mat-radio-button name="left"></mat-radio-button>
+          </td>
+        }
+        <td><button mat-raised-button color="warn" type="button" (click)="clear('left')" >Очистить</button></td>
+      </tr>
+      <tbody>
+        <!-- <form > -->
+          <tr>
+            @for (item of constructItem?.workingFluidSupply?.items; track item) {
+              <td>
+                <mat-radio-button name="right"></mat-radio-button>
+                <!-- <input type="radio" name="right" class="right-radio"> -->
+              </td>
+            }
+            <td><button (click)="clear('right')" type="reset" for="left" mat-raised-button color="warn">Очистить</button></td>
+      </tr>
+
+      <!-- </form> -->
+    </tbody>
+    <!-- <mat-radio-group id="leftSide">
+    </mat-radio-group>
+    <mat-radio-group id="rightSide">
+    </mat-radio-group> -->
+  </table>
+
+
+</div>
