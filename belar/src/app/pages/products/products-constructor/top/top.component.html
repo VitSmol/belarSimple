@@ -35,29 +35,28 @@
       <tr>
         @for (item of constructItem?.workingFluidSupply?.items; track item) {
           <td>
+            <div class="cell">
               <mat-radio-button name="left"></mat-radio-button>
+            </div>
           </td>
         }
-        <td><button mat-raised-button color="warn" type="button" (click)="clear('left')" >Очистить</button></td>
+        <td><button mat-mini-fab color="warn" type="button" (click)="clear('left')" >x</button></td>
       </tr>
-      <tbody>
         <!-- <form > -->
           <tr>
             @for (item of constructItem?.workingFluidSupply?.items; track item) {
               <td>
-                <mat-radio-button name="right"></mat-radio-button>
+                <div class="cell">
+                  <mat-radio-button name="right"></mat-radio-button>
+                </div>
                 <!-- <input type="radio" name="right" class="right-radio"> -->
               </td>
             }
-            <td><button (click)="clear('right')" type="reset" for="left" mat-raised-button color="warn">Очистить</button></td>
+            <td>
+              <button (click)="clear('right')" type="reset" for="left" mat-mini-fab color="warn">x</button>
+            </td>
       </tr>
 
-      <!-- </form> -->
-    </tbody>
-    <!-- <mat-radio-group id="leftSide">
-    </mat-radio-group>
-    <mat-radio-group id="rightSide">
-    </mat-radio-group> -->
   </table>
 
 

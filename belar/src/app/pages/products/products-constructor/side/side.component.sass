@@ -1,10 +1,20 @@
+@import 'variables'
 $brd-lite: 1px solid black
 $brd-bold: 3px solid black
+
+.wrapper
+  border: $brd-bold
+  border-top: none
+h6
+  font-family: Montserrat
+  font-size: 14px
+
 h3
   font-size: 15px
   text-align: center
   border-bottom: $brd-lite
   margin-bottom: 0
+  border-top: $brd-bold
 strong
   font-size: 13px
 .title
@@ -39,6 +49,10 @@ strong
 .group-container
   display: flex
   border-bottom: $brd-bold
+  &:last-child
+    border-bottom: none
+
+
 
   .items-container
     width: 100%
@@ -58,7 +72,7 @@ strong
     border-left: $brd-lite
     span
       align-self: center
-      width: 25px
+      width: 30px
     label
       display: flex
       width: 100%

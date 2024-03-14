@@ -9,15 +9,80 @@
   align-items: center
   height: 100%
   scrollbar-width: thin
+  position: relative
 
 .img-wrapper
-  height: 100%
+  height: calc(100% + 110px)
   display: flex
   align-items: center
   width: 100%
   justify-content: center
   transform-origin: left top
+  position: absolute
+  left: 5px
+  top: 0
   &:hover
     cursor: grab
-img
-  width: 600px
+#img
+  position: relative
+  img
+    height: 45%
+    position: relative
+    max-width: 500px
+    z-index: -1
+#size-0
+  position: absolute
+  top: 33%
+  left: 26%
+#size-1
+  position: absolute
+  z-index: 100
+  left: 37%
+  top: 33%
+
+#size-2
+  position: absolute
+  top: 33%
+  left: 50%
+#left-side, #right-side, #top-left, #top-right
+  position: absolute
+  background-color: gray
+
+#top-left, #top-right
+  height: 100px
+  width: 15%
+  top: -100px
+#top-right
+  right: 125px
+#top-left
+  left: 60px
+
+#left-side, #right-side
+  width: 150px
+  height: 82%
+
+#left-side
+  left: -150px
+
+#right-side
+  right: -150px
+::ng-deep
+  mat-form-field
+    background: white
+    width: 45px
+    font-size: 12px
+    .mat-mdc-text-field-wrapper
+      padding: 5px 5px
+      height: 40px
+      padding: 3px
+      height: 30px
+      // padding: 1px
+      // height: 25px
+    .mat-mdc-form-field-infix
+      padding: 2px !important
+      height: 40px
+    mat-select
+      font-size: 13px !important
+  .mat-mdc-option
+    padding-left: 8px !important
+    min-height: 36px !important

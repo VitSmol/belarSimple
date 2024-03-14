@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { Construct } from 'src/app/dao/interfaces/interfaces';
+import { Construct, Item } from 'src/app/dao/interfaces/interfaces';
 import { ConstructorService } from 'src/app/services/constructor.service';
 
 @Component({
@@ -10,12 +10,13 @@ import { ConstructorService } from 'src/app/services/constructor.service';
 export class ProductsConstructorComponent implements OnInit, AfterViewInit {
 
   public construct?: Construct
-
+  public sideElement!: { el: Item, side: string }
   constructor(
     private serv: ConstructorService
-  ){}
+  ) { }
 
   ngAfterViewInit(): void {
+
   }
 
   ngOnInit(): void {
@@ -25,5 +26,7 @@ export class ProductsConstructorComponent implements OnInit, AfterViewInit {
     })
   }
 
-
+  setSideElement(el: Item, side: string) {
+    this.sideElement = { side, el }
+  }
 }

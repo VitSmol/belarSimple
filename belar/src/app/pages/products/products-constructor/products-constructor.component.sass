@@ -11,7 +11,7 @@ $brd-bold: 3px solid black
   display: flex
   position: relative
   font-style: italic
-  height: 80vh
+  height: 90vh
   gap: 10px
 .grid-wrapper
   height: 100%
@@ -19,20 +19,22 @@ $brd-bold: 3px solid black
   align-self: stretch
   max-width: 100%
   display: grid
-  grid-template-rows: 1fr 2fr 1fr
+  grid-template-rows: 1fr 7fr 1fr
 
 .left
-  border: $brd-bold
+  // border: $brd-bold
 .right
-  border: $brd-bold
+  // border: $brd-bold
 .left, .right
-  min-width: 250px
+  max-width: 230px
   overflow-y: scroll
   overflow-x: hidden
   scrollbar-width: thin
 
 .middle
-  width: calc(90vw - 500px)
+  // width: calc(90vw - 500px)
+  padding-top: 20px
+  width: 100%
   margin: 0 auto
   height: 100%
   align-self: center
@@ -41,3 +43,21 @@ $brd-bold: 3px solid black
 
 .bottom
   background: blue
+
+// ::ng-deep .mat-radio-container
+//       height: 10px !important
+//       width: 10px !important
+
+// ::ng-deep .mat-radio-outer-circle
+//   height: 10px !important
+//   width: 10px !important
+
+// ::ng-deep .mat-radio-inner-circle
+//   height: 10px !important
+//   width: 10px !important
+
+// ::ng-deep .mat-radio-button .mat-radio-ripple
+//   height: 20px !important
+//   width: 20px !important
+//   left: calc(50% - 10px) !important
+//   top: calc(50% - 10px) !important

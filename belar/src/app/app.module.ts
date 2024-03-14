@@ -10,7 +10,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { CertsComponent } from './pages/certs/certs.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProductsComponent } from './pages/products/products.component';
-import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy, NgOptimizedImage, PathLocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsListComponent } from './pages/products/products-list/products-list.component';
 import { ProductsConstructorComponent } from './pages/products/products-constructor/products-constructor.component';
@@ -60,9 +60,8 @@ import { MiddleComponent } from './pages/products/products-constructor/middle/mi
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },
     { provide: MatPaginatorIntl, useValue: getRUPaginatorIntl() },
-    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { subscriptSizing: 'dynamic' } },
-    { provide: MAT_RADIO_DEFAULT_OPTIONS, useValue: { color: 'primary' },
-    }
+    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { subscriptSizing: 'dynamic', appearance: 'fill' } },
+    // { provide: MAT_RADIO_DEFAULT_OPTIONS, useValue: { color: 'primary' }, }
   ],
   bootstrap: [AppComponent],
   imports: [
@@ -85,6 +84,7 @@ import { MiddleComponent } from './pages/products/products-constructor/middle/mi
     MatTableModule,
     MatInputModule,
     MatRadioModule,
+    NgOptimizedImage
 
   ]
 })

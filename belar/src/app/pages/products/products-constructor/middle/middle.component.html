@@ -1,6 +1,43 @@
 <div class="main-wrapper dragscroll">
   <div class="img-wrapper" (mousewheel)="onwheel($event)" [style.scale]="this.scale"
   >
-    <img src="assets/img/constr/main.png" alt="">
+    <div class="img" id="img">
+        <div id="left-side">
+
+        </div>
+        <div id="right-side">
+
+        </div>
+        <div id="top-left">
+
+        </div>
+        <div id="top-right">
+
+        </div>
+        <mat-form-field id="size-0">
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field id="size-1" appearance="fill">
+          <mat-select >
+            <mat-option [value]="25">25</mat-option>
+            <mat-option [value]="32">32</mat-option>
+            <mat-option [value]="35">35</mat-option>
+            <mat-option [value]="40">40</mat-option>
+            <mat-option [value]="50">50</mat-option>
+            <mat-option [value]="100">100</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field id="size-2" appearance="fill">
+          <mat-select>
+            <mat-option [value]="25">25</mat-option>
+            <mat-option [value]="32">32</mat-option>
+            <mat-option [value]="35">35</mat-option>
+            <mat-option [value]="40">40</mat-option>
+            <mat-option [value]="50">50</mat-option>
+            <mat-option [value]="100">100</mat-option>
+          </mat-select>
+        </mat-form-field>
+      <img src="assets/img/constr/main.png" alt="Чертеж гидроцилиндра">
+    </div>
   </div>
 </div>
