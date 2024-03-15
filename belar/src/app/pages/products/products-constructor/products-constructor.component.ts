@@ -10,7 +10,10 @@ import { ConstructorService } from 'src/app/services/constructor.service';
 export class ProductsConstructorComponent implements OnInit, AfterViewInit {
 
   public construct?: Construct
-  public sideElement!: { el: Item, side: string }
+  public leftSideElement!: { el: Item, side: string }
+  public rightSideElement!: { el: Item, side: string }
+  public topRightElement!: { el: Item, side: string }
+  public topLeftElement!: { el: Item, side: string }
   constructor(
     private serv: ConstructorService
   ) { }
@@ -22,11 +25,18 @@ export class ProductsConstructorComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.serv.getAll().subscribe(data => {
       this.construct = data
-      console.log(this.construct);
     })
   }
 
   setSideElement(el: Item, side: string) {
-    this.sideElement = { side, el }
+    if (side === 'left') {
+      this.leftSideElement = { side, el }
+    } else if (side === 'right') {
+      this.rightSideElement = { side, el }
+    } else if (side === 'topleft') {
+      this.topLeftElement = {side, el}
+    } else if (side === 'topright') {
+      this.topRightElement = {side, el}
+    }
   }
 }

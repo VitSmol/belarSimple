@@ -36,24 +36,24 @@
         @for (item of constructItem?.workingFluidSupply?.items; track item) {
           <td>
             <div class="cell">
-              <mat-radio-button name="left"></mat-radio-button>
+              <mat-radio-button name="topleft"  (change)="setElement(item, 'topleft')"></mat-radio-button>
             </div>
           </td>
         }
-        <td><button mat-mini-fab color="warn" type="button" (click)="clear('left')" >x</button></td>
+        <td><button mat-mini-fab color="warn" type="button" (click)="clear('topleft')" >x</button></td>
       </tr>
         <!-- <form > -->
           <tr>
             @for (item of constructItem?.workingFluidSupply?.items; track item) {
               <td>
                 <div class="cell">
-                  <mat-radio-button name="right"></mat-radio-button>
+                  <mat-radio-button name="topright" (change)="setElement(item, 'topright')"></mat-radio-button>
                 </div>
                 <!-- <input type="radio" name="right" class="right-radio"> -->
               </td>
             }
             <td>
-              <button (click)="clear('right')" type="reset" for="left" mat-mini-fab color="warn">x</button>
+              <button (click)="clear('topright')" type="reset" for="left" mat-mini-fab color="warn">x</button>
             </td>
       </tr>
 

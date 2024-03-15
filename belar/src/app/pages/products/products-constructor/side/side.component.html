@@ -25,7 +25,7 @@
               <div class="sub-groupe">
                 <span>{{element.subgroup}}</span>
                 <label for="#side-group">
-                  <mat-radio-button [name]="constructItem.title" (change)="log(element)">
+                  <mat-radio-button [name]="constructItem.title" (change)="setElement(element)">
                     <h6 class="subgroup-title">{{element.title}}</h6>
                     <img [src]="element.listImgSrc" alt="Крепление" class="sub-group-img">
                   </mat-radio-button>

@@ -14,12 +14,17 @@
       <div class="top">
         <app-top
         [constructItem]="construct"
+        (topLeftElement)="setSideElement($event, 'topleft')"
+        (topRightElement)="setSideElement($event, 'topright')"
         ></app-top>
       </div>
 
       <div class="middle">
         <app-middle
-        [sideElement]="sideElement"
+        [leftSideElement]="leftSideElement"
+        [rightSideElement]="rightSideElement"
+        [topRightElement]="topRightElement"
+        [topLeftElement]="topLeftElement"
         >
 
         </app-middle>

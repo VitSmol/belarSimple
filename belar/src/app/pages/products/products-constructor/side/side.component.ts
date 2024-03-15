@@ -14,11 +14,10 @@ export class SideComponent {
   @Input('constructItem') public set setProducts(constructItem: ConstructItem | undefined) {
     setTimeout(() => {
       this.constructItem = constructItem
-      console.log(this.constructItem);
     }, 200);
   }
 
-  log(el: Item) {
+  setElement(el: Item) {
     this.sideElement.emit(el)
   }
 }

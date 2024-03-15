@@ -25,6 +25,9 @@ export interface Item {
   subgroup: string | null;
   listImgSrc: string;
   mainImgSrc: string;
+  bottom?: string;
+  top?: string;
+  height?: string;
 }
 
 export interface Sleeve {

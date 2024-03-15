@@ -1,5 +1,5 @@
-<div class="main-wrapper dragscroll">
-  <div class="img-wrapper" (mousewheel)="onwheel($event)" [style.scale]="this.scale"
+<div class="main-wrapper dragscroll" id="img-wrapper">
+  <div class="img-wrapper"  (mousewheel)="onwheel($event)" [style.scale]="this.scale"
   >
     <div class="img" id="img">
         <div id="left-side">
@@ -14,7 +14,7 @@
         <div id="top-right">
 
         </div>
-        <mat-form-field id="size-0">
+        <!-- <mat-form-field id="size-0">
           <input matInput>
         </mat-form-field>
         <mat-form-field id="size-1" appearance="fill">
@@ -36,7 +36,7 @@
             <mat-option [value]="50">50</mat-option>
             <mat-option [value]="100">100</mat-option>
           </mat-select>
-        </mat-form-field>
+        </mat-form-field> -->
       <img src="assets/img/constr/main.png" alt="Чертеж гидроцилиндра">
     </div>
   </div>
