@@ -1,3 +1,4 @@
+import { WrappedNodeExpr } from '@angular/compiler';
 import { AfterViewInit, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Item } from 'src/app/dao/interfaces/interfaces';
 
@@ -8,13 +9,22 @@ import { Item } from 'src/app/dao/interfaces/interfaces';
 })
 export class MiddleComponent implements OnChanges, OnInit, AfterViewInit {
 
-  scale = 1.3;
   public leftImgContainer!: HTMLDivElement
   public rightImgContainer!: HTMLDivElement
   public topRightImgContainer!: HTMLDivElement
   public topLeftImgContainer!: HTMLDivElement
-
   public mainImg!: HTMLImageElement
+
+  public scale = 1.3;
+  public startX: number = 0;
+  private startY: number = 0;
+  public posX: number = 0;
+  public posY: number = 0;
+  public gestureStartRotation: number = 0;
+  public gestureStartScale: number = 0
+  public rotation: number = 0;
+
+  public wrapper!: HTMLElement
 
 
   @Input() leftSideElement!: { el: Item, side: string }
@@ -32,9 +42,10 @@ export class MiddleComponent implements OnChanges, OnInit, AfterViewInit {
     this.rightImgContainer = document.getElementById('right-side') as HTMLDivElement
     this.topLeftImgContainer = document.getElementById('top-left') as HTMLDivElement
     this.topRightImgContainer = document.getElementById('top-right') as HTMLDivElement
-    const wrapper = document.getElementById('img-wrapper')
-    wrapper!.scrollLeft = window.innerWidth / 8
-    wrapper!.scrollTop = 150
+    this.wrapper = document.getElementById('img-wrapper') as HTMLDivElement
+    this.wrapper!.scrollLeft = window.innerWidth / 8
+    this.wrapper!.scrollTop = 150
+    // const wrapper = document.querySelectorAll('.img-wrapper')
   }
 
   onwheel(event: Event) {
@@ -102,5 +113,30 @@ export class MiddleComponent implements OnChanges, OnInit, AfterViewInit {
         this.createVerticalImg(this.topLeftImgContainer ,this.topLeftElement)
       }
     }
+  }
+  render() {
+    window.requestAnimationFrame(() => {
+      let val = `translate3D(${this.posX}px, ${this.posY}px, 0px) rotate(${this.rotation}deg)`
+      this.wrapper.style.transform = val
+    })
+  }
+  ongesturestart(ev: any): void {
+    ev.preventDefault()
+    // console.log(ev);
+    this.startX = ev.pageX - this.posX
+    this.startY = ev.pageY - this.posY
+    this.gestureStartRotation = this.rotation
+    this.gestureStartScale = this.scale
+  }
+  ongesturechange(ev: any): void {
+    ev.preventDefault()
+    this.rotation = this.gestureStartRotation + ev.rotation
+    this.scale = this.gestureStartScale + ev.scale
+    this.posX = ev.pageX - this.startX
+    this.posY = ev.pageY - this.startY
+    this.render()
+  }
+  ongestureend(ev: any) {
+    ev.preventDefault()
   }
 }

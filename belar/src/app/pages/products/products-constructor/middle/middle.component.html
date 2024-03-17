@@ -1,5 +1,10 @@
 <div class="main-wrapper dragscroll" id="img-wrapper">
-  <div class="img-wrapper"  (wheel)="onwheel($event)" [style.scale]="this.scale"
+  <div class="img-wrapper"
+    (wheel)="onwheel($event)"
+    [style.scale]="this.scale"
+    (gesturestart)="ongesturestart($event)"
+    (gesturechange)="ongesturechange($event)"
+    (gestureend)="ongestureend($event)"
   >
     <div class="img" id="img">
         <div id="left-side">
