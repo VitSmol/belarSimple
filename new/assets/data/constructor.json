@@ -11,14 +11,16 @@
             "code": "1",
             "subgroup": "1.1",
             "listImgSrc": "assets/img/constr/left_and_right/1_1_проушина-с-шс3.png",
-            "mainImg": "assets/img/constr/left_and_right/1_1_Проушина-с-шс.png"
+            "mainImg": "assets/img/constr/left_and_right/1_1_Проушина-с-шс.png",
+            "bottom": "36%"
           },
           {
             "title": "Проушина с ШС (повернута на 90°)",
             "code": "1",
             "subgroup": "1.2",
             "listImgSrc": "assets/img/constr/left_and_right/1_2_Проушина.png",
-            "mainImg": "assets/img/constr/left_and_right/1_2_Проушина-3.png"
+            "mainImg": "assets/img/constr/left_and_right/1_2_Проушина-3.png",
+            "bottom": "25%"
           }
         ]
       },
@@ -30,14 +32,16 @@
             "code": "1",
             "subgroup": "2.1",
             "listImgSrc": "assets/img/constr/left_and_right/2_1_Серьга.png",
-            "mainImg": "assets/img/constr/left_and_right/2_2_Серьга-3.png"
+            "mainImg": "assets/img/constr/left_and_right/2_1_Серьга-3.png",
+            "bottom": "12%"
           },
           {
             "title": "Серьга c ШСㅤ(повернута на 90°)",
             "code": "1",
             "subgroup": "2.2",
             "listImgSrc": "assets/img/constr/left_and_right/2_2_серьга-сбоку1.png",
-            "mainImg": "assets/img/constr/left_and_right/2_2_серьга-с-осью.png"
+            "mainImg": "assets/img/constr/left_and_right/2_2_серьга-с-осью.png",
+            "bottom": "25%"
           }
         ]
       },
@@ -49,14 +53,16 @@
             "code": "2",
             "subgroup": "3.1",
             "listImgSrc": "assets/img/constr/left_and_right/3_1_проушина-без-шс.png",
-            "mainImg": "assets/img/constr/left_and_right/3_1_проушина-без-шс-2.png"
+            "mainImg": "assets/img/constr/left_and_right/3_1_проушина-без-шс-2.png",
+            "bottom": "36%"
           },
           {
             "title": "Проушина без ШС (повернута на 90°)",
             "code": "2",
             "subgroup": "3.2",
             "listImgSrc": "assets/img/constr/left_and_right/3_2_проушина-без-шс-1.png",
-            "mainImg": "assets/img/constr/left_and_right/3_2_проушина-сбоку1.png"
+            "mainImg": "assets/img/constr/left_and_right/3_2_проушина-сбоку.png",
+            "bottom": "23%"
           }
         ]
       },
@@ -68,14 +74,18 @@
             "code": "4",
             "subgroup": "4.1",
             "listImgSrc": "assets/img/constr/left_and_right/4_1_вилка3.png",
-            "mainImg": "assets/img/constr/left_and_right/4_1_вилка-повернутая.png"
+            "mainImg": "assets/img/constr/left_and_right/4_1_вилка-повернутая.png",
+            "bottom": "2%",
+            "height": "150%"
           },
           {
             "title": "Вилка",
             "code": "4",
             "subgroup": "4.2",
             "listImgSrc": "assets/img/constr/left_and_right/4_2_влка4.png",
-            "mainImg": "assets/img/constr/left_and_right/4_2_вилкаспереди-2.png"
+            "mainImg": "assets/img/constr/left_and_right/4_2_вилкаспереди-2.png",
+            "height": "123%",
+            "bottom": "-37px"
           }
         ]
       },
@@ -87,7 +97,9 @@
             "code": "5",
             "subgroup": "5",
             "listImgSrc": "assets/img/constr/left_and_right/5_Шток1.png",
-            "mainImg": "assets/img/constr/left_and_right/5_Наружная-резьба-1.png"
+            "mainImg": "assets/img/constr/left_and_right/5_Наружная-резьба-1.png",
+            "height": "68%",
+            "bottom": "23%"
           }
         ]
       },
@@ -99,7 +111,9 @@
             "code": "6",
             "subgroup": "5",
             "listImgSrc": "assets/img/constr/left_and_right/6_Шток.png",
-            "mainImg": "assets/img/constr/left_and_right/6_резьба.png"
+            "mainImg": "assets/img/constr/left_and_right/6_резьба.png",
+            "bottom": "25%",
+            "height": "50%"
           }
         ]
       }
@@ -117,14 +131,16 @@
             "code": "1",
             "subgroup": "1.1",
             "listImgSrc": "assets/img/constr/left_and_right/1_1_проушина-с-шс3.png",
-            "mainImg": "assets/img/constr/left_and_right/1_1_проушина-с-шс-перев.png"
+            "mainImg": "assets/img/constr/left_and_right/1_1_проушина-с-шс3-перев.png",
+            "bottom": "36%"
           },
           {
             "title": "Проушина с ШС (повернута на 90°)",
             "code": "1",
             "subgroup": "1.2",
             "listImgSrc": "assets/img/constr/left_and_right/1_2_Проушина.png",
-            "mainImg": "assets/img/constr/left_and_right/1_2_Проушина-3-перев.png"
+            "mainImg": "assets/img/constr/left_and_right/1_2_Проушина-3-перев.png",
+            "bottom": "25%"
           }
         ]
       },
@@ -136,14 +152,16 @@
             "code": "1",
             "subgroup": "2.1",
             "listImgSrc": "assets/img/constr/left_and_right/2_1_Серьга.png",
-            "mainImg": "assets/img/constr/left_and_right/2_1_Серьга-3-перев.png"
+            "mainImg": "assets/img/constr/left_and_right/2_1_Серьга-3-перев.png",
+            "bottom": "12%"
           },
           {
             "title": "Серьга c ШСㅤ(повернута на 90°)",
             "code": "1",
             "subgroup": "2.2",
             "listImgSrc": "assets/img/constr/left_and_right/2_2_серьга-сбоку1.png",
-            "mainImg": "assets/img/constr/left_and_right/2_2_серьга-с-осью.png"
+            "mainImg": "assets/img/constr/left_and_right/2_2_серьга-с-осью-перев.png",
+            "bottom": "25%"
           }
         ]
       },
@@ -155,14 +173,16 @@
             "code": "2",
             "subgroup": "3.1",
             "listImgSrc": "assets/img/constr/left_and_right/3_1_проушина-без-шс.png",
-            "mainImg": "assets/img/constr/left_and_right/3_1_проушина-без-шс-2-перев.png"
+            "mainImg": "assets/img/constr/left_and_right/3_1_проушина-без-шс-2-перев.png",
+            "bottom": "36%"
           },
           {
             "title": "Проушина без ШС (повернута на 90°)",
             "code": "2",
             "subgroup": "3.2",
             "listImgSrc": "assets/img/constr/left_and_right/3_2_проушина-без-шс-1.png",
-            "mainImg": "assets/img/constr/left_and_right/3_2_проушина-сбоку1-перев.png"
+            "mainImg": "assets/img/constr/left_and_right/3_2_проушина-сбоку-перев.png",
+            "bottom": "23%"
           }
         ]
       },
@@ -174,14 +194,18 @@
             "code": "4",
             "subgroup": "4.1",
             "listImgSrc": "assets/img/constr/left_and_right/4_1_вилка3.png",
-            "mainImg": "assets/img/constr/left_and_right/4_1_вилка-повернутая-перев.png"
+            "mainImg": "assets/img/constr/left_and_right/4_1_вилка-повернутая-перев.png",
+            "bottom": "2%",
+            "height": "150%"
           },
           {
             "title": "Вилка",
             "code": "4",
             "subgroup": "4.2",
             "listImgSrc": "assets/img/constr/left_and_right/4_2_влка4.png",
-            "mainImg": "assets/img/constr/left_and_right/4_2_вилкаспереди-2-перев.png"
+            "mainImg": "assets/img/constr/left_and_right/4_2_вилкаспереди-2-перев.png",
+            "height": "123%",
+            "bottom": "-22%"
           }
         ]
       },
@@ -193,7 +217,9 @@
             "code": "5",
             "subgroup": "5",
             "listImgSrc": "assets/img/constr/left_and_right/5_Шток1.png",
-            "mainImg": "assets/img/constr/left_and_right/5_Наружная-резьба-1-перев.png"
+            "mainImg": "assets/img/constr/left_and_right/5_Наружная-резьба-1-перев.png",
+            "height": "68%",
+            "bottom": "23%"
           }
         ]
       },
@@ -205,15 +231,18 @@
             "code": "6",
             "subgroup": "5",
             "listImgSrc": "assets/img/constr/left_and_right/6_Шток.png",
-            "mainImg": "assets/img/constr/left_and_right/6_резьба-перев.png"
+            "mainImg": "assets/img/constr/left_and_right/6_резьба-перев.png",
+            "bottom": "25%",
+            "height": "50%"
           }
         ]
       }
     ]
   },
-  "workingFluidSupplyBonk": {
+
+  "workingFluidSupply": {
     "title": "Бонка c внутренней резьбой",
-    "data": [
+    "items": [
       {
         "title": "ГОСТ 22526-77 ISO 9974-1 (метр.) ISO 1179-1 (BSPP)",
         "code": null,
@@ -234,12 +263,7 @@
         "subgroup": null,
         "listImgSrc": "assets/img/constr/top/bonk-3.png",
         "mainImgSrc": "assets/img/constr/top/bonk-3-1.png"
-      }
-    ]
-  },
-  "workingFluidSupplyShtucer": {
-    "title": "Штуцер с наружной резьбой",
-    "data": [
+      },
       {
         "title": "по ГОСТ 16045-70 DIN 7631",
         "code": null,

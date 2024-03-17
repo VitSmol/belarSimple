@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
 import { ConstructItem, Item, Sleeve } from 'src/app/dao/interfaces/interfaces';
 
 @Component({
@@ -8,7 +8,12 @@ import { ConstructItem, Item, Sleeve } from 'src/app/dao/interfaces/interfaces';
 })
 export class SideComponent {
   public constructItem?: ConstructItem | undefined
+  public width: number = 0
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event:any) {
+    this.width = event.target.innerWidth
+  }
   @Output() sideElement = new EventEmitter<Item>()
 
   @Input('constructItem') public set setProducts(constructItem: ConstructItem | undefined) {
@@ -20,4 +25,5 @@ export class SideComponent {
   setElement(el: Item) {
     this.sideElement.emit(el)
   }
+
 }

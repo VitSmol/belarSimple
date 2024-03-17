@@ -34,7 +34,7 @@ export class MiddleComponent implements OnChanges, OnInit, AfterViewInit {
     this.topRightImgContainer = document.getElementById('top-right') as HTMLDivElement
     const wrapper = document.getElementById('img-wrapper')
     wrapper!.scrollLeft = window.innerWidth / 8
-    wrapper!.scrollTop = 70
+    wrapper!.scrollTop = 150
   }
 
   onwheel(event: Event) {
@@ -46,7 +46,7 @@ export class MiddleComponent implements OnChanges, OnInit, AfterViewInit {
   createImg(parentNode: HTMLDivElement, child: any) {
     // TODO РАБОТАЕТ
     if (!child) {
-      parentNode.innerHTML = ''
+      // parentNode.innerHTML = ''
       return
     }
     parentNode.innerHTML = '' //очищаем родительский контейнер
@@ -61,24 +61,21 @@ export class MiddleComponent implements OnChanges, OnInit, AfterViewInit {
     setTimeout(() => {
       // parentNode.style[child.side] = -img.clientWidth * 100 + 'px';
       parentNode.style.transform = `translate(${child.side === 'left' ? -img.clientWidth * 50 : img.clientWidth * 100}px)`
-      parentNode.style[child.side] = -img.clientWidth + 'px';
+      parentNode.style[child.side] = -img.clientWidth - 1 + 'px';
       parentNode.classList.add('slide')
     }, 100);
     parentNode.append(img)
   }
 
   createVerticalImg(parentNode: HTMLDivElement, child: any) {
-    if (!child) {
-      parentNode.innerHTML = ''
-      return
-    }
+    if (!child) return
     parentNode.innerHTML = ''
     parentNode.classList.remove('topSlide')
     const img = document.createElement('img') as HTMLImageElement
     img.src = child.el.mainImgSrc // устанавливаем картинку
     img.style.width = `100%`
-    img.style.maxHeight = `100px`
-    img.style.minHeight = `80px`
+    // img.style.maxHeight = `100px`
+    // img.style.minHeight = `80px`
     setTimeout(() => {
       parentNode.style.transform = `translateY(${-img.clientHeight * 100}px)`
       parentNode.style.top = -img.clientHeight + 'px';
@@ -88,6 +85,7 @@ export class MiddleComponent implements OnChanges, OnInit, AfterViewInit {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+
     if (changes) {
       if (changes[`leftSideElement`]) {
         this.createImg(this.leftImgContainer, this.leftSideElement)

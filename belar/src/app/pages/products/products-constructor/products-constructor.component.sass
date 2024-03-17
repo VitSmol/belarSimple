@@ -6,6 +6,9 @@ $brd-bold: 3px solid black
   padding: 20px 0
   width: $contentWidth
   margin: 0 auto
+  @media screen and (max-width: 768px)
+    width: calc(100% - 10px)
+
 .wrapper
   font-family: Montserrat, sans-serif
   display: flex
@@ -21,18 +24,31 @@ $brd-bold: 3px solid black
   display: grid
   grid-template-rows: 1fr 7fr 1fr
 
-.left
-  // border: $brd-bold
-.right
-  // border: $brd-bold
 .left, .right
   max-width: 230px
   overflow-y: scroll
   overflow-x: hidden
   scrollbar-width: thin
+  border-bottom: $brd-bold
+@media screen and (max-width: 1300px)
+  .left-inner
+    transform: translateX(-230px)
+    transition: transform 0.5s
+    &.active
+      transition: transform 0.5s
+      transform: translateX(0px)
+  .right-inner
+    transition: transform 0.5s
+    transform: translateX(230px)
+    &.active
+      transition: transform 0.5s
+      transform: translateX(0px)
+@media screen and (max-width:700px)
+  .top
+    z-index: 200
+    overflow-x: auto
 
 .middle
-  // width: calc(90vw - 500px)
   padding-top: 20px
   width: 100%
   margin: 0 auto
@@ -44,20 +60,45 @@ $brd-bold: 3px solid black
 .bottom
   background: blue
 
-// ::ng-deep .mat-radio-container
-//       height: 10px !important
-//       width: 10px !important
+@media screen and (max-width: 1300px)
+  .left, .right
+    background: white
+    z-index: 101
+  .left-inner, .right-inner
+    position: fixed
+    z-index: 300
+  .left-inner
+    left: 0
+  .right-inner
+    right: 0
+  .left-arrow, .right-arrow
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    position: absolute
+    width: 30px
+    height: 60px
+    z-index: 200
+    top: calc( 50% - 15px )
+    span
+      font-size: 80px
+  .down-arrow
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    position: absolute
+    width: 60px
+    height: 30px
+    z-index: 200
+    left: calc( 50% - 30px )
+    span
+      font-size: 80px
+  .left-arrow
+    right: -30px
 
-// ::ng-deep .mat-radio-outer-circle
-//   height: 10px !important
-//   width: 10px !important
+  .right-arrow
+    left: -30px
 
-// ::ng-deep .mat-radio-inner-circle
-//   height: 10px !important
-//   width: 10px !important
 
-// ::ng-deep .mat-radio-button .mat-radio-ripple
-//   height: 20px !important
-//   width: 20px !important
-//   left: calc(50% - 10px) !important
-//   top: calc(50% - 10px) !important

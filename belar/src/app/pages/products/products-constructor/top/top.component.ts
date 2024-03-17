@@ -17,6 +17,7 @@ export class TopComponent {
       this.constructItem = constructItem
     }, 200);
   }
+  @Input() topShow: boolean = false;
   @Output() topLeftElement = new EventEmitter<Item>();
   @Output() topRightElement = new EventEmitter<Item>();
 

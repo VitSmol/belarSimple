@@ -31,6 +31,8 @@
     position: relative
     max-width: 450px
     z-index: 99
+    @media screen and (max-width: 700px)
+      width: 300px
 #size-0
   position: absolute
   top: 33%
@@ -54,7 +56,11 @@
 #top-left, #top-right
   width: 12%
   img
-    min-height: 60px
+    min-height: 80px
+    max-height: 100px
+    @media screen and (max-width: 700px)
+      min-height: 40px
+      max-height: 50px
 #top-right
   right: 121px
 #top-left

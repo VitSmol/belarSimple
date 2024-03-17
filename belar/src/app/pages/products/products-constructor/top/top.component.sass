@@ -3,11 +3,15 @@ $brd-bold: 3px solid black
 .top-wrapper
   display: flex
   flex-direction: column
-  border: $brd-lite
+  position: relative
+  // border: $brd-lite
+  background-color: white
+  h3, h4
+    background-color: white
+  .title
+    z-index: 300
 
-.bonk, .shtuc
-  h5
-    // border-right: $brd-lite
+
 .items-container
   display: flex
 .item-container
@@ -15,6 +19,24 @@ $brd-bold: 3px solid black
   flex-direction: column
   align-items: center
   border-right: $brd-lite
+
+
+.table-wrapper
+  max-width: 100%
+  border: $brd-lite
+  border-top: none
+@media screen and (max-width: 700px)
+  .table-wrapper
+    position: absolute
+    overflow-x: auto
+    overflow-y: hidden
+    transform: translateY(-100%)
+    transition: all 500ms
+    &.active
+      transform: translateY(0%)
+      position: relative
+      transition: all 500ms
+
 table tr:not(:last-child)
   border-bottom: $brd-lite
 th:not(:last-child)
@@ -25,16 +47,16 @@ tr td
   vertical-align: top
 h3
   font-size: 16px
-  border-bottom: $brd-lite
+  border: $brd-lite
+
 h4
   font-size: 14px
-  border-bottom: $brd-lite
+  border: $brd-lite
+  border-top: none
 h5
   font-size: 13px
-  // border-bottom: $brd-lite
 h6
   font-size: 12px
-  // border-bottom: $brd-lite
 img
   height: 60px
 .cell
@@ -48,6 +70,8 @@ h3, h4, h5, h6
   margin: 0
   padding: 2px 0
   text-align: center
+
+
 ::ng-deep
   .mdc-radio
     padding: 5px
