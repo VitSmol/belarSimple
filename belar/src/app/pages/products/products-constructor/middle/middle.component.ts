@@ -58,12 +58,14 @@ export class MiddleComponent implements OnChanges, OnInit, AfterViewInit {
     parentNode.style.bottom = child.el.bottom
     parentNode.style.height = child.el.height
 
+
     setTimeout(() => {
       // parentNode.style[child.side] = -img.clientWidth * 100 + 'px';
       parentNode.style.transform = `translate(${child.side === 'left' ? -img.clientWidth * 50 : img.clientWidth * 100}px)`
       parentNode.style[child.side] = -img.clientWidth - 1 + 'px';
+      parentNode.style.width = img.clientWidth + 'px';
       parentNode.classList.add('slide')
-    }, 100);
+    }, 500);
     parentNode.append(img)
   }
 
