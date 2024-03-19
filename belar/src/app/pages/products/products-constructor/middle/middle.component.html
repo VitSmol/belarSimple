@@ -1,5 +1,5 @@
-<div class="main-wrapper"  id="img-wrapper">
-  <div class="img-wrapper" cdkDrag
+<div class="main-wrapper" id="img-wrapper">
+  <div class="img-wrapper" cdkDrag appScale
     (wheel)="onwheel($event)"
     [style.scale]="this.scale"
     (touchstart)="onTouchStart($event)"
@@ -41,7 +41,7 @@
             <mat-option [value]="100">100</mat-option>
           </mat-select>
         </mat-form-field> -->
-      <img src="assets/img/constr/main.png" alt="Чертеж гидроцилиндра" draggable="true" dragscroll>
+      <img src="assets/img/constr/main.png" alt="Чертеж гидроцилиндра" draggable="true">
     </div>
   </div>
 </div>

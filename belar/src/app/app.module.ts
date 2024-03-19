@@ -37,6 +37,7 @@ import { SideComponent } from './pages/products/products-constructor/side/side.c
 import { BottomComponent } from './pages/products/products-constructor/bottom/bottom.component';
 import { MiddleComponent } from './pages/products/products-constructor/middle/middle.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { ScaleDirective } from './directives/scale.directive';
 
 @NgModule({
   declarations: [
@@ -86,7 +87,8 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     MatInputModule,
     MatRadioModule,
     NgOptimizedImage,
-    DragDropModule
+    DragDropModule,
+    ScaleDirective
 
   ]
 })

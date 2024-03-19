@@ -1,11 +1,15 @@
 import { WrappedNodeExpr } from '@angular/compiler';
 import { AfterViewInit, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Item } from 'src/app/dao/interfaces/interfaces';
+import { ScaleDirective } from 'src/app/directives/scale.directive';
+
 
 @Component({
   selector: 'app-middle',
   templateUrl: './middle.component.html',
-  styleUrl: './middle.component.sass'
+  styleUrl: './middle.component.sass',
+  // standalone: true,
+  // imports: [ScaleDirective]
 })
 export class MiddleComponent implements OnChanges, OnInit, AfterViewInit {
 
