@@ -11,7 +11,6 @@ $brd-bold: 3px solid black
   .title
     z-index: 300
 
-
 .items-container
   display: flex
 .item-container
@@ -20,22 +19,25 @@ $brd-bold: 3px solid black
   align-items: center
   border-right: $brd-lite
 
-
 .table-wrapper
   max-width: 100%
   border: $brd-lite
   border-top: none
+.subtitle
+  background: white
+  border-left: $brd-lite
+  border-right: $brd-lite
+  z-index: 200
 @media screen and (max-width: 700px)
-  .table-wrapper
+  .table-wrapper, .subtitle
     position: absolute
     overflow-x: auto
     overflow-y: hidden
-    transform: translateY(-100%)
-    transition: all 500ms
+    transform: translateY(calc(-100% - 25px))
     &.active
       transform: translateY(0%)
       position: relative
-      transition: all 500ms
+      transition: transform 900ms
 
 table tr:not(:last-child)
   border-bottom: $brd-lite

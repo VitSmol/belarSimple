@@ -2,78 +2,74 @@
 
   <div class="wrapper">
 
-    <div class="left-inner"  [class.active]="leftShow">
-      @if (width < 1300) {
-        <div class="left-arrow" (click)="leftShow = !leftShow; rightShow = false; topShow=false">
-          @if (leftShow) {
-            <span class="material-symbols-outlined">
-              chevron_left
-            </span>
-          } @else {
-            <span class="material-symbols-outlined">
-              chevron_right
-            </span>
-          }
-        </div>
-      }
-      <div class="left">
-        <app-side [constructItem]="construct?.sleeveFastening" (sideElement)="setSideElement($event, 'left')">
-        </app-side>
-      </div>
+    <div class="left-inner" [class.active]="leftShow">
+      @if (width < 1300) { <div class="left-arrow" (click)="leftShow = !leftShow; rightShow = false; topShow=false">
+        @if (leftShow) {
+        <span class="material-symbols-outlined">
+          chevron_left
+        </span>
+        } @else {
+        <span class="material-symbols-outlined">
+          chevron_right
+        </span>
+        }
     </div>
-    <div class="grid-wrapper">
-      <div class="top">
-        <app-top
-          [constructItem]="construct"
-          (topLeftElement)="setSideElement($event, 'topleft')"
-          (topRightElement)="setSideElement($event, 'topright')"
-          [topShow]="topShow"
-          ></app-top>
-          @if (width < 700) {
-            <div class="down-arrow" (click)="topShow = !topShow; rightShow = false; leftShow = false">
-              @if (topShow) {
-                <span class="material-symbols-outlined">
-                  expand_less
-                  </span>
-              } @else {
-                <span class="material-symbols-outlined">
-                  expand_more
-                </span>
-              }
-            </div>
-          }
-      </div>
-
-      <div class="middle">
-        <app-middle [leftSideElement]="leftSideElement" [rightSideElement]="rightSideElement"
-          [topRightElement]="topRightElement" [topLeftElement]="topLeftElement">
-
-        </app-middle>
-      </div>
-      <div class="bottom">
-        <app-bottom></app-bottom>
-      </div>
-    </div>
-
-    <div class="right-inner"  [class.active]="rightShow">
-      @if (width < 1300) {
-        <div class="right-arrow" (click)="rightShow = !rightShow; leftShow = false; topShow = false">
-          @if (rightShow) {
-            <span class="material-symbols-outlined">
-              chevron_right
-            </span>
-          } @else {
-            <span class="material-symbols-outlined">
-              chevron_left
-            </span>
-          }
-        </div>
-      }
-      <div class="right">
-        <app-side [constructItem]="construct?.stemFastening" (sideElement)="setSideElement($event, 'right')">
-        </app-side>
-      </div>
+    }
+    <div class="left">
+      <app-side [constructItem]="construct?.sleeveFastening" (sideElement)="setSideElement($event, 'left')">
+      </app-side>
     </div>
   </div>
+  <div class="grid-wrapper">
+    <div class="top">
+      <div class="top-out">
+        <app-top [constructItem]="construct" (topLeftElement)="setSideElement($event, 'topleft')"
+          (topRightElement)="setSideElement($event, 'topright')" [topShow]="topShow"></app-top>
+
+      @if (width < 700) { <div class="down-arrow" (click)="topShow = !topShow; rightShow = false; leftShow = false">
+        @if (topShow) {
+        <span class="material-symbols-outlined">
+          expand_less
+        </span>
+        } @else {
+        <span class="material-symbols-outlined">
+          expand_more
+        </span>
+        }
+      </div>
+    }
+  </div>
+  </div>
+
+  <div class="middle">
+    <app-middle [leftSideElement]="leftSideElement" [rightSideElement]="rightSideElement"
+      [topRightElement]="topRightElement" [topLeftElement]="topLeftElement">
+
+    </app-middle>
+  </div>
+  <div class="bottom">
+    <app-bottom></app-bottom>
+  </div>
+</div>
+
+<div class="right-inner" [class.active]="rightShow">
+  @if (width < 1300) { <div class="right-arrow" (click)="rightShow = !rightShow; leftShow = false; topShow = false">
+    @if (rightShow) {
+    <span class="material-symbols-outlined">
+      chevron_right
+    </span>
+    } @else {
+    <span class="material-symbols-outlined">
+      chevron_left
+    </span>
+    }
+</div>
+}
+<div class="right">
+  <app-side [constructItem]="construct?.stemFastening" (sideElement)="setSideElement($event, 'right')">
+  </app-side>
+</div>
+</div>
+</div>
 
 </div>
