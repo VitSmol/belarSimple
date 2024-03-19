@@ -9,6 +9,10 @@ import { Item } from 'src/app/dao/interfaces/interfaces';
 })
 export class MiddleComponent implements OnChanges, OnInit, AfterViewInit {
 
+  constructor() {
+
+  }
+
   public leftImgContainer!: HTMLDivElement
   public rightImgContainer!: HTMLDivElement
   public topRightImgContainer!: HTMLDivElement
@@ -16,15 +20,8 @@ export class MiddleComponent implements OnChanges, OnInit, AfterViewInit {
   public mainImg!: HTMLImageElement
 
   public scale = 1.3;
-  public startX: number = 0;
-  private startY: number = 0;
-  public posX: number = 0;
-  public posY: number = 0;
-  public gestureStartRotation: number = 0;
-  public gestureStartScale: number = 0
-  public rotation: number = 0;
-
   public wrapper!: HTMLElement
+  public startDistance: number = 0
 
 
   @Input() leftSideElement!: { el: Item, side: string }
@@ -44,7 +41,8 @@ export class MiddleComponent implements OnChanges, OnInit, AfterViewInit {
     this.topRightImgContainer = document.getElementById('top-right') as HTMLDivElement
     this.wrapper = document.getElementById('img-wrapper') as HTMLDivElement
     this.wrapper!.scrollLeft = window.innerWidth / 8
-    this.wrapper!.scrollTop = 150
+    this.wrapper!.scrollTop = 100
+
     // const wrapper = document.querySelectorAll('.img-wrapper')
   }
 
@@ -68,10 +66,7 @@ export class MiddleComponent implements OnChanges, OnInit, AfterViewInit {
     img.style.height = `100%` // задаем высоту изображения равную высоте родительского контейнера
     parentNode.style.bottom = child.el.bottom
     parentNode.style.height = child.el.height
-
-
     setTimeout(() => {
-      // parentNode.style[child.side] = -img.clientWidth * 100 + 'px';
       parentNode.style.transform = `translate(${child.side === 'left' ? -img.clientWidth * 50 : img.clientWidth * 100}px)`
       parentNode.style[child.side] = -img.clientWidth - 1 + 'px';
       parentNode.style.width = img.clientWidth + 'px';
@@ -85,20 +80,19 @@ export class MiddleComponent implements OnChanges, OnInit, AfterViewInit {
     parentNode.innerHTML = ''
     parentNode.classList.remove('topSlide')
     const img = document.createElement('img') as HTMLImageElement
-    img.src = child.el.mainImgSrc // устанавливаем картинку
+    img.src = child.el.mainImgSrc
     img.style.width = `100%`
-    // img.style.maxHeight = `100px`
-    // img.style.minHeight = `80px`
     setTimeout(() => {
       parentNode.style.transform = `translateY(${-img.clientHeight * 100}px)`
       parentNode.style.top = -img.clientHeight + 'px';
+      parentNode.style.height = img.clientHeight + 'px'
       parentNode.classList.add('topSlide')
-    }, 100);
+    }, 500);
     parentNode.append(img)
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-
+    // this.wrapper.classList.add('dragscroll')
     if (changes) {
       if (changes[`leftSideElement`]) {
         this.createImg(this.leftImgContainer, this.leftSideElement)
@@ -114,29 +108,35 @@ export class MiddleComponent implements OnChanges, OnInit, AfterViewInit {
       }
     }
   }
-  render() {
-    window.requestAnimationFrame(() => {
-      let val = `translate3D(${this.posX}px, ${this.posY}px, 0px) rotate(${this.rotation}deg)`
-      this.wrapper.style.transform = val
-    })
+
+
+  onTouchStart(e: TouchEvent) {
+    // if (e.touches.length > 1) {
+    //   e.preventDefault()
+    //   const t1 = e.touches[0];
+    //   const t2 = e.touches[1];
+    //   const distance = Math.hypot(t1.clientX - t2.clientX, t1.clientY - t2.clientY)
+    //   this.startDistance = distance
+    // }
+
   }
-  ongesturestart(ev: any): void {
-    ev.preventDefault()
-    // console.log(ev);
-    this.startX = ev.pageX - this.posX
-    this.startY = ev.pageY - this.posY
-    this.gestureStartRotation = this.rotation
-    this.gestureStartScale = this.scale
+  onTouchMove(e: TouchEvent) {
+    // if (e.touches.length > 1) {
+    //   e.preventDefault()
+    //   const t1 = e.touches[0];
+    //   const t2 = e.touches[1];
+    //   const distance = Math.hypot(t1.clientX - t2.clientX, t1.clientY - t2.clientY)
+
+    //   if (distance < this.startDistance) {
+    //     this.scale -= distance / 13000
+    //   } else {
+    //     this.scale += distance / 13000
+    //   }
+    // }
+
   }
-  ongesturechange(ev: any): void {
-    ev.preventDefault()
-    this.rotation = this.gestureStartRotation + ev.rotation
-    this.scale = this.gestureStartScale + ev.scale
-    this.posX = ev.pageX - this.startX
-    this.posY = ev.pageY - this.startY
-    this.render()
-  }
-  ongestureend(ev: any) {
-    ev.preventDefault()
-  }
+
+
+
 }
+

@@ -1,0 +1,76 @@
+@import 'variables'
+$brd-lite: 1px solid black
+$brd-bold: 3px solid black
+.interaxle
+  display: flex
+  gap: 10px
+  padding-top: 10px
+  justify-content: center
+  // @media screen and ( max-width: 100px )
+ul
+  list-style-type: none
+  padding: 0
+  margin: 0
+.parameters
+  display: flex
+  flex-direction: column
+  font-weight: bold
+  font-size: 12px
+  gap: 10px
+.params-wrapper
+  display: flex
+  justify-content: space-between
+  gap: 10px
+  @media screen and ( max-width: 1720px )
+    flex-direction: column
+    align-items: center
+
+    .params
+      justify-content: center
+    .colors
+
+
+.params
+  display: flex
+  gap: 10px
+  .first-group, .second-group
+    display: flex
+    flex-direction: column
+    gap: 5px
+    li
+      display: flex
+      justify-content: space-between
+      gap: 10px
+  @media screen and ( max-width: 1100px )
+    justify-content: space-evenly
+  @media screen and ( max-width: 740px )
+    flex-direction: column
+    .first-group, .second-group
+      li
+        display: flex
+        mat-form-field
+          flex-grow: 3
+        span
+          width: 270px
+.colors
+  display: flex
+  table
+    th, td
+      border: $brd-lite
+      padding-left: 10px
+  @media screen and ( max-width: 1100px )
+    justify-content: center
+
+::ng-deep
+  mat-form-field
+    background: white
+    width: 150px
+    font-size: 12px
+
+  .parameters .mdc-label
+    flex-direction: row !important
+    justify-content: flex-start !important
+    gap: 5px
+    border-left: none !important
+    border-right: none !important
+

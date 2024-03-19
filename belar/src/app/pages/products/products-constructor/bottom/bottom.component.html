@@ -1,6 +1,177 @@
-<p>bottom works!</p>
-<select>
-  <option value="25">25</option>
-  <option value="32">32</option>
-  <option value="35">35</option>
-</select>
+<section class="parameters">
+  <div class="interaxle">
+    <span>Межосевое расстояние:</span>
+    <mat-form-field>
+      <input matInput>
+    </mat-form-field>
+  </div>
+
+  <div class="params-wrapper">
+    <div class="params">
+      <ul class="first-group">
+        <li>
+          <span>Рабочее давление, bar:</span>
+          <mat-form-field><input matInput></mat-form-field>
+        </li>
+        <li>
+          <span>Максимальное рабочее давление, bar: </span>
+          <mat-form-field><input matInput></mat-form-field>
+        </li>
+        <li>
+          <span>Темп. окружающей среды, °C:</span>
+          <mat-form-field><input matInput></mat-form-field>
+        </li>
+        <li>
+          <span>Воздействие агрессивных сред:</span>
+          <mat-form-field><input matInput></mat-form-field>
+        </li>
+        <li>
+          <span>Торможение:</span>
+          <mat-form-field><input matInput></mat-form-field>
+        </li>
+        <li>
+          <span>Гидрозамок:</span>
+          <mat-form-field><input matInput></mat-form-field>
+        </li>
+      </ul>
+
+      <ul class="second-group">
+        <li>
+          <span>Тип гидроцилиндра:</span>
+          <mat-form-field><input matInput></mat-form-field>
+        </li>
+        <li>
+          <span>Контактное лицо: </span>
+          <mat-form-field><input matInput></mat-form-field>
+        </li>
+        <li>
+          <span>Телефон:</span>
+          <mat-form-field><input matInput></mat-form-field>
+        </li>
+        <li>
+          <span>Эл. адрес:</span>
+          <mat-form-field><input matInput></mat-form-field>
+        </li>
+        <li>
+          <span>Компания:</span>
+          <mat-form-field><input matInput></mat-form-field>
+        </li>
+        <li>
+          <span>Другие требования:</span>
+          <mat-form-field><input matInput></mat-form-field>
+        </li>
+      </ul>
+    </div>
+
+    <section class="colors">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3">
+              Покрытие
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+
+              Грунт
+            </td>
+            <td>
+              <mat-radio-button name="grunt">
+                <img src="assets/img/icons/gray.jpg" alt="cross">
+                <span>
+                  Серый
+                </span>
+              </mat-radio-button>
+            </td>
+            <td>
+              <mat-radio-button name="grunt">
+                <img src="assets/img/icons/cross.png" alt="cross">
+                <span>
+                  Без грунта
+                </span>
+              </mat-radio-button>
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="4">
+              Цвет
+            </td>
+            <td>
+              <mat-radio-button name="color">
+                <img src="assets/img/icons/cross.png" alt="cross">
+<span>
+  Без покрытия
+
+</span>
+              </mat-radio-button>
+            </td>
+            <td>
+              <mat-radio-button name="color">
+                <img src="assets/img/icons/red.jpg" alt="cross">
+                <span>
+                  Красный RAL 3020
+                </span>
+              </mat-radio-button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mat-radio-button name="color">
+
+                <img src="assets/img/icons/black.jpg" alt="cross">
+                <span>
+                 Черный RAL 9005
+
+               </span>
+              </mat-radio-button>
+            </td>
+            <td>
+              <mat-radio-button name="color">
+                <img src="assets/img/icons/yellow1018.jpg" alt="cross">
+                <span>
+                  Желтый RAL 1018
+                </span>
+              </mat-radio-button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mat-radio-button name="color">
+                <img src="assets/img/icons/blue.jpg" alt="cross">
+                <span>
+                  Синий RAL 5005
+                </span>
+              </mat-radio-button>
+            </td>
+            <td>
+              <mat-radio-button name="color">
+                <img src="assets/img/icons/yellow1033.jpg" alt="cross">
+                <span>
+                  Желтый RAL 1033
+                </span>
+              </mat-radio-button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mat-radio-button name="color">
+                <img src="assets/img/icons/red3002.jpg" alt="cross">
+                <span>
+                  Красный RAL 3002
+                </span>
+              </mat-radio-button>
+            </td>
+            <td>
+              <mat-radio-button name="color">Другой
+                <input>
+              </mat-radio-button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</section>

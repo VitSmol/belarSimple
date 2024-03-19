@@ -4,7 +4,7 @@
 .main-wrapper
   max-width: 100%
   overflow: auto
-  display: flex
+  // display: flex
   justify-content: center
   align-items: center
   height: 100%
@@ -14,7 +14,7 @@
 .img-wrapper
   height: calc(100% + 110px)
   display: flex
-  display: inline-flex
+  // display: inline-flex
   align-items: center
   width: 115%
   justify-content: center
@@ -31,8 +31,10 @@
     position: relative
     max-width: 450px
     z-index: 99
-    @media screen and (max-width: 700px)
+    @media screen and (max-width: 740px)
       width: 300px
+    @media screen and (max-width: 500px)
+      width: 250px
 #size-0
   position: absolute
   top: 33%
@@ -62,9 +64,9 @@
       min-height: 40px
       max-height: 50px
 #top-right
-  right: 121px
+  right: 27%
 #top-left
-  left: 45px
+  left: 10%
 
 #left-side, #right-side
   height: 82%

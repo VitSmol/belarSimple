@@ -1,10 +1,9 @@
-<div class="main-wrapper dragscroll" id="img-wrapper">
-  <div class="img-wrapper"
+<div class="main-wrapper"  id="img-wrapper">
+  <div class="img-wrapper" cdkDrag
     (wheel)="onwheel($event)"
     [style.scale]="this.scale"
-    (gesturestart)="ongesturestart($event)"
-    (gesturechange)="ongesturechange($event)"
-    (gestureend)="ongestureend($event)"
+    (touchstart)="onTouchStart($event)"
+    (touchmove)="onTouchMove($event)"
   >
     <div class="img" id="img">
         <div id="left-side">
@@ -42,7 +41,7 @@
             <mat-option [value]="100">100</mat-option>
           </mat-select>
         </mat-form-field> -->
-      <img src="assets/img/constr/main.png" alt="Чертеж гидроцилиндра">
+      <img src="assets/img/constr/main.png" alt="Чертеж гидроцилиндра" draggable="true" dragscroll>
     </div>
   </div>
 </div>

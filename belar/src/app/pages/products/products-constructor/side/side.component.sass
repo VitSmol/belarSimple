@@ -4,12 +4,25 @@ $brd-bold: 3px solid black
 
 .wrapper
   border-top: none
-  height: 75vh
+  height: 82vh
+  @media screen and ( max-height: 725px )
+    height: 80vh
+  @media screen and ( max-height: 670px )
+    height: 78vh
+  @media screen and ( max-height: 590px )
+    height: 76vh
+  @media screen and ( max-height: 545px )
+    height: 74vh
+  @media screen and ( max-height: 500px )
+    height: 71vh
+  @media screen and ( max-height: 450px )
+    height: 67vh
+  @media screen and ( max-height: 400px )
+    height: 63vh
   form
     border: $brd-bold
     border-bottom: none
     border-top: none
-  .content-wrapper
 h6
   font-family: Montserrat
   font-size: 14px

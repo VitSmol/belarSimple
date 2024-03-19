@@ -14,15 +14,21 @@ $brd-bold: 3px solid black
   display: flex
   position: relative
   font-style: italic
-  height: 90vh
+  height: 100%
   gap: 10px
+
 .grid-wrapper
   height: 100%
   flex-grow: 1
   align-self: stretch
   max-width: 100%
   display: grid
-  grid-template-rows: 1fr 7fr 1fr
+  grid-template-rows: max-content 1.4fr 1fr
+  @media screen and ( max-width: 1700px )
+    grid-template-rows: max-content 0.9fr 1fr
+  @media screen and ( max-width: 740px )
+    grid-template-rows: max-content 0.7fr 1fr
+
 
 .left, .right
   max-width: 230px
@@ -58,7 +64,7 @@ $brd-bold: 3px solid black
   height: fit-content
 
 .bottom
-  background: blue
+  // background: blue
 
 @media screen and (max-width: 1300px)
   .left, .right
@@ -66,7 +72,8 @@ $brd-bold: 3px solid black
     z-index: 101
   .left-inner, .right-inner
     position: fixed
-    z-index: 300
+    z-index: 310
+
   .left-inner
     left: 0
   .right-inner

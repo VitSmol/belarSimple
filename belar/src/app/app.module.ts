@@ -36,6 +36,7 @@ import { TopComponent } from "./pages/products/products-constructor/top/top.comp
 import { SideComponent } from './pages/products/products-constructor/side/side.component';
 import { BottomComponent } from './pages/products/products-constructor/bottom/bottom.component';
 import { MiddleComponent } from './pages/products/products-constructor/middle/middle.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,8 @@ import { MiddleComponent } from './pages/products/products-constructor/middle/mi
     MatTableModule,
     MatInputModule,
     MatRadioModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    DragDropModule
 
   ]
 })
