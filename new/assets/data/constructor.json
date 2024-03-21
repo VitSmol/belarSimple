@@ -246,35 +246,35 @@
       {
         "title": "ГОСТ 22526-77 ISO 9974-1 (метр.) ISO 1179-1 (BSPP)",
         "code": null,
-        "subgroup": null,
+        "subgroup": "1",
         "listImgSrc": "assets/img/constr/top/bonk-1.png",
         "mainImgSrc": "assets/img/constr/top/bonk-1-1.png"
       },
       {
         "title": "ГОСТ 9833-73",
         "code": null,
-        "subgroup": null,
+        "subgroup": "2",
         "listImgSrc": "assets/img/constr/top/bonk-2.png",
         "mainImgSrc": "assets/img/constr/top/bonk-2-1.png"
       },
       {
         "title": "ГОСТ 25065-90 ISO 6149-1 (метр.) ISO 11926-1 (BSPP)",
         "code": null,
-        "subgroup": null,
+        "subgroup": "3",
         "listImgSrc": "assets/img/constr/top/bonk-3.png",
         "mainImgSrc": "assets/img/constr/top/bonk-3-1.png"
       },
       {
         "title": "по ГОСТ 16045-70 DIN 7631",
         "code": null,
-        "subgroup": null,
+        "subgroup": "4",
         "listImgSrc": "assets/img/constr/top/stuc-1.png",
         "mainImgSrc": "assets/img/constr/top/stuc-1-1.png"
       },
       {
         "title": "по ГОСТ 22525-77 DIN 3861 ISO 8434-1",
         "code": null,
-        "subgroup": null,
+        "subgroup": "5",
         "listImgSrc": "assets/img/constr/top/stuc-2.png",
         "mainImgSrc": "assets/img/constr/top/stuc-2-1.png"
       }
