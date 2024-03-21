@@ -10,10 +10,10 @@ import { ConstructorService } from 'src/app/services/constructor.service';
 export class ProductsConstructorComponent implements OnInit, AfterViewInit {
 
   public construct?: Construct
-  public leftSideElement!: { el: Item, side: string }
-  public rightSideElement!: { el: Item, side: string }
-  public topRightElement!: { el: Item, side: string }
-  public topLeftElement!: { el: Item, side: string }
+  public leftSideElement!: { el: Item | null, side: string }
+  public rightSideElement!: { el: Item | null, side: string }
+  public topRightElement!: { el: Item | null, side: string }
+  public topLeftElement!: { el: Item | null, side: string }
   public width: number = window.innerWidth
   public leftShow: boolean = false
   public rightShow: boolean = false
@@ -45,7 +45,7 @@ export class ProductsConstructorComponent implements OnInit, AfterViewInit {
 
   }
 
-  setSideElement(el: Item, side: string) {
+  setSideElement(el: Item | null, side: string) {
     if (side === 'left') {
       this.leftSideElement = { side, el }
     } else if (side === 'right') {

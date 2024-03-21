@@ -41,7 +41,7 @@
             </div>
           </td>
         }
-        <td><button mat-mini-fab color="warn" type="button" (click)="clear('topleft')" >x</button></td>
+        <td><button mat-mini-fab color="warn" type="button" (click)="clear('topleft'); setElement(null, 'topleft')" >x</button></td>
       </tr>
         <!-- <form > -->
           <tr>
@@ -54,7 +54,7 @@
               </td>
             }
             <td>
-              <button (click)="clear('topright')" type="reset" for="left" mat-mini-fab color="warn">x</button>
+              <button (click)="clear('topright'); setElement(null, 'topright')" type="reset" for="left" mat-mini-fab color="warn">x</button>
             </td>
       </tr>
 

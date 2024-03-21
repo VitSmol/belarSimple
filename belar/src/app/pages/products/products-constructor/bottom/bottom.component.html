@@ -11,46 +11,73 @@
       <ul class="first-group">
         <li>
           <span>Рабочее давление, bar:</span>
-          <mat-form-field><input matInput></mat-form-field>
+          <mat-form-field>
+            <mat-select [(value)]="selectedBar">
+              @for (size of barArray; track size) {
+                <mat-option [value]="size">{{size}}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
         </li>
         <li>
           <span>Максимальное рабочее давление, bar: </span>
-          <mat-form-field><input matInput></mat-form-field>
+          <mat-form-field><input matInput (keyup)="checkNums($event)" placeholder="200"></mat-form-field>
         </li>
         <li>
           <span>Темп. окружающей среды, °C:</span>
-          <mat-form-field><input matInput></mat-form-field>
+          <mat-form-field><input matInput (keyup)="checkNums($event)" placeholder="20"></mat-form-field>
         </li>
         <li>
           <span>Воздействие агрессивных сред:</span>
-          <mat-form-field><input matInput></mat-form-field>
+          <mat-form-field><input matInput placeholder="нет"></mat-form-field>
         </li>
         <li>
           <span>Торможение:</span>
-          <mat-form-field><input matInput></mat-form-field>
+          <mat-form-field>
+            <mat-select>
+              @for (brak of braking; track brak) {
+                <mat-option [value]="brak">{{brak}}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
         </li>
         <li>
           <span>Гидрозамок:</span>
-          <mat-form-field><input matInput></mat-form-field>
+          <mat-form-field>
+            <mat-select>
+
+              @for (lock of hydLock; track lock) {
+                <mat-option [value]="lock">{{lock}}</mat-option>
+              }
+              <input matInput>
+            </mat-select>
+          </mat-form-field>
         </li>
       </ul>
 
       <ul class="second-group">
         <li>
           <span>Тип гидроцилиндра:</span>
-          <mat-form-field><input matInput></mat-form-field>
+          <mat-form-field>
+          <mat-select>
+            @for (type of hydroType; track type) {
+              <mat-option [value]="type">{{type}}</mat-option>
+            }
+          </mat-select>
+
+          </mat-form-field>
         </li>
         <li>
-          <span>Контактное лицо: </span>
-          <mat-form-field><input matInput></mat-form-field>
+          <span>Контактное лицо:* </span>
+          <mat-form-field><input matInput required></mat-form-field>
         </li>
         <li>
-          <span>Телефон:</span>
-          <mat-form-field><input matInput></mat-form-field>
+          <span>Телефон:*</span>
+          <mat-form-field><input matInput  required ></mat-form-field>
         </li>
         <li>
-          <span>Эл. адрес:</span>
-          <mat-form-field><input matInput></mat-form-field>
+          <span>Эл. адрес:*</span>
+          <mat-form-field><input matInput required ></mat-form-field>
         </li>
         <li>
           <span>Компания:</span>

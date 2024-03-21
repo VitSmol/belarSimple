@@ -18,8 +18,8 @@ export class TopComponent {
     }, 200);
   }
   @Input() topShow: boolean = false;
-  @Output() topLeftElement = new EventEmitter<Item>();
-  @Output() topRightElement = new EventEmitter<Item>();
+  @Output() topLeftElement = new EventEmitter<Item | null>();
+  @Output() topRightElement = new EventEmitter<Item | null>();
 
   clear(name: string) {
     document.querySelectorAll(`input[name=${name}]`).forEach(item => {
@@ -27,7 +27,7 @@ export class TopComponent {
     })
   }
 
-  setElement(el: Item, side: string) {
+  setElement(el: Item | null, side: string) {
     if (side === 'topleft') {
       this.topLeftElement.emit(el);
     }

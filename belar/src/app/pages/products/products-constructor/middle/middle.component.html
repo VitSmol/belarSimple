@@ -1,49 +1,36 @@
 <div class="main-wrapper" id="img-wrapper">
-  <div class="img-wrapper" cdkDrag appScale
-    (wheel)="onwheel($event)"
-    [style.scale]="this.scale"
-    (touchstart)="onTouchStart($event)"
-    (touchmove)="onTouchMove($event)"
-  >
+  <div class="img-wrapper" cdkDrag appScale (wheel)="onwheel($event)" [style.scale]="this.scale">
     <div class="img" id="img">
-        <div id="left-side">
+      <div id="left-side">
 
-        </div>
-        <div id="right-side">
+      </div>
+      <div id="right-side">
 
-        </div>
-        <div id="top-left">
+      </div>
+      <div id="top-left">
 
-        </div>
-        <div id="top-right">
+      </div>
+      <div id="top-right">
 
-        </div>
-        <mat-form-field id="size-0">
-          <input matInput>
-        </mat-form-field>
-        <mat-form-field id="size-1" appearance="fill">
-          <mat-select >
-            <mat-option [value]="25">25</mat-option>
-            <mat-option [value]="32">32</mat-option>
-            <mat-option [value]="35">35</mat-option>
-            <mat-option [value]="40">40</mat-option>
-            <mat-option [value]="50">50</mat-option>
-            <mat-option [value]="100">100</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <mat-form-field id="size-2" appearance="fill">
-          <mat-select>
-            <mat-option [value]="25">25</mat-option>
-            <mat-option [value]="32">32</mat-option>
-            <mat-option [value]="35">35</mat-option>
-            <mat-option [value]="40">40</mat-option>
-            <mat-option [value]="50">50</mat-option>
-            <mat-option [value]="100">100</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <mat-form-field id="size-3" appearance="fill">
-          <input matInput>
-        </mat-form-field>
+      </div>
+
+      <input class="simple-input" type="text" id="size-0" value="90">
+      <select class="simple-input" name="s1" id="size-1">
+        @for (size of sizeSelectArray1; track size) {
+        <option [value]="size" [selected]="size === 75">{{size}}</option>
+        }
+      </select>
+      <select class="simple-input" name="s2" id="size-2">
+        @for (size of sizeSelectArray2; track size) {
+        <option [value]="size" [selected]="size === 40">{{size}}</option>
+        }
+      </select>
+
+      <label for="size-3" class="inp-label" id="size-3">
+        S ход&nbsp;
+        <input class="simple-input" title="Используйте числовой формат" type="text" (keyup)="checkNums($event)">
+      </label>
+
       <img src="assets/img/constr/main.png" alt="Чертеж гидроцилиндра" draggable="true">
     </div>
   </div>

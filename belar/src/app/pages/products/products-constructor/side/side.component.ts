@@ -14,7 +14,7 @@ export class SideComponent {
   onResize(event:any) {
     this.width = event.target.innerWidth
   }
-  @Output() sideElement = new EventEmitter<Item>()
+  @Output() sideElement = new EventEmitter<Item | null>()
 
   @Input('constructItem') public set setProducts(constructItem: ConstructItem | undefined) {
     setTimeout(() => {
@@ -22,7 +22,7 @@ export class SideComponent {
     }, 200);
   }
 
-  setElement(el: Item) {
+  setElement(el: Item | null) {
     this.sideElement.emit(el)
   }
 

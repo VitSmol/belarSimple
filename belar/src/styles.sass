@@ -11,6 +11,7 @@
 *
   animation-duration: 0.5s
   animation-name: opacity-links
+  backface-visibility: hidden
 body
   font-family: 'Hydro', sans-serif
   font-family: 'Noto Sans', sans-serif
@@ -27,9 +28,30 @@ body
   height: inherit
   background-repeat: no-repeat
   background-size: contain
-.simple-input
-  width: 32px
+.simple-input, .simple-input input
+  width: 35px
   position: absolute
   font-size: 12px
-  height: 15px
+  height: 18px
   font-style: italic
+  text-align: center
+  font-weight: bold
+  vertical-align: middle
+  border: 1px solid #00000029
+  &:focus
+    outline: none
+.simple-label
+  position: absolute
+  font-size: 13px
+  font-weight: bold
+  display: flex
+  gap: 2px
+  input
+    width: 35px
+    font-size: 12px
+    height: 18px
+    font-style: italic
+    text-align: center
+    font-weight: bold
+    vertical-align: middle
+    border: 1px solid #00000029
