@@ -4,7 +4,7 @@
     <mat-label>Диаметр поршня</mat-label>
     <mat-chip-grid #chipGrid area-label="Выбор диаметра поршня">
       <mat-chip-row *ngFor="let startdiamP of this.searchPistonDiameters"
-        (removed)="remove(startdiamP, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)">
+        (removed)="remove($event, startdiamP, intersectPistonDiameters, query.pa_diamp, searchPistonDiameters)">
         {{startdiamP}}
         <button matChipRemove [attr.aria-label]="'удалить '+ startdiamP">
           <mat-icon>cancel</mat-icon>
@@ -33,9 +33,9 @@
     <mat-label>Диаметр штока</mat-label>
     <mat-chip-grid #chipGrid2 area-label="Выбор диаметра штока">
       <mat-chip-row *ngFor="let startdiamSh of this.searchStockDiameters"
-        (removed)="remove(startdiamSh, intersectStockDiameters, query.pa_diamsh, searchStockDiameters)">
+        (removed)="remove($event, startdiamSh, intersectStockDiameters, query.pa_diamsh, searchStockDiameters)">
         {{startdiamSh}}
-        <button matChipRemove [attr.aria-label]="'удалить '+ startdiamSh">
+        <button matChipRemove [attr.aria-label]="'удалить '+ startdiamSh" (click)="$event.preventDefault()">
           <mat-icon>cancel</mat-icon>
         </button>
       </mat-chip-row>
@@ -63,7 +63,7 @@
     <mat-label>Ход поршня</mat-label>
     <mat-chip-grid #chipGrid3 area-label="Выбор хода поршня">
       <mat-chip-row *ngFor="let startHod of this.searchPistonStroke"
-        (removed)="remove(startHod, intersectPistonStroke, query.pa_hod, searchPistonStroke)">
+        (removed)="remove($event, startHod, intersectPistonStroke, query.pa_hod, searchPistonStroke)">
         {{startHod}}
         <button matChipRemove [attr.aria-label]="'удалить '+ startHod">
           <mat-icon>cancel</mat-icon>

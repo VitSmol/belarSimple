@@ -15,20 +15,20 @@
       </div>
 
       <input class="simple-input" type="text" id="size-0" value="90">
-      <select class="simple-input" name="s1" id="size-1">
+      <select class="simple-input" name="s1" id="size-1" #diamPSelect (change)="filterByDiamP($event)">
         @for (size of sizeSelectArray1; track size) {
         <option [value]="size" [selected]="size === 75">{{size}}</option>
         }
       </select>
-      <select class="simple-input" name="s2" id="size-2">
+      <select class="simple-input" name="s2" id="size-2" #diamShSelect (change)="filterByDiamSh($event)">
         @for (size of sizeSelectArray2; track size) {
-        <option [value]="size" [selected]="size === 40">{{size}}</option>
+        <option [value]="size" [selected]="size === 40" >{{size}}</option>
         }
       </select>
 
       <label for="size-3" class="inp-label" id="size-3">
         S ход&nbsp;
-        <input class="simple-input" title="Используйте числовой формат" type="text" (keyup)="checkNums($event)">
+        <input class="simple-input" title="Используйте числовой формат" type="text" (keyup)="checkNumsAndEmmit($event)" [(ngModel)]="currentHod">
       </label>
 
       <img src="assets/img/constr/main.png" alt="Чертеж гидроцилиндра" draggable="true">

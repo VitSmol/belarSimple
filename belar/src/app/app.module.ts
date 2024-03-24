@@ -23,7 +23,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatChipsModule } from '@angular/material/chips';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { getRUPaginatorIntl } from 'src/paginator-ru';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -67,6 +67,7 @@ import { ScaleDirective } from './directives/scale.directive';
   ],
   bootstrap: [AppComponent],
   imports: [
+    FormsModule,
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,

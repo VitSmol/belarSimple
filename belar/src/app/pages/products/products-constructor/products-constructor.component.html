@@ -23,8 +23,14 @@
   <div class="grid-wrapper">
     <div class="top">
       <div class="top-out">
-        <app-top [constructItem]="construct" (topLeftElement)="setSideElement($event, 'topleft')"
-          (topRightElement)="setSideElement($event, 'topright')" [topShow]="topShow"></app-top>
+        <app-top
+        [constructItem]="construct"
+        (topLeftElement)="setSideElement($event, 'topleft')"
+        (topRightElement)="setSideElement($event, 'topright')"
+        [topShow]="topShow"
+        [titleObj]=titleObj
+        >
+      </app-top>
 
       @if (width < 700) { <div class="down-arrow" (click)="topShow = !topShow; rightShow = false; leftShow = false">
         @if (topShow) {
@@ -42,13 +48,23 @@
   </div>
 
   <div class="middle">
-    <app-middle [leftSideElement]="leftSideElement" [rightSideElement]="rightSideElement"
-      [topRightElement]="topRightElement" [topLeftElement]="topLeftElement">
+    <app-middle
+      [leftSideElement]="leftSideElement"
+      [rightSideElement]="rightSideElement"
+      [topRightElement]="topRightElement"
+      [topLeftElement]="topLeftElement"
+      (hod)="setHod($event)"
+      (diamP)="setDiamP($event)"
+      (diamSh)="setDiamSh($event)"
+      >
 
     </app-middle>
   </div>
   <div class="bottom">
-    <app-bottom></app-bottom>
+    <app-bottom
+      (pressure)="setPressure($event)"
+      (MO)="setMO($event)"
+    ></app-bottom>
   </div>
 </div>
 

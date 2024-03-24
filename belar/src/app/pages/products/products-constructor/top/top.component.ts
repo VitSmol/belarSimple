@@ -1,12 +1,14 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Construct, ConstructItem, Item } from 'src/app/dao/interfaces/interfaces';
+import { titleObj } from '../products-constructor.component';
 
 @Component({
   selector: 'app-top',
   templateUrl: './top.component.html',
   styleUrl: './top.component.sass'
 })
-export class TopComponent {
+export class TopComponent implements OnInit {
+
   public constructItem?: Construct | undefined
   public bonksArray?: Item[] = [];
   public shtucArray?: Item[] = [];
@@ -20,6 +22,15 @@ export class TopComponent {
   @Input() topShow: boolean = false;
   @Output() topLeftElement = new EventEmitter<Item | null>();
   @Output() topRightElement = new EventEmitter<Item | null>();
+  //! Переменные для отображения в title
+  @Input() titleObj: titleObj | any
+
+  ngOnInit(): void {
+    this.titleObj.currentHod = 'X'
+    this.titleObj.leftCode = 'X'
+    this.titleObj.rightCode = 'X'
+    this.titleObj.MO = 'X'
+  }
 
   clear(name: string) {
     document.querySelectorAll(`input[name=${name}]`).forEach(item => {

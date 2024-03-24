@@ -8,6 +8,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { ProductsListComponent } from './pages/products/products-list/products-list.component';
 import { ProductsByTechnicsComponent } from './pages/products/products-by-technics/products-by-technics.component';
 import { ProductsConstructorComponent } from './pages/products/products-constructor/products-constructor.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,9 @@ const routes: Routes = [
           path: 'constructor', component: ProductsConstructorComponent
         }
       ]},
+      {
+        path: 'cart', component: CartComponent
+      }
     ]
   },
 

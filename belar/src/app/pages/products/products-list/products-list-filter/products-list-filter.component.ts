@@ -100,7 +100,8 @@ export class ProductsListFilterComponent {
     event.value = ''
   }
 
-  remove(item: string, intersectArr: string[], initialArr: string[], searchArr: string[]) {
+  remove(e: any, item: string, intersectArr: string[], initialArr: string[], searchArr: string[]) {
+    // e.preventDefault();
     const index = searchArr.indexOf(item);
     if (index > -1) {
       searchArr.splice(index, 1)

@@ -1,5 +1,5 @@
 import { WrappedNodeExpr } from '@angular/compiler';
-import { AfterViewInit, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { Item } from 'src/app/dao/interfaces/interfaces';
 import { ScaleDirective } from 'src/app/directives/scale.directive';
 import { ConstructorService } from 'src/app/services/constructor.service';
@@ -12,8 +12,8 @@ import { ConstructorService } from 'src/app/services/constructor.service';
 })
 export class MiddleComponent implements OnChanges, OnInit, AfterViewInit {
 
-  public sizeSelectArray1: number[] = [25, 32, 35, 40, 50, 60, 63, 70, 75, 80, 90, 100, 110, 125, 140 ];
-  public sizeSelectArray2: number[] = [20, 22, 25, 28, 30, 32, 35, 40, 45, 50, 56, 60, 63, 70, 80 ];
+  public sizeSelectArray1: number[] = [25, 32, 35, 40, 50, 60, 63, 70, 75, 80, 90, 100, 110, 125, 140];
+  public sizeSelectArray2: number[] = [20, 22, 25, 28, 30, 32, 35, 40, 45, 50, 56, 60, 63, 70, 80];
 
 
   constructor(
@@ -37,8 +37,26 @@ export class MiddleComponent implements OnChanges, OnInit, AfterViewInit {
   @Input() topRightElement!: { el: Item | null, side: string }
   @Input() topLeftElement!: { el: Item | null, side: string }
 
+  //! Переменные для title
+  public currentHod: string = ''
+  public currentDiamP: string = ''
+  public currentDiamSh: string = ''
+  @Output() hod = new EventEmitter();
+  @Output() diamP = new EventEmitter();
+  @Output() diamSh = new EventEmitter();
+  @ViewChild('diamPSelect') selectDiamP!: ElementRef
+  @ViewChild('diamShSelect') selectDiamSh!: ElementRef
+
+
   ngOnInit(): void {
     this.mainImg = document.getElementById('main') as HTMLImageElement
+    setTimeout(() => {
+      this.currentDiamP = this.selectDiamP.nativeElement.value;
+      this.currentDiamSh = this.selectDiamSh.nativeElement.value;
+      this.diamP.emit(this.currentDiamP)
+      this.diamSh.emit(this.currentDiamSh)
+
+    }, 100);
   }
 
   ngAfterViewInit(): void {
@@ -75,11 +93,18 @@ export class MiddleComponent implements OnChanges, OnInit, AfterViewInit {
     }
   }
 
-  checkNums(ev: KeyboardEvent): void {
-    (ev.target as HTMLInputElement).value = (ev.target as HTMLInputElement).value.replace(/[^0-9]/g,'')
+  checkNumsAndEmmit(ev: KeyboardEvent): void {
+    this.currentHod = this.currentHod.replace(/[^0-9]/g, '')
+    this.hod.emit(this.currentHod)
   }
 
-
-
+  filterByDiamP(event:any) {
+    this.diamP.emit(this.selectDiamP.nativeElement.value)
+    console.log(event.target.value);
+  }
+  filterByDiamSh(event:any) {
+    this.diamSh.emit(this.selectDiamSh.nativeElement.value)
+    console.log(event.target.value);
+  }
 }
 

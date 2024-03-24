@@ -1,9 +1,9 @@
 <div class="top-wrapper">
-  <h3 class="title">Гидроцилиндр MC75/40×X-3.2(X)(предварительное обозначение)</h3>
+  <h3 class="title">Гидроцилиндр MC{{titleObj.diamP}}/{{titleObj.diamSh}}×{{titleObj.currentHod}}-{{titleObj.pressureGroup}}.{{titleObj.leftCode}}{{titleObj.rightCode}}.3.3({{titleObj.MO}})(предварительное обозначение)</h3>
 
   <h4 class="subtitle" [class.active]="topShow">Подвод рабочей жидкости</h4>
   <div class="table-wrapper" [class.active]="topShow">
-  <table>
+    <table>
       <tr>
         <th colspan="3">
           <h5>Бонка c внутренней резьбой</h5>
@@ -21,12 +21,10 @@
         <td>
           <h6>{{item.title}}</h6>
         </td>
-      }
-      <td rowspan="2">
-        <textarea
-          cdkTextareaAutosize
-          name="other" id="other" cols="20" rows="4"></textarea>
-      </td>
+        }
+        <td rowspan="2">
+          <textarea cdkTextareaAutosize name="other" id="other" cols="20" rows="4"></textarea>
+        </td>
       </tr>
       <tr>
         @for (item of constructItem?.workingFluidSupply?.items; track item) {
@@ -35,30 +33,32 @@
       </tr>
       <tr>
         @for (item of constructItem?.workingFluidSupply?.items; track item) {
-          <td>
-            <div class="cell">
-              <mat-radio-button name="topleft"  (change)="setElement(item, 'topleft')"></mat-radio-button>
-            </div>
-          </td>
+        <td>
+          <div class="cell">
+            <mat-radio-button name="topleft" (change)="setElement(item, 'topleft')"></mat-radio-button>
+          </div>
+        </td>
         }
-        <td><button mat-mini-fab color="warn" type="button" (click)="clear('topleft'); setElement(null, 'topleft')" >x</button></td>
+        <td><button mat-mini-fab color="warn" type="button"
+            (click)="clear('topleft'); setElement(null, 'topleft')">x</button></td>
       </tr>
-        <!-- <form > -->
-          <tr>
-            @for (item of constructItem?.workingFluidSupply?.items; track item) {
-              <td>
-                <div class="cell">
-                  <mat-radio-button name="topright" (change)="setElement(item, 'topright')"></mat-radio-button>
-                </div>
-                <!-- <input type="radio" name="right" class="right-radio"> -->
-              </td>
-            }
-            <td>
-              <button (click)="clear('topright'); setElement(null, 'topright')" type="reset" for="left" mat-mini-fab color="warn">x</button>
-            </td>
+      <!-- <form > -->
+      <tr>
+        @for (item of constructItem?.workingFluidSupply?.items; track item) {
+        <td>
+          <div class="cell">
+            <mat-radio-button name="topright" (change)="setElement(item, 'topright')"></mat-radio-button>
+          </div>
+          <!-- <input type="radio" name="right" class="right-radio"> -->
+        </td>
+        }
+        <td>
+          <button (click)="clear('topright'); setElement(null, 'topright')" type="reset" for="left" mat-mini-fab
+            color="warn">x</button>
+        </td>
       </tr>
 
-  </table>
-</div>
+    </table>
+  </div>
 
 </div>

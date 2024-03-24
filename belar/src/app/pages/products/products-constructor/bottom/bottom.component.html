@@ -2,7 +2,7 @@
   <div class="interaxle">
     <span>Межосевое расстояние:</span>
     <mat-form-field>
-      <input matInput>
+      <input matInput (keyup)="checkNumsAndEmmit($event)" [(ngModel)]="currentMO">
     </mat-form-field>
   </div>
 
@@ -12,7 +12,7 @@
         <li>
           <span>Рабочее давление, bar:</span>
           <mat-form-field>
-            <mat-select [(value)]="selectedBar">
+            <mat-select [(value)]="selectedBar" #pressureSelect (valueChange)="setChange($event)">
               @for (size of barArray; track size) {
                 <mat-option [value]="size">{{size}}</mat-option>
               }
