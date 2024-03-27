@@ -1,6 +1,11 @@
 <header>
   <div class="header-wrapper">
-    <img class="logo" src="assets/img/logoBelar.png" alt='OOO TM "Белар"' title='OOO TM "Белар" - производство гидроцилиндров'>
+    <div class="logo-header">
+      <img class="logo" src="assets/img/logoBig.png" alt='OOO TM "Белар"' title='OOO TM "Белар" - производство гидроцилиндров'>
+      <article class="orgname">
+        <h2 class="name">OOO &laquo;ТМ Белар&raquo; - Создаем вечное движение уже сегодня!</h2>
+      </article>
+    </div>
     <span class="material-symbols-outlined menu show" (click)="openClose('open')">
       menu
     </span>
@@ -13,6 +18,9 @@
           <a (click)="getRoute()" (click)="removeMenu('close')" routerLinkActive="active" [routerLink]="['']" [routerLinkActiveOptions]="{exact:true}" class="caption-layer">Главная</a>
         </li>
         <li>
+          <a (click)="getRoute()" (click)="removeMenu('close')" routerLinkActive="active" [routerLink]="['/company']" class="caption-layer">О компании</a>
+        </li>
+        <li>
           <a (click)="getRoute()" (click)="removeMenu('close')" routerLinkActive="active" [routerLink]="['/products']" class="caption-layer">Продукция</a>
         </li>
         <li>
@@ -22,8 +30,8 @@
           <a (click)="getRoute()" (click)="removeMenu('close')" routerLinkActive="active" [routerLink]="['/login']" class="caption-layer">Личный кабинет</a>
         </li>
         <li>
-          <a href="#contacts" (click)="removeMenu('close')" class="caption-layer" (click)="scrollTo($event)">Контакты</a>
-          <!-- <a  [href]="currentRoute + '#contacts'" (click)="getRoute()"  class="caption-layer">Контакты</a> -->
+          <a href="#contacts" (click)="removeMenu('close')" class="caption-layer" [routerLink]="['/contacts']">Контакты</a>
+          <!-- (click)="scrollTo($event) <a  [href]="currentRoute + '#contacts'" (click)="getRoute()"  class="caption-layer">Контакты</a> -->
         </li>
         <li>
           <a (click)="getRoute()" (click)="removeMenu('close')" routerLinkActive="active" [routerLink]="['/cart']" class="caption-layer">Корзина</a>

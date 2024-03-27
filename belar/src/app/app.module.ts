@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
@@ -38,6 +40,9 @@ import { BottomComponent } from './pages/products/products-constructor/bottom/bo
 import { MiddleComponent } from './pages/products/products-constructor/middle/middle.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { ScaleDirective } from './directives/scale.directive';
+import {MAT_DIALOG_DATA, MatDialogModule} from '@angular/material/dialog';
+import { CartComponent } from './pages/cart/cart.component';
+import { CartDialogComponent } from './shared/cart-dialog/cart-dialog.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +62,9 @@ import { ScaleDirective } from './directives/scale.directive';
     TopComponent,
     SideComponent,
     BottomComponent,
-    MiddleComponent
+    MiddleComponent,
+    CartComponent,
+    CartDialogComponent
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },
@@ -89,8 +96,9 @@ import { ScaleDirective } from './directives/scale.directive';
     MatRadioModule,
     NgOptimizedImage,
     DragDropModule,
-    ScaleDirective
-
-  ]
+    ScaleDirective,
+    MatDialogModule,
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

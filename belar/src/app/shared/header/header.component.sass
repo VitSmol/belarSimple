@@ -1,11 +1,13 @@
 @import "variables"
 header
-  background-color: black
+  // background-color: black
   width: 100%
-  height: 60px
+  height: fit-content
+  padding: 10px 0
   box-shadow: $mainShadow
   position: fixed
   z-index: 1002
+  background: $gradientBg
 .header-wrapper
   font-size: 18px
   height: 100%
@@ -15,10 +17,23 @@ header
   width: $contentWidth
   margin: 0 auto
   align-items: center
+  .orgname
+    display: flex
+    justify-content: end
+    text-transform: uppercase
+    .name
+      font-size: 14px
+      font-weight: 500
+      color: black
+      font-style: oblique
+      margin-bottom: 0
+      @media screen and ( max-width: 1390px )
+        font-size: 12px
+
   .menu, .close
-    color: $mainColor
+    color: black
     position: absolute
-    left: 5vw
+    right: 5vw
     display: none
     font-size: 40px
     top: calc(50% - 20px)
@@ -35,32 +50,53 @@ header
     margin: 0
     padding: 0
     display: flex
-    gap: 1vw
+    gap: 1.5vw
     width: 100%
-
-  .arrowUp
-    display: none
-    color: $mainColor
-    position: absolute
-    bottom: 0
-    left: calc(50% - 6pxpx)
-  a
-    color: white
-    text-decoration: none
-    &:hover, &.active
-      transition: .5s color
-      color: $mainColor
+    li
+      position: relative
+    a.caption-layer
+      // color: white
+      font-size: 1vw
+      position: relative
+      color: black
+      display: block
+      font-weight: 600
+      text-decoration: none
+      letter-spacing: 0.8px
+      scale: 1
+      &:hover, &.active
+        transition: .5s all
+        // color: $mainColor
+        color: white
+        scale: 1.1
+        @media screen and (max-width: 1000px)
+          color: #dc9623
+          scale: 1
 
 @media screen and (max-width: 1360px)
-  a.caption-layer
-    font-size: 15px
   .logo
-    // width: 100px
+    max-width: 350px
+  a.caption-layer
+    // font-size: 15px
+@media screen and (max-width: 1150px)
+  .logo-header
+    width: 300px
+
+  .logo
+    max-width: 300px
+  .header__navigation ul
+    gap: 10px
+    a.caption-layer
+      font-size: 12px
+
 @media screen and (max-width: 1000px)
+  .logo-header
+    width: 300px
   .logo
     z-index: 300
+    max-width: 300px
   .header-wrapper
-    justify-content: end
+    // justify-content: end
     .menu.show, .close.show
       display: inline-block
     .menu.hide, .close.hide
@@ -70,17 +106,20 @@ header
     flex-direction: column
     left: 0
     top: 0
-    background: black
+    background: white
     width: 100%
     overflow-y: hidden
     transform: scale(0)
+    align-items: center
     // transition: 0.5s transform ease-in-out
     &.active
       height: min-content
       padding: 0
       padding-left: 5vw
       padding-bottom: 20px
-      padding-top: 0
-      top: 60px
+      padding-top: 20px
+      top: 120px
+      box-shadow: $mainShadow
       transform: scale(1)
       transition: 0.3s transform ease-in-out
+

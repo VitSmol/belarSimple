@@ -23,7 +23,7 @@
     <div class="center-distance" *ngIf="item.pa_mezhos">
       <strong>Межосевое расстояние: </strong> <span>{{ item.pa_mezhos }}</span>
     </div>
-    <button class="add-to-cart" mat-raised-button color="accent">В корзину</button>
+    <button class="add-to-cart" mat-raised-button color="accent" (click)="openDialog(item)">В корзину</button>
     </div>
   </div>
 </div>
