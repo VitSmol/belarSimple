@@ -44,6 +44,7 @@ import {MAT_DIALOG_DATA, MatDialogModule} from '@angular/material/dialog';
 import { CartComponent } from './pages/cart/cart.component';
 import { CartDialogComponent } from './shared/cart-dialog/cart-dialog.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { ImgDialogComponent } from './shared/img-dialog/img-dialog.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     BottomComponent,
     MiddleComponent,
     CartComponent,
-    CartDialogComponent
+    CartDialogComponent,
+    ImgDialogComponent
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },
