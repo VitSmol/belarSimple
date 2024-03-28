@@ -43,6 +43,7 @@ import { ScaleDirective } from './directives/scale.directive';
 import {MAT_DIALOG_DATA, MatDialogModule} from '@angular/material/dialog';
 import { CartComponent } from './pages/cart/cart.component';
 import { CartDialogComponent } from './shared/cart-dialog/cart-dialog.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -98,6 +99,7 @@ import { CartDialogComponent } from './shared/cart-dialog/cart-dialog.component'
     DragDropModule,
     ScaleDirective,
     MatDialogModule,
+    MatCheckboxModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

@@ -1,12 +1,12 @@
 <section class="about" id="about">
   <div class="about-wrapper">
-    <h2 class="main-caption">О компании</h2>
+    <h1 class="main-caption">О компании</h1>
     <div class="description">
       <img class="description-image" src="assets/img/belar.jpg" alt="Производство гидроцилиндров"
         title="Производство гидроцилиндров">
-      <h1 class="main-caption">ООО «ТМ Белар»</h1>
+      <!-- <h1 class="main-caption">ООО «ТМ Белар»</h1> -->
       <!-- ! изначально -->
-      <!-- <p>
+      <p>
         с 2015 года <strong>производит гидроцилиндры</strong> для различной мобильной техники — поршневые,
         плунжерные, двухштоковые.
         Первым <strong>гидроцилиндром</strong> был освоен <strong>гидроцилиндр</strong> с внутренним диаметром
@@ -21,10 +21,10 @@
         как <strong>EMAG</strong>, <strong>HAAS</strong>, <strong>DMG</strong> и др. Все
         <strong>гидроцилиндры</strong> проходят 100% испытания на функционирование и герметичность. На предприятии
         введена система менеджмента качества ISO 9001-2015.
-      </p> -->
+      </p>
 <!-- ! /изначально -->
 <!-- *GPT -->
-      <p>
+      <!-- <p>
         ООО "ТМ Белар" – ведущий производитель гидравлических цилиндров, обладающий богатым опытом и высоким качеством
         продукции.
       </p>
@@ -57,10 +57,9 @@
         как <strong>EMAG</strong>, <strong>HAAS</strong>, <strong>DMG</strong> и др. Все
         <strong>гидроцилиндры</strong> проходят 100% испытания на функционирование и герметичность. На предприятии
         введена система менеджмента качества ISO 9001-2015.
-        <!-- * /GPT -->
-      </p>
+      </p> -->
     </div>
-    <div class="icons-wrapper">
+    <!-- <div class="icons-wrapper">
       <a class="icon-card">
         <svg class="icon" width="21" height="28" viewBox="0 0 21 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -92,25 +91,7 @@
             fill="#5C8EE6" />
         </svg>Оперативное производство
       </a>
-    </div>
-    <div class="image-container">
-      <img class="img-item" src="assets/img/1.jpg" alt="Производство гидроцилиндров"
-        title="Производство гидроцилиндров">
-      <img class="img-item" src="assets/img/2.jpg" alt="Производство гидроцилиндров"
-        title="Производство гидроцилиндров">
-      <img class="img-item" src="assets/img/3.jpg" alt="Производство гидроцилиндров"
-        title="Производство гидроцилиндров">
-      <img class="img-item" src="assets/img/4.jpg" alt="Производство гидроцилиндров"
-        title="Производство гидроцилиндров">
-      <img class="img-item" src="assets/img/5.jpg" alt="Производство гидроцилиндров"
-        title="Производство гидроцилиндров">
-      <img class="img-item" src="assets/img/6.jpg" alt="Производство гидроцилиндров"
-        title="Производство гидроцилиндров">
-      <img class="img-item" src="assets/img/7.jpg" alt="Производство гидроцилиндров"
-        title="Производство гидроцилиндров">
-      <img class="img-item" src="assets/img/8.jpg" alt="Производство гидроцилиндров"
-        title="Производство гидроцилиндров">
-    </div>
+    </div> -->
     <div class="video-wrapper">
       <video controls muted class="video">
         <source src="assets/video/1.mp4" type="video/mp4">
@@ -122,5 +103,11 @@
         <source src="assets/video/3.mp4" type="video/mp4">
       </video>
     </div>
+    <div class="image-container">
+      @for (img of imgArray; track img) {
+        <img [src]="img.pathMini" alt="Производство гидроцилиндров" (click)="showSwipe(img)" class="img-item">
+      }
+    </div>
+
   </div>
 </section>

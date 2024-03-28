@@ -1,15 +1,36 @@
 <div class="products-wrapper">
   <nav class="products-navigation">
     <ul>
-      <li routerLinkActive="active">
-        <a mat-raised-button color="accent" [routerLink]="['/products', 'list']">Из каталога</a>
+      <li [formGroup]="choose" class="choose">
+        <mat-checkbox formControlName="hydro">
+          <img src="assets/img/cy.png" alt="Гидроилиндры">
+          Гироцилиндры</mat-checkbox>
+          <mat-checkbox formControlName="other">
+          <img src="assets/img/other.png" alt="Гидроилиндры">
+          Другое</mat-checkbox>
       </li>
-      <li routerLinkActive="active">
-        <a mat-raised-button color="accent" [routerLink]="['/products', 'constructor']">По индивидуальному заказу</a>
-      </li>
-      <li routerLinkActive="active">
-        <a mat-raised-button color="accent" [routerLink]="['/products', 'technick']">Применяемость по видам техники</a>
-      </li>
+      @if (choose.value.hydro) {
+        <li routerLinkActive="active">
+          <a mat-raised-button color="accent" [routerLink]="['/products', 'list']">Из каталога</a>
+        </li>
+        <li routerLinkActive="active">
+          <a mat-raised-button color="accent" [routerLink]="['/products', 'constructor']">По индивидуальному заказу</a>
+        </li>
+        <li routerLinkActive="active">
+          <a mat-raised-button color="accent" [routerLink]="['/products', 'technick']">По видам техники</a>
+        </li>
+      }
+      @if (choose.value.other) {
+        <li routerLinkActive="active">
+          <a mat-raised-button color="accent" [routerLink]="['/products', 'oil']">Вращающийся маслопровод</a>
+        </li>
+        <li routerLinkActive="active">
+          <a mat-raised-button color="accent" [routerLink]="['/products', 'valve']">Гидроблок</a>
+        </li>
+        <li routerLinkActive="active">
+          <a mat-raised-button color="accent" [routerLink]="['/products', 'spare']">Запчасти</a>
+        </li>
+      }
     </ul>
   </nav>
   <router-outlet></router-outlet>

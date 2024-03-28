@@ -11,6 +11,9 @@ import { ProductsConstructorComponent } from './pages/products/products-construc
 import { CartComponent } from './pages/cart/cart.component';
 import { CompanyComponent } from './pages/company/company.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
+import { OilLineComponent } from './pages/products/oil-line/oil-line.component';
+import { ValveBodyComponent } from './pages/products/valve-body/valve-body.component';
+import { SparePartsComponent } from './pages/products/spare-parts/spare-parts.component';
 
 const routes: Routes = [
   {
@@ -33,6 +36,15 @@ const routes: Routes = [
           },
           {
             path: 'constructor', component: ProductsConstructorComponent
+          },
+          {
+            path: 'oil', component: OilLineComponent
+          },
+          {
+            path: 'valve', component: ValveBodyComponent
+          },
+          {
+            path: 'spare', component: SparePartsComponent
           }
         ]
       },

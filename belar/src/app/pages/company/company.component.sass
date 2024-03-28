@@ -1,12 +1,10 @@
 @import 'variables'
 .about
-  // padding: 70px 0
-  // padding: 120px
   display: flex
   align-items: center
   flex-direction: column
 .about-wrapper
-  padding-top: 120px
+  padding-top: 150px
   width: $contentWidth
   height: 100%
   display: flex
@@ -20,8 +18,7 @@
     .description-image
       float: left
       margin-right: 20px
-    h1
-      font-size: 25px
+      width: 600px
     strong
       font-weight: 400
     p
@@ -92,6 +89,11 @@
     .description-image
       align-self: center
 @media screen and (max-width: 813px)
+  .about-wrapper
+    padding-top: 120px
+    gap: 10px
+    h1.main-caption
+      font-size: 35px
   .icons-wrapper
     flex-wrap: wrap
     .icon-card
